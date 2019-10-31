@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef Name="BuildingBase" Abstract="True">
+    <category>Building</category>
+    <thingClass>Building</thingClass>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <selectable>true</selectable>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>Filth_RubbleBuilding</filthLeaving>
+  </ThingDef>
+
+  <ThingDef Name="TurretBase" ParentName="BuildingBase" Abstract="True">
+    <thingClass>CombatExtended.Building_TurretGunCE</thingClass>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+      <drawSize>(3,3)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <tradeability>All</tradeability>
+    <techLevel>Industrial</techLevel>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>0.1</Flammability>
+      <WorkToMake>10000</WorkToMake>
+      <Beauty>-60</Beauty>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+    </comps>
+    <tickerType>Normal</tickerType>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <fillPercent>0.85</fillPercent>
+    <castEdgeShadows>true</castEdgeShadows>
+    <hasTooltip>true</hasTooltip>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <building>
+      <ai_combatDangerous>true</ai_combatDangerous>
+      <turretBurstCooldownTime>1</turretBurstCooldownTime>
+    </building>
+    <tradeTags>
+      <li>CE_Turret</li>
+    </tradeTags>
+	<thingCategories>
+      <li>BuildingsSecurity</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef Name="TurretAutoBase" ParentName="TurretBase" Abstract="True">
+    <designationCategory>Security</designationCategory>
+    <comps>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Breakdownable"/>
+    </comps>
+  </ThingDef>
+
+  <ThingDef Name="TurretMannedBase" ParentName="TurretBase" Abstract="True">
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <comps>
+      <li Class="CompProperties_Mannable">
+        <manWorkType>Violent</manWorkType>
+      </li>
+    </comps>
+    <recipeMaker>
+      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedTurretGun</unfinishedThingDef>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef Name="TurretMannedCraftableBase" ParentName="TurretMannedBase" Abstract="True">
+    <recipeMaker>
+      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedTurretGun</unfinishedThingDef>
+    </recipeMaker>
+  </ThingDef>
+
+  <!--=============== Auto Rec.SMG ===============-->
+  <ThingDef ParentName="TurretAutoBase">
+    <defName>Turret_DAT_TGUN_22LR</defName>
+    <label>American 180</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets/MachineGunBase</texPath>
+    </graphicData>
+    <statBases>
+      <Flammability>1.0</Flammability>
+      <WorkToMake>21500</WorkToMake>
+      <Mass>16.0</Mass>
+      <Bulk>15</Bulk>
+      <AimingAccuracy>0.5</AimingAccuracy>
+      <ShootingAccuracyTurret>1</ShootingAccuracyTurret>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>150</basePowerConsumption>
+      </li>
+    </comps>
+    <description>An automated version of the American 180 with 500 rounds of ammo, it may go through it quickly though.</description>
+    <costList>
+      <Steel>115</Steel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
+    <building>
+      <turretGunDef>DAT_TGUN_22LR</turretGunDef>
+      <turretTopGraphicPath>Things/Building/Turrets/Light_Turret</turretTopGraphicPath>
+    </building>
+	<specialDisplayRadius>20</specialDisplayRadius>
+    <minifiedDef>MinifiedThing</minifiedDef>
+	<researchPrerequisites>
+      <li>GunTurrets</li>
+    </researchPrerequisites>
+  </ThingDef>
+  <!--=============== MG_08 ===============-->
+  <ThingDef ParentName="TurretMannedCraftableBase">
+    <defName>Turret_MG_08Z</defName>
+    <label>Maschinengewehr 08</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets/MachineGunBase</texPath>
+    </graphicData>
+    <statBases>
+      <Flammability>1.0</Flammability>
+      <WorkToMake>21500</WorkToMake>
+      <Mass>69.0</Mass>
+      <Bulk>40</Bulk>
+    </statBases>
+    <description>German Great War machine gun used mostly against personell Re-Chambered To the much more common 7.92x57mmMauser to be useable untill now.</description>
+    <costList>
+      <Steel>150</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <building>
+      <turretGunDef>DAT_MG_08Z</turretGunDef>
+      <turretTopGraphicPath>Things/Building/Turrets/Maxim_Gun</turretTopGraphicPath>
+    </building>
+	<specialDisplayRadius>75</specialDisplayRadius>
+    <minifiedDef>MinifiedThing</minifiedDef>
+	<recipeMaker>
+      <researchPrerequisite>BlowbackOperation</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+  <!--=============== MG_08 Auto ===============-->
+  <ThingDef ParentName="TurretAutoBase">
+    <defName>Turret_TMG_08Z</defName>
+    <label>Auto MG 08</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets/MachineGunBase</texPath>
+    </graphicData>
+    <statBases>
+      <Flammability>1.0</Flammability>
+      <WorkToMake>21500</WorkToMake>
+      <Mass>69.0</Mass>
+      <Bulk>50</Bulk>
+      <AimingAccuracy>0.5</AimingAccuracy>
+      <ShootingAccuracyTurret>1</ShootingAccuracyTurret>
+    </statBases>
+    <techLevel>Spacer</techLevel>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>450</basePowerConsumption>
+      </li>
+    </comps>
+    <description>An automated version of the MG08.</description>
+    <costList>
+      <Steel>175</Steel>
+      <ComponentIndustrial>6</ComponentIndustrial>
+    </costList>
+    <building>
+      <turretGunDef>DAT_TMG_08Z</turretGunDef>
+      <turretTopGraphicPath>Things/Building/Turrets/Maxim_Gun</turretTopGraphicPath>
+    </building>
+	<specialDisplayRadius>65</specialDisplayRadius>
+    <minifiedDef>MinifiedThing</minifiedDef>
+	<researchPrerequisites>
+      <li>GunTurrets</li>
+    </researchPrerequisites>
+  </ThingDef>
+  <!--=============== PM M1910 ===============-->
+  <ThingDef ParentName="TurretMannedCraftableBase">
+    <defName>Turret_PM_M1910Z</defName>
+    <label>PM M1910</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets/MachineGunBase</texPath>
+    </graphicData>
+    <statBases>
+      <Flammability>1.0</Flammability>
+      <WorkToMake>21500</WorkToMake>
+      <Mass>80.0</Mass>
+      <Bulk>50</Bulk>
+    </statBases>
+    <description>PM M1910 Russian Great war machine gun for use against personell.</description>
+    <costList>
+      <Steel>150</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <building>
+      <turretGunDef>DAT_PM_M1910Z</turretGunDef>
+      <turretTopGraphicPath>Things/Building/Turrets/Maxim_Gun</turretTopGraphicPath>
+    </building>
+	<specialDisplayRadius>75</specialDisplayRadius>
+    <minifiedDef>MinifiedThing</minifiedDef>
+	<recipeMaker>
+      <researchPrerequisite>BlowbackOperation</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+  <!--=============== PM M1910 Auto ===============-->
+  <ThingDef ParentName="TurretAutoBase">
+    <defName>Turret_TPM_M1910Z</defName>
+    <label>Auto PM M1910</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets/MachineGunBase</texPath>
+    </graphicData>
+    <statBases>
+      <Flammability>1.0</Flammability>
+      <WorkToMake>21500</WorkToMake>
+      <Mass>80.0</Mass>
+      <Bulk>50</Bulk>
+      <AimingAccuracy>0.5</AimingAccuracy>
+      <ShootingAccuracyTurret>1</ShootingAccuracyTurret>
+    </statBases>
+    <techLevel>Spacer</techLevel>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>450</basePowerConsumption>
+      </li>
+    </comps>
+    <description>An automated version of the PM M1910.</description>
+    <costList>
+      <Steel>175</Steel>
+      <ComponentIndustrial>6</ComponentIndustrial>
+    </costList>
+    <building>
+      <turretGunDef>DAT_TPM_M1910Z</turretGunDef>
+      <turretTopGraphicPath>Things/Building/Turrets/Maxim_Gun</turretTopGraphicPath>
+    </building>
+	<specialDisplayRadius>65</specialDisplayRadius>
+    <minifiedDef>MinifiedThing</minifiedDef>
+	<researchPrerequisites>
+      <li>GunTurrets</li>
+    </researchPrerequisites>
+  </ThingDef>
+  <!--=============== Vickers ===============-->
+  <ThingDef ParentName="TurretMannedCraftableBase">
+    <defName>Turret_VMG</defName>
+    <label>Vickers Machine Gun</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets/MachineGunBase</texPath>
+    </graphicData>
+    <statBases>
+      <Flammability>1.0</Flammability>
+      <WorkToMake>21500</WorkToMake>
+      <Mass>23.0</Mass>
+      <Bulk>20</Bulk>
+    </statBases>
+    <description>Vickers Machine Gun from the Great War in Britian Using British Standard .303 rounds.</description>
+    <costList>
+      <Steel>150</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <building>
+      <turretGunDef>DAT_VMG</turretGunDef>
+      <turretTopGraphicPath>Things/Building/Turrets/Maxim_Gun</turretTopGraphicPath>
+    </building>
+	<specialDisplayRadius>75</specialDisplayRadius>
+    <minifiedDef>MinifiedThing</minifiedDef>
+	<recipeMaker>
+      <researchPrerequisite>BlowbackOperation</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+  <!--=============== Vickers Auto ===============-->
+  <ThingDef ParentName="TurretAutoBase">
+    <defName>Turret_TVMG</defName>
+    <label>Auto VMG</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets/MachineGunBase</texPath>
+    </graphicData>
+    <statBases>
+      <Flammability>1.0</Flammability>
+      <WorkToMake>21500</WorkToMake>
+      <Mass>23.0</Mass>
+      <Bulk>20</Bulk>
+      <AimingAccuracy>0.5</AimingAccuracy>
+      <ShootingAccuracyTurret>1</ShootingAccuracyTurret>
+    </statBases>
+    <techLevel>Spacer</techLevel>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>450</basePowerConsumption>
+      </li>
+    </comps>
+    <description>An automated version of the VMG.</description>
+    <costList>
+      <Steel>175</Steel>
+      <ComponentIndustrial>6</ComponentIndustrial>
+    </costList>
+    <building>
+      <turretGunDef>DAT_TVMG</turretGunDef>
+      <turretTopGraphicPath>Things/Building/Turrets/Maxim_Gun</turretTopGraphicPath>
+    </building>
+	<specialDisplayRadius>65</specialDisplayRadius>
+    <minifiedDef>MinifiedThing</minifiedDef>
+	<researchPrerequisites>
+      <li>GunTurrets</li>
+    </researchPrerequisites>
+  </ThingDef>
+  <!--=============== 25mm Cannon ===============-->
+  <ThingDef ParentName="TurretMannedCraftableBase">
+    <defName>Turret_25mm</defName>
+    <label>25mm Autocannon</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets/MachineGunBase</texPath>
+    </graphicData>
+    <statBases>
+	  <MaxHitPoints>350</MaxHitPoints>
+      <WorkToMake>53500</WorkToMake>
+      <Mass>785</Mass>
+      <Bulk>400</Bulk>
+    </statBases>
+    <description>A single 25mm Auto Cannon that has a very poor ammo Capacity.</description>
+    <costList>
+      <Steel>325</Steel>
+      <ComponentIndustrial>10</ComponentIndustrial>
+    </costList>
+    <building>
+      <turretGunDef>DAT_25mm</turretGunDef>
+      <turretTopGraphicPath>Things/Building/Turrets/25mm_top</turretTopGraphicPath>
+	  <turretTopDrawSize>4</turretTopDrawSize>
+    </building>
+    <recipeMaker>
+      <researchPrerequisite>CE_TurretHeavyWeapons</researchPrerequisite>
+    </recipeMaker>
+    <minifiedDef>MinifiedThing</minifiedDef>
+  </ThingDef>
+  <!--=============== Dual Mounts -==============-->
+  <ThingDef ParentName="TurretMannedBase">
+    <defName>Turret_2_25mm</defName>
+    <label>25mm Dual Static Autocannon</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets/25mm_Base_Static</texPath>
+    </graphicData>
+    <statBases>
+	  <MaxHitPoints>450</MaxHitPoints>
+      <WorkToMake>74500</WorkToMake>
+      <Mass>1100</Mass>
+      <Bulk>600</Bulk>
+    </statBases>
+    <description>A Dual 25mm Autocannon that has a very poor ammo Capacity.</description>
+    <costList>
+      <Steel>465</Steel>
+      <ComponentIndustrial>16</ComponentIndustrial>
+    </costList>
+    <building>
+      <turretGunDef>DAT_2_25mm</turretGunDef>
+      <turretTopGraphicPath>Things/Building/Turrets/25mm_2_top</turretTopGraphicPath>
+	  <turretTopDrawSize>4</turretTopDrawSize>
+    </building>
+	<size>(2,2)</size>
+    <recipeMaker>
+      <researchPrerequisite>CE_TurretHeavyWeapons</researchPrerequisite>
+    </recipeMaker>
+    <minifiedDef>MinifiedThing</minifiedDef>
+  </ThingDef>
+  
+  <ThingDef ParentName="TurretMannedBase">
+    <defName>Turret_2_25mm_B</defName>
+    <label>25mm Dual Seige Autocannon</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets/25mm_Base_Seige</texPath>
+    </graphicData>
+    <statBases>
+	  <MaxHitPoints>450</MaxHitPoints>
+      <WorkToMake>75500</WorkToMake>
+      <Mass>145</Mass>
+      <Bulk>600</Bulk>
+    </statBases>
+    <description>A Dual 25mm Autocannon that has a very poor ammo Capacity.</description>
+    <costList>
+      <Steel>425</Steel>
+      <ComponentIndustrial>16</ComponentIndustrial>
+	  <WoodLog>50</WoodLog>
+    </costList>
+    <building>
+      <turretGunDef>DAT_2_25mm</turretGunDef>
+      <turretTopGraphicPath>Things/Building/Turrets/25mm_2_top</turretTopGraphicPath>
+	  <turretTopDrawSize>4</turretTopDrawSize>
+    </building>
+	<size>(2,2)</size>
+    <recipeMaker>
+      <researchPrerequisite>CE_TurretHeavyWeapons</researchPrerequisite>
+    </recipeMaker>
+    <minifiedDef>MinifiedThing</minifiedDef>
+  </ThingDef>
+  
+  <!--=============== Triple Mounts =============-->
+  <ThingDef ParentName="TurretMannedBase">
+    <defName>Turret_3_25mm</defName>
+    <label>25mm Triple Static Autocannon</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets/25mm_Base_Static</texPath>
+    </graphicData>
+    <statBases>
+	  <MaxHitPoints>600</MaxHitPoints>
+      <WorkToMake>113500</WorkToMake>
+      <Mass>1500</Mass>
+      <Bulk>800</Bulk>
+    </statBases>
+    <description>A Dual 25mm Autocannon that has a very poor ammo Capacity.</description>
+    <costList>
+      <Steel>575</Steel>
+      <ComponentIndustrial>24</ComponentIndustrial>
+    </costList>
+    <building>
+      <turretGunDef>DAT_3_25mm</turretGunDef>
+      <turretTopGraphicPath>Things/Building/Turrets/25mm_3_top</turretTopGraphicPath>
+	  <turretTopDrawSize>4</turretTopDrawSize>
+    </building>
+	<size>(2,2)</size>
+    <recipeMaker>
+      <researchPrerequisite>CE_TurretHeavyWeapons</researchPrerequisite>
+    </recipeMaker>
+    <minifiedDef>MinifiedThing</minifiedDef>
+  </ThingDef>
+  
+  <ThingDef ParentName="TurretMannedBase">
+    <defName>Turret_3_25mmB</defName>
+    <label>25mm Triple Seige Autocannon</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets/25mm_Base_Seige</texPath>
+    </graphicData>
+    <statBases>
+	  <MaxHitPoints>600</MaxHitPoints>
+      <WorkToMake>123500</WorkToMake>
+      <Mass>200</Mass>
+      <Bulk>800</Bulk>
+    </statBases>
+    <description>A Dual 25mm Autocannon that has a very poor ammo Capacity.</description>
+    <costList>
+      <Steel>535</Steel>
+      <ComponentIndustrial>24</ComponentIndustrial>
+	  <WoodLog>50</WoodLog>
+    </costList>
+    <building>
+      <turretGunDef>DAT_3_25mm</turretGunDef>
+      <turretTopGraphicPath>Things/Building/Turrets/25mm_3_top</turretTopGraphicPath>
+	  <turretTopDrawSize>4</turretTopDrawSize>
+    </building>
+	<size>(2,2)</size>
+    <recipeMaker>
+      <researchPrerequisite>CE_TurretHeavyWeapons</researchPrerequisite>
+    </recipeMaker>
+    <minifiedDef>MinifiedThing</minifiedDef>
+  </ThingDef>
+  <!--=============== Special =============-->
+  <ThingDef ParentName="TurretMannedBase">
+    <defName>Turret_Flame</defName>
+    <label>Large Flame Thrower</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets/25mm_Base_Static</texPath>
+    </graphicData>
+    <statBases>
+	  <MaxHitPoints>750</MaxHitPoints>
+      <WorkToMake>123500</WorkToMake>
+      <Mass>2000</Mass>
+      <Bulk>8000</Bulk>
+    </statBases>
+    <description>A Large Flamethrower that has a very Large ammo Capacity.</description>
+    <costList>
+      <Steel>575</Steel>
+      <ComponentIndustrial>24</ComponentIndustrial>
+    </costList>
+    <specialDisplayRadius>35</specialDisplayRadius>
+    <building>
+      <turretGunDef>DAT_FTT</turretGunDef>
+      <turretTopGraphicPath>Things/Building/Turrets/25mm_top</turretTopGraphicPath>
+	  <turretTopDrawSize>4</turretTopDrawSize>
+    </building>
+	<size>(2,2)</size>
+    <recipeMaker>
+      <researchPrerequisite>CE_TurretHeavyWeapons</researchPrerequisite>
+    </recipeMaker>
+    <minifiedDef>MinifiedThing</minifiedDef>
+  </ThingDef>
+  
+  <ThingDef ParentName="TurretMannedBase">
+    <defName>Turret_SG</defName>
+    <label>120mm Shotgun</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets/25mm_Base_Static</texPath>
+    </graphicData>
+    <statBases>
+	  <MaxHitPoints>750</MaxHitPoints>
+      <WorkToMake>123500</WorkToMake>
+      <Mass>1500</Mass>
+      <Bulk>6000</Bulk>
+    </statBases>
+    <description>A Large Shotgun that's able to cull large groups of people.</description>
+    <costList>
+      <Steel>425</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <building>
+      <turretGunDef>DAT_120mmShotgun</turretGunDef>
+      <turretTopGraphicPath>Things/Building/Turrets/25mm_top</turretTopGraphicPath>
+	  <turretTopDrawSize>4</turretTopDrawSize>
+    </building>
+	<size>(2,2)</size>
+    <recipeMaker>
+      <researchPrerequisite>CE_TurretHeavyWeapons</researchPrerequisite>
+    </recipeMaker>
+    <minifiedDef>MinifiedThing</minifiedDef>
+  </ThingDef>
+  
+</Defs>

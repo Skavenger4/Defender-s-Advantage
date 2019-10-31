@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- ======================= Minified things ========================= -->
+<!--
+  <ThingDef ParentName="MinifiedBase" Name="MinifiedTurretBase" Abstract="True">
+    <thingCategories>
+      <li>WeaponsTurrets</li>
+    </thingCategories>
+  </ThingDef>
+  -->
+
+  <ThingDef ParentName="MinifiedBase">
+    <defName>MinifiedTurret_TGUN_22LR</defName>
+    <label>Very High Capacity American 180</label>
+	<description>Very High Capacity American 180</description>
+    <statBases>
+      <Mass>16.0</Mass>
+      <Bulk>15</Bulk>
+    </statBases>
+	<thingCategories>
+      <li>WeaponsTurrets</li>
+    </thingCategories>
+  </ThingDef>
+  
+  <ThingDef ParentName="MinifiedBase">
+    <defName>MinifiedTurret_MG_08Z</defName>
+    <label>Maschinengewehr 08</label>
+	<description>MG 08</description>
+    <statBases>
+      <Mass>69.0</Mass>
+      <Bulk>20</Bulk>
+    </statBases>
+	<thingCategories>
+      <li>WeaponsTurrets</li>
+    </thingCategories>
+  </ThingDef>
+  
+  <ThingDef ParentName="MinifiedBase">
+    <defName>MinifiedTurret_TMG_08Z</defName>
+    <label>Maschinengewehr 08 Auto</label>
+	<description>Automated MG 08</description>
+    <statBases>
+      <Mass>69.0</Mass>
+      <Bulk>50</Bulk>
+    </statBases>
+	<thingCategories>
+      <li>WeaponsTurrets</li>
+    </thingCategories>
+  </ThingDef>
+  
+  <ThingDef ParentName="MinifiedBase">
+    <defName>MinifiedTurret_PM_M1910Z</defName>
+    <label>PM M1910</label>
+	<description>PM M1910</description>
+    <statBases>
+      <Mass>80.0</Mass>
+      <Bulk>50</Bulk>
+    </statBases>
+	<thingCategories>
+      <li>WeaponsTurrets</li>
+    </thingCategories>
+  </ThingDef>
+  
+  <ThingDef ParentName="MinifiedBase">
+    <defName>MinifiedTurret_TPM_M1910Z</defName>
+    <label>PM M1910 Auto</label>
+	<description>Auto PM M1910</description>
+    <statBases>
+      <Mass>80.0</Mass>
+      <Bulk>50</Bulk>
+    </statBases>
+	<thingCategories>
+      <li>WeaponsTurrets</li>
+    </thingCategories>
+  </ThingDef>
+  
+  <ThingDef ParentName="MinifiedBase">
+    <defName>MinifiedTurret_VMG</defName>
+    <label>Vickers Machine Gun</label>
+	<description>Vickers Machine Gun</description>
+    <statBases>
+      <Mass>23.0</Mass>
+      <Bulk>20</Bulk>
+    </statBases>
+	<thingCategories>
+      <li>WeaponsTurrets</li>
+    </thingCategories>
+  </ThingDef>
+  
+  <ThingDef ParentName="MinifiedBase">
+    <defName>MinifiedTurret_TVMG</defName>
+    <label>Vickers Machine Gun Auto</label>
+	<description>Auto Vickers Machine Gun</description>
+    <statBases>
+      <Mass>23.0</Mass>
+      <Bulk>20</Bulk>
+    </statBases>
+	<thingCategories>
+      <li>WeaponsTurrets</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="MinifiedBase">
+    <defName>MinifiedTurret_25mm</defName>
+    <label>25mm Autocannon</label>
+	<description>Single 25mm Autocannon</description>
+    <statBases>
+      <Mass>785</Mass>
+      <Bulk>400</Bulk>
+    </statBases>
+	<thingCategories>
+      <li>WeaponsTurrets</li>
+    </thingCategories>
+  </ThingDef>
+  
+  <ThingDef ParentName="MinifiedBase">
+    <defName>MinifiedTurret_2_25mm</defName>
+    <label>Dual 25mm Autocannon</label>
+	<description>Dual 25mm Autocannon</description>
+    <statBases>
+      <Mass>1100</Mass>
+      <Bulk>600</Bulk>
+    </statBases>
+	<thingCategories>
+      <li>WeaponsTurrets</li>
+    </thingCategories>
+  </ThingDef>
+  
+  <ThingDef ParentName="MinifiedBase">
+    <defName>MinifiedTurret_2_25mm_B</defName>
+    <label>Dual 25mm Autocannon</label>
+	<description>A mobile variant of the Dual 25mm Autocannon</description>
+    <statBases>
+      <Mass>145</Mass>
+      <Bulk>600</Bulk>
+    </statBases>
+	<thingCategories>
+      <li>WeaponsTurrets</li>
+    </thingCategories>
+  </ThingDef>
+  
+  <ThingDef ParentName="MinifiedBase">
+    <defName>MinifiedTurret_3_25mm</defName>
+    <label>Triple 25mm Autocannon</label>
+	<description>Triple 25mm Autocannon</description>
+    <statBases>
+      <Mass>1500</Mass>
+      <Bulk>800</Bulk>
+    </statBases>
+	<thingCategories>
+      <li>WeaponsTurrets</li>
+    </thingCategories>
+  </ThingDef>
+  
+  <ThingDef ParentName="MinifiedBase">
+    <defName>MinifiedTurret_3_25mm_B</defName>
+    <label>Triple 25mm Autocannon</label>
+	<description>A mobile variant of the Triple 25mm Autocannon</description>
+    <statBases>
+      <Mass>200</Mass>
+      <Bulk>800</Bulk>
+    </statBases>
+  <thingCategories>
+      <li>WeaponsTurrets</li>
+  </thingCategories>
+  </ThingDef>
+  
+  <ThingDef ParentName="MinifiedBase">
+    <defName>MinifiedTurret_Flame</defName>
+    <label>Fire Turret</label>
+	<description>A Minified Flamethrower Turret</description>
+    <statBases>
+      <Mass>4000</Mass>
+      <Bulk>8000</Bulk>
+    </statBases>
+  <thingCategories>
+      <li>WeaponsTurrets</li>
+  </thingCategories>
+  </ThingDef>
+  
+  <ThingDef ParentName="MinifiedBase">
+    <defName>MinifiedTurret_SG</defName>
+    <label>Fire Turret</label>
+	<description>A Minified Shotgun Turret</description>
+    <statBases>
+      <Mass>1500</Mass>
+      <Bulk>6000</Bulk>
+    </statBases>
+  <thingCategories>
+      <li>WeaponsTurrets</li>
+  </thingCategories>
+  </ThingDef>
+  
+</Defs>

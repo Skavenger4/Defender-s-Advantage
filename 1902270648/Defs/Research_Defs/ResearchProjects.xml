@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--=============================== Textiles ===================================-->
+  <!--===== Ballistic Fabric ====-->
+  <ResearchProjectDef>
+    <defName>FiberTOne</defName>
+    <label>Type 1 Fiber</label>
+    <description>Enables the production of Type 1 Ballistic Fiber at Tailor benches.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>ComplexClothing</li>
+      <li>Devilstrand</li>	  
+    </prerequisites>
+    <researchViewX>1</researchViewX>
+    <researchViewY>4.5</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>FiberTTwo</defName>
+    <label>Type 2 Fiber</label>
+    <description>Enables the production of Type 2 Ballistic Fiber at Tailor benches.</description>
+    <baseCost>2500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>FiberTOne</li>  
+    </prerequisites>
+    <researchViewX>2</researchViewX>
+    <researchViewY>4.5</researchViewY>
+  </ResearchProjectDef>
+  <!--===== Lightweight Insulator ====-->
+  <ResearchProjectDef>
+    <defName>FiberTThree</defName>
+    <label>Type 2.5 Fiber</label>
+    <description>Enables the production of Lightweight Insulator at the Refinery.</description>
+    <baseCost>5000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>BiofuelRefining</li>
+      <li>FiberTTwo</li>	  
+    </prerequisites>
+    <researchViewX>6</researchViewX>
+    <researchViewY>4.5</researchViewY>
+  </ResearchProjectDef> 
+  <!--=============================== Armors ===================================-->
+   <ResearchProjectDef>
+    <defName>FullBodyUniforms</defName>
+    <label>Full Body Uniforms</label>
+    <description>Enables the production of Army Uniforms at the Tailor Bench.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>FlakArmor</li>	  
+    </prerequisites>
+    <researchViewX>6</researchViewX>
+    <researchViewY>4.9</researchViewY>
+  </ResearchProjectDef> 
+  <ResearchProjectDef>
+    <defName>FireFighting</defName>
+    <label>Very Heat Resistant Kit</label>
+    <description>Enables the production of Fireman Uniforms at the Tailor Bench.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>FullBodyUniforms</li>	  
+	  <li>FiberTThree</li>
+    </prerequisites>
+    <researchViewX>7</researchViewX>
+    <researchViewY>4.5</researchViewY>
+  </ResearchProjectDef> 
+</Defs>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Defender's Advantage</name>
+	<author>Scave4</author>
+	<supportedVersions>
+		<li>1.0</li>
+	</supportedVersions>
+	<url></url>
+	<description>Version: 1.0.0\n\Adds many defensive machine guns and some medium autocannons, and a use for mechanoid bullets that are otherwise just sold.</description>
+</ModMetaData>
