@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingCategoryDef>
+      <defName>Ammo120mmS</defName>
+      <label>120mm Shell</label>
+      <parent>AmmoShotguns</parent>
+      <iconPath>UI/Icons/ThingCategories/CaliberShotgun</iconPath>
+    </ThingCategoryDef>
+	
+	<!-- ==================== AmmoSet ========================== -->
+
+  <CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_120mmS</defName>
+    <label>120mm Shell</label>
+    <ammoTypes>
+      <Ammo_120mmS_Buck>Bullet_120mmS_Buck</Ammo_120mmS_Buck>
+      <Ammo_120mmS_Bird>Bullet_120mmS_Bird</Ammo_120mmS_Bird>
+      <Ammo_120mmS_Beanbag>Bullet_120mmS_Beanbag</Ammo_120mmS_Beanbag>
+    </ammoTypes>
+  </CombatExtended.AmmoSetDef>
+	
+	<!-- ==================== Ammo ========================== -->
+
+  <ThingDef Class="CombatExtended.AmmoDef" Name="120mmSBase" ParentName="SmallAmmoBase" Abstract="True">
+    <description>Very uncommonly large shotgun shell used mostly for mass slaughter.</description>
+    <statBases>
+	  <Mass>15.043</Mass>
+	  <Bulk>10.06</Bulk>
+    </statBases>
+	<tradeTags>
+	  <li>CE_AutoEnableTrade</li>
+	  <li>CE_AutoEnableCrafting</li>
+	</tradeTags>
+    <thingCategories>
+      <li>Ammo120mmS</li>
+    </thingCategories>
+    <stackLimit>25</stackLimit>
+  </ThingDef>
+
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="120mmSBase">
+    <defName>Ammo_120mmS_Buck</defName>
+    <label>120mm shell (Buck)</label>
+    <graphicData>
+      <texPath>Things/Ammo/Shotgun/Shot</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>4.02</MarketValue>
+    </statBases>
+    <ammoClass>BuckShot</ammoClass>
+    <cookOffProjectile>Bullet_120mmS_Buck</cookOffProjectile>
+  </ThingDef>
+
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="120mmSBase">
+    <defName>Ammo_120mmS_Bird</defName>
+    <label>120mm shell (Bird)</label>
+    <graphicData>
+      <texPath>Things/Ammo/Shotgun/Shot</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>4.02</MarketValue>
+    </statBases>
+    <ammoClass>BirdShot</ammoClass>
+    <cookOffProjectile>Bullet_120mmS_Bird</cookOffProjectile>
+  </ThingDef>
+
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="120mmSBase">
+    <defName>Ammo_120mmS_Beanbag</defName>
+    <label>120mm shell (Bean)</label>
+	<generateAllowChance>0</generateAllowChance>
+    <graphicData>
+      <texPath>Things/Ammo/Shotgun/Beanbag</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>4.12</MarketValue>
+    </statBases>
+    <ammoClass>Beanbag</ammoClass>
+    <cookOffProjectile>Bullet_120mmS_Beanbag</cookOffProjectile>
+  </ThingDef>
+
+	<!-- ================== Projectiles ================== -->
+
+	<ThingDef Class="CombatExtended.AmmoDef" Name="Base20GaugeBullet" ParentName="BaseBullet" Abstract="true">
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>Bullet</damageDef>
+			<speed>84</speed>
+			<dropsCasings>true</dropsCasings>
+			<casingMoteDefname>Mote_ShotgunShell</casingMoteDefname>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Base20GaugeBullet">
+		<defName>Bullet_120mmS_Buck</defName>
+		<label>buckshot pellet</label>
+		<graphicData>
+			<texPath>Things/Projectile/Shotgun_Pellet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>25</damageAmountBase>
+			<pelletCount>150</pelletCount>
+			<armorPenetrationBase>0.285</armorPenetrationBase>
+			<spreadMult>15.8</spreadMult>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Base20GaugeBullet">
+		<defName>Bullet_120mmS_Bird</defName>
+		<label>birdshot pellet</label>
+		<graphicData>
+			<texPath>Things/Projectile/Shotgun_Pellet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>7</damageAmountBase>
+			<pelletCount>450</pelletCount>
+			<spreadMult>50.4</spreadMult>
+			<armorPenetrationBase>0.177</armorPenetrationBase>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Base20GaugeBullet">
+		<defName>Bullet_120mmS_Beanbag</defName>
+		<label>beanbag</label>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_big</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>Beanbag</damageDef>
+			<damageAmountBase>8</damageAmountBase>
+			<pelletCount>25</pelletCount>
+			<armorPenetrationBase>0.157</armorPenetrationBase>
+			<spreadMult>15</spreadMult>
+		</projectile>
+	</ThingDef>
+  	<!-- ==================== Recipes ========================== -->
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_120mmS_Buck</defName>
+    <label>make 120mm (Buck) shell x5</label>
+    <description>Craft 5 120mm (Buck) shells.</description>
+    <jobString>Making 120mm (Buck) shells.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>45</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_120mmS_Buck>5</Ammo_120mmS_Buck>
+    </products>
+    <workAmount>3250</workAmount>
+  </RecipeDef>
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_120mmS_Bird</defName>
+    <label>make 120mm (Bird) shell x5</label>
+    <description>Craft 5 120mm (Bird) shells.</description>
+    <jobString>Making 120mm (Bird) shells.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>45</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_120mmS_Bird>5</Ammo_120mmS_Bird>
+    </products>
+    <workAmount>4000</workAmount>
+  </RecipeDef>
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_120mmS_Beanbag</defName>
+    <label>make 120mm (Beanbag) shell x5</label>
+    <description>Craft 5 120mm (Beanbag) shells.</description>
+    <jobString>Making 120mm (Beanbag) shells.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>44</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Cloth</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+        <li>Cloth</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_120mmS_Beanbag>5</Ammo_120mmS_Beanbag>
+    </products>
+    <workAmount>2500</workAmount>
+  </RecipeDef>
+	
+</Defs>
