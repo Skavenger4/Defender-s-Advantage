@@ -65,8 +65,7 @@
     <comps>
       <li Class="CombatExtended.CompProperties_AmmoUser">
         <magazineSize>25</magazineSize>
-        <reloadTime>1.0</reloadTime>
-		<reloadOneAtATime>true</reloadOneAtATime>
+        <reloadTime>12</reloadTime>
         <spawnUnloaded>false</spawnUnloaded>
         <ammoSet>AmmoSet_MusketBall</ammoSet>
       </li>

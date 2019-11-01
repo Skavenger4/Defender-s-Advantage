@@ -205,10 +205,6 @@
 				<preExplosionSpawnThingDef>FilthPrometheum</preExplosionSpawnThingDef>
 				<preExplosionSpawnChance>0.5</preExplosionSpawnChance>
 				<soundExplode>MortarIncendiary_Explode</soundExplode>
-				<fragments>
-					<Fragment_Tiny>5</Fragment_Tiny>
-				</fragments>
-				<fragRange>2</fragRange>
 				<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
 			</li>
 		</comps>
@@ -361,13 +357,6 @@
 			<soundExplode>MortarIncendiary_Explode</soundExplode>
 			<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
 		</projectile>
-		<comps>
-			<li Class="CombatExtended.CompProperties_ExplosiveCE">
-				<fragments>
-					<Fragment_Tiny>5</Fragment_Tiny>
-				</fragments>
-			</li>
-		</comps>
 	</ThingDef>
 	
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseMusketBallBullet">

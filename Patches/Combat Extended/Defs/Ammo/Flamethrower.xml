@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+<!--==Flamethrower Stack Size==-->
+<Operation Class="PatchOperationReplace">
+<xpath>Defs/ThingDef[@Class="CombatExtended.AmmoDef"][Name="FlamethrowerBase"]/stackLimit</xpath>
+  <value>
+	<stackLimit>500.0</stackLimit>
+  </value>
+</Operation>
+
+</Patch>

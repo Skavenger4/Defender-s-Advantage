@@ -67,6 +67,8 @@
   <DamageDef ParentName="APMine">
     <defName>ATMine</defName>
 	<label>Anti-Tank Mine Explosion</label>
+    <deathMessage>{0} has died in a horrible explosion.</deathMessage>
+	<minDamageToFragment>45</minDamageToFragment>
     <defaultDamage>150</defaultDamage>
     <defaultStoppingPower>2.0</defaultStoppingPower>
     <defaultArmorPenetration>3.50</defaultArmorPenetration>

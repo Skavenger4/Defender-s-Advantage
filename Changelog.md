@@ -25,7 +25,7 @@ Version 1.2.0
 		- Added a slug version (Thrumbo) 
 			- Damage 400
 				- Considering Making it High Explosive for increased Chaos
-	- Adding a Bayonet (&1KG) on the handheld Puckle gun when the enemy get too close
+	- Adding a Bayonet (&1KG) on the handheld Puckle gun when the enemy gets too close
 	- Adding a graphic on steam page
 	- Removal of useless patches
 	- Boosted cancer chance from radioactive bullets to increse misery
@@ -35,5 +35,25 @@ Version 1.2.0
 		- Changed Pellets from 15 to 24
 		- Changed armor penetration from .1 to .08
 	Glancing at the consideration of adding Sheep
-	Forget to add specfic Png for Flamethrower & Charge Blaster
-	 
+	Forget to add specfic Png for Flamethrower & Charge Blaster proto
+	- *Activated* secret Project 003 
+	
+Version 1.2.1
+*Raid hotfix edition (Thanks CE)*
+- Parts of Project 003 Implemented
+	- Add PNGs
+	- Fast Tracked Module 5 of Secret Project 004 as Combat Extended made my mod (Mostly) useless
+		- Added Patch For the Raid Patch
+			- Increased Points for Stage then Attack 1.0 -> 1.5
+			- Brought back all of the raid options (For the enemy of course)
+	- Failed to add More data to the steam page 
+	Handheld Puckle Gun 
+		- Weapon Sway 2.36 -> 3.72
+		- Shot spread 0.15 -> 0.17
+		- Recoil 1.25 -> 1.35
+		- Craft Skill Req. 7 -> 8
+		- Now Makeble at the smithy
+	- All Muskets now have Gun Weapon Tag. . . (oops)
+	25mm Anti Tank Rifle 
+		- Range 186 -> 156
+	- Secret Project 008 moved to 007

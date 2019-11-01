@@ -77,6 +77,9 @@
       </recipeUsers>
       <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
     </recipeMaker>
+	<weaponTags>
+      <li>Gun</li>
+    </weaponTags>
   </ThingDef>
   <!-- ==================== Luger ==================== -->
   <ThingDef ParentName="BaseHumanMakeableGun_CE">
@@ -1008,7 +1011,7 @@
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_25x163mm_FMJ</defaultProjectile>
         <warmupTime>3.2</warmupTime>
-        <range>186</range>
+        <range>156</range>
         <soundCast>HeavyMG</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
@@ -1260,7 +1263,7 @@
     </weaponTags>
   </ThingDef>
   <!-- ================== Assault musket ================== -->
-  <ThingDef ParentName="BaseHumanMakeableGun_CE">
+  <ThingDef ParentName="BaseHumanMakeableGun_CE_B">
     <defName>DA_1700SaltRifle</defName>
     <label>Handheld Puckle Gun</label>
     <graphicData>
@@ -1272,8 +1275,8 @@
     <statBases>
       <WorkToMake>22000</WorkToMake>
       <SightsEfficiency>0.7</SightsEfficiency>
-      <ShotSpread>0.15</ShotSpread>
-      <SwayFactor>2.36</SwayFactor>
+      <ShotSpread>0.17</ShotSpread>
+      <SwayFactor>3.72</SwayFactor>
 	  <Bulk>17.90</Bulk>
       <Mass>13.2</Mass>
       <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
@@ -1286,12 +1289,12 @@
 	<recipeMaker>
       <researchPrerequisite>Gunsmithing</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>7</Crafting>
+				<Crafting>8</Crafting>
 			</skillRequirements>
     </recipeMaker>
     <verbs>
       <li Class="CombatExtended.VerbPropertiesCE">
-        <recoilAmount>1.25</recoilAmount>
+        <recoilAmount>1.35</recoilAmount>
         <verbClass>CombatExtended.Verb_ShootCE</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_MusketBall_Steel</defaultProjectile>
