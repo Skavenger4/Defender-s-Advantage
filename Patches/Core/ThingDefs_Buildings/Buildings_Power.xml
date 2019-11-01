@@ -35,18 +35,3 @@
 			<li>Charcoal</li>
 		</value>
 	</Operation>
-<!--========Name Changes========-->	
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="WoodFiredGenerator"]/label</xpath>
-		<value>
-			<label>Solid Fueled Generator</label>
-		</value>
-	</Operation>
-	
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="ChemfuelPoweredGenerator"]/label</xpath>
-		<value>
-			<label>Fluid Fueled Generator</label>
-		</value>
-	</Operation>
-</Patch>

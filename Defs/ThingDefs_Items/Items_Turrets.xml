@@ -11,6 +11,19 @@
   -->
 
   <ThingDef ParentName="MinifiedBase">
+    <defName>MinifiedTurret_TPG_25Z</defName>
+    <label>Minified Puckle Gun</label>
+	<description>High Capacity Puckle Gun</description>
+    <statBases>
+      <Mass>50.0</Mass>
+      <Bulk>40</Bulk>
+    </statBases>
+	<thingCategories>
+      <li>WeaponsTurrets</li>
+    </thingCategories>
+  </ThingDef>
+  
+  <ThingDef ParentName="MinifiedBase">
     <defName>MinifiedTurret_TGUN_22LR</defName>
     <label>Very High Capacity American 180</label>
 	<description>Very High Capacity American 180</description>
@@ -181,7 +194,7 @@
   
   <ThingDef ParentName="MinifiedBase">
     <defName>MinifiedTurret_SG</defName>
-    <label>Fire Turret</label>
+    <label>Bus Blunderer</label>
 	<description>A Minified Shotgun Turret</description>
     <statBases>
       <Mass>1500</Mass>

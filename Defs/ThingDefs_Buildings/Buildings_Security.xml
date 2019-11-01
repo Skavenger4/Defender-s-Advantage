@@ -60,8 +60,8 @@
         <explosiveDamageType>APMine</explosiveDamageType>
         <startWickHitPointsPercent>0.2</startWickHitPointsPercent>
         <wickTicks>
-          <min>7</min>
-          <max>7</max>
+          <min>10</min>
+          <max>10</max>
         </wickTicks>
       </li>
 	</comps>
@@ -85,8 +85,8 @@
         <explosiveDamageType>ATMine</explosiveDamageType>
         <startWickHitPointsPercent>0.2</startWickHitPointsPercent>
         <wickTicks>
-          <min>7</min>
-          <max>7</max>
+          <min>10</min>
+          <max>10</max>
         </wickTicks>
       </li>
     </comps>

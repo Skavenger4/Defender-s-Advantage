@@ -16,6 +16,7 @@
     <ammoTypes>
       <Ammo_120mmS_Buck>Bullet_120mmS_Buck</Ammo_120mmS_Buck>
       <Ammo_120mmS_Bird>Bullet_120mmS_Bird</Ammo_120mmS_Bird>
+	  <Ammo_120mmS_Slug>Bullet_120mmS_Slug</Ammo_120mmS_Slug>
       <Ammo_120mmS_Beanbag>Bullet_120mmS_Beanbag</Ammo_120mmS_Beanbag>
     </ammoTypes>
   </CombatExtended.AmmoSetDef>
@@ -23,7 +24,7 @@
 	<!-- ==================== Ammo ========================== -->
 
   <ThingDef Class="CombatExtended.AmmoDef" Name="120mmSBase" ParentName="SmallAmmoBase" Abstract="True">
-    <description>Very uncommonly large shotgun shell used mostly for mass slaughter.</description>
+    <description>Absurdly large shotgun shell used mostly for mass slaughter.</description>
     <statBases>
 	  <Mass>15.043</Mass>
 	  <Bulk>10.06</Bulk>
@@ -40,7 +41,7 @@
 
   <ThingDef Class="CombatExtended.AmmoDef" ParentName="120mmSBase">
     <defName>Ammo_120mmS_Buck</defName>
-    <label>120mm shell (Buck)</label>
+    <label>120mm shell (Muffalo)</label>
     <graphicData>
       <texPath>Things/Ammo/Shotgun/Shot</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -54,7 +55,7 @@
 
   <ThingDef Class="CombatExtended.AmmoDef" ParentName="120mmSBase">
     <defName>Ammo_120mmS_Bird</defName>
-    <label>120mm shell (Bird)</label>
+    <label>120mm shell (Human)</label>
     <graphicData>
       <texPath>Things/Ammo/Shotgun/Shot</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -80,6 +81,20 @@
     <ammoClass>Beanbag</ammoClass>
     <cookOffProjectile>Bullet_120mmS_Beanbag</cookOffProjectile>
   </ThingDef>
+  
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="120mmSBase">
+    <defName>Ammo_120mmS_Slug</defName>
+    <label>120mm shell (Thrumbo)</label>
+    <graphicData>
+      <texPath>Things/Ammo/Shotgun/Shot</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>4.02</MarketValue>
+    </statBases>
+    <ammoClass>Slug</ammoClass>
+    <cookOffProjectile>Bullet_120mmS_Slug</cookOffProjectile>
+  </ThingDef>
 
 	<!-- ================== Projectiles ================== -->
 
@@ -94,14 +109,14 @@
 
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Base20GaugeBullet">
 		<defName>Bullet_120mmS_Buck</defName>
-		<label>buckshot pellet</label>
+		<label>Muffaloshot pellet</label>
 		<graphicData>
 			<texPath>Things/Projectile/Shotgun_Pellet</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageAmountBase>25</damageAmountBase>
-			<pelletCount>150</pelletCount>
+			<pelletCount>100</pelletCount>
 			<armorPenetrationBase>0.285</armorPenetrationBase>
 			<spreadMult>15.8</spreadMult>
 		</projectile>
@@ -109,14 +124,14 @@
 
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Base20GaugeBullet">
 		<defName>Bullet_120mmS_Bird</defName>
-		<label>birdshot pellet</label>
+		<label>Humanshot pellet</label>
 		<graphicData>
 			<texPath>Things/Projectile/Shotgun_Pellet</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>7</damageAmountBase>
-			<pelletCount>450</pelletCount>
+			<damageAmountBase>8</damageAmountBase>
+			<pelletCount>400</pelletCount>
 			<spreadMult>50.4</spreadMult>
 			<armorPenetrationBase>0.177</armorPenetrationBase>
 		</projectile>
@@ -135,6 +150,19 @@
 			<pelletCount>25</pelletCount>
 			<armorPenetrationBase>0.157</armorPenetrationBase>
 			<spreadMult>15</spreadMult>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Base20GaugeBullet">
+		<defName>Bullet_120mmS_Slug</defName>
+		<label>Thrumbo Shot</label>
+		<graphicData>
+			<texPath>Things/Projectile/Cannon/HEAT</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>400</damageAmountBase>
+			<armorPenetrationBase>2.517</armorPenetrationBase>
 		</projectile>
 	</ThingDef>
   	<!-- ==================== Recipes ========================== -->
@@ -190,6 +218,32 @@
     <workAmount>4000</workAmount>
   </RecipeDef>
 
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_120mmS_Slug</defName>
+    <label>make 120mm (Thrumbo) shell x5</label>
+    <description>Craft 5 120mm (Thrumbo) shells.</description>
+    <jobString>Making 120mm (Thrumbo) shells.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>45</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_120mmS_Slug>5</Ammo_120mmS_Slug>
+    </products>
+    <workAmount>4000</workAmount>
+  </RecipeDef>
+  
   <RecipeDef ParentName="AmmoRecipeBase">
     <defName>MakeAmmo_120mmS_Beanbag</defName>
     <label>make 120mm (Beanbag) shell x5</label>

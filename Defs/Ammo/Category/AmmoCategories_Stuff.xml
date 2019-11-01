@@ -6,6 +6,13 @@
 		<labelShort>Wooden Musket Ball</labelShort>
 		<description>Wooden bullets that are not able to stay in one piece after exiting the barrel.</description>
 	</CombatExtended.AmmoCategoryDef>
+	
+	<CombatExtended.AmmoCategoryDef>
+		<defName>StoneMB</defName>
+		<label>Stone Musket Ball</label>
+		<labelShort>Stone Musket Ball</labelShort>
+		<description>Stone bullets that are not able to stay in one piece after exiting the barrel they fragmet less than wood though.</description>
+	</CombatExtended.AmmoCategoryDef>
 
 	<CombatExtended.AmmoCategoryDef>
 		<defName>SilverMB</defName>
@@ -49,4 +56,25 @@
 		<description>Infectious Musket Ball filled with all sorts of nastiness, It's low armor penetration makes it good against unarmored targets.</description>
 	</CombatExtended.AmmoCategoryDef>
 
+	<CombatExtended.AmmoCategoryDef>
+		<defName>IncendiaryMB</defName>
+		<label>Incendiary Musket Ball</label>
+		<labelShort>Incendiary Musket Ball</labelShort>
+		<description>Incendiary Musket Ball filled with Prometheum, It's able to start significant fires.</description>
+	</CombatExtended.AmmoCategoryDef>
+	
+	<CombatExtended.AmmoCategoryDef>
+		<defName>HEMB</defName>
+		<label>High Explosive Musket Ball</label>
+		<labelShort>High Explosive Musket Ball</labelShort>
+		<description>exploding musket ball that does little explosive damage, But could spray fragments about the place.</description>
+	</CombatExtended.AmmoCategoryDef>
+	
+	<CombatExtended.AmmoCategoryDef>
+		<defName>SquareMB</defName>
+		<label>Square Musket Ball</label>
+		<labelShort>Square Musket Ball</labelShort>
+		<description>Square Musket Ball, seemingly ridiculous but with increased damage but poor armor penetration.</description>
+	</CombatExtended.AmmoCategoryDef>
+	
 </Defs>

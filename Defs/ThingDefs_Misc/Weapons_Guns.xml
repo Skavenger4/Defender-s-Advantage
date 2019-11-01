@@ -268,6 +268,12 @@
       <ComponentIndustrial>4</ComponentIndustrial>
       <WoodLog>15</WoodLog>
     </costList>
+	<recipeMaker>
+	  <researchPrerequisite>Gunsmithing</researchPrerequisite>
+	  <skillRequirements>
+		<Crafting>4</Crafting>
+	  </skillRequirements>
+	</recipeMaker>
     <verbs>
       <li Class="CombatExtended.VerbPropertiesCE">
         <verbClass>CombatExtended.Verb_ShootCE</verbClass>
@@ -329,11 +335,102 @@
 	  <li>CE_AI_Rifle</li>
     </weaponTags>
   </ThingDef>
+  <!-- ==================== MS-162 ==================== -->
+  <ThingDef ParentName="BaseHumanMakeableGun_CE">
+    <defName>DA_MS160Z</defName>
+    <label>MS-162</label>
+    <description>Designed by Non-spacers and mostly reversed engineered from charge blasters/Lances from bricked Mechanoids that has a very fast shot with low recoil and wooden constuction.</description>
+    <graphicData>
+      <texPath>Things/Weapons/MS-160</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <statBases>
+      <WorkToMake>54000</WorkToMake>
+      <SightsEfficiency>1.2</SightsEfficiency>
+      <ShotSpread>0.05</ShotSpread>
+      <SwayFactor>1.21</SwayFactor>
+      <Bulk>11.75</Bulk>
+      <Mass>10.24</Mass>
+      <RangedWeapon_Cooldown>0.55</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>50</Steel>
+      <ComponentIndustrial>10</ComponentIndustrial>
+	  <Plasteel>10</Plasteel>
+	  <WoodLog>10</WoodLog>
+    </costList>
+	<recipeMaker>
+	  <researchPrerequisite>Gunsmithing</researchPrerequisite>
+	  <skillRequirements>
+		<Crafting>9</Crafting>
+	  </skillRequirements>
+	</recipeMaker>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_5x35mmCharged</defaultProjectile>
+        <warmupTime>0.8</warmupTime>
+        <range>60</range>
+        <soundCast>ChargeLance_Fire</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>10</magazineSize>
+		<reloadOneAtATime>true</reloadOneAtATime>
+		<reloadTime>0.6</reloadTime>
+        <ammoSet>AmmoSet_5x35mmCharged</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+        <aiAimMode>AimedShot</aiAimMode>
+      </li>
+    </comps>
+	<tools>
+        <li Class="CombatExtended.ToolCE">
+          <label>stock</label>
+          <capacities>
+            <li>Blunt</li>
+          </capacities>
+          <power>9</power>
+          <cooldownTime>1.8</cooldownTime>
+          <chanceFactor>1.5</chanceFactor>
+          <armorPenetration>0.11</armorPenetration>
+          <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+        </li>
+        <li Class="CombatExtended.ToolCE">
+          <label>barrel</label>
+          <capacities>
+            <li>Blunt</li>
+          </capacities>
+          <power>10</power>
+          <cooldownTime>1.9</cooldownTime>
+          <armorPenetration>0.118</armorPenetration>
+          <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+        </li>
+        <li Class="CombatExtended.ToolCE">
+          <label>muzzle</label>
+          <capacities>
+            <li>Poke</li>
+          </capacities>
+          <power>10</power>
+          <cooldownTime>1.9</cooldownTime>
+          <armorPenetration>0.086</armorPenetration>
+          <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+        </li>
+      </tools>
+	<weaponTags>
+	  <li>CE_AI_Rifle</li>
+    </weaponTags>
+  </ThingDef>
   <!-- ==================== MS-620 ==================== -->
   <ThingDef ParentName="BaseHumanMakeableGun_CE">
     <defName>DA_MS620Z</defName>
     <label>MS-620</label>
-    <description>Designed and originaly used to solve the question what do we do with all of these mechanoid bullets?.</description>
+    <description>Designed by Non-spacers and mostly reversed engineered from charge blasters/Lances from bricked Mechanoids that has a very powerful shot with moderate recoil and wooden constuction.</description>
     <graphicData>
       <texPath>Things/Weapons/MS-620</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -346,21 +443,27 @@
       <SwayFactor>1.31</SwayFactor>
       <Bulk>13.25</Bulk>
       <Mass>12.29</Mass>
-      <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+      <RangedWeapon_Cooldown>0.75</RangedWeapon_Cooldown>
     </statBases>
     <costList>
       <Steel>50</Steel>
-      <ComponentIndustrial>4</ComponentIndustrial>
-	  <ComponentSpacer>1</ComponentSpacer>
-	  <Plasteel>25</Plasteel>
+      <ComponentIndustrial>15</ComponentIndustrial>
+	  <Plasteel>15</Plasteel>
+	  <WoodLog>15</WoodLog>
     </costList>
+	<recipeMaker>
+	  <researchPrerequisite>Gunsmithing</researchPrerequisite>
+	  <skillRequirements>
+		<Crafting>9</Crafting>
+	  </skillRequirements>
+	</recipeMaker>
     <verbs>
       <li Class="CombatExtended.VerbPropertiesCE">
         <verbClass>CombatExtended.Verb_ShootCE</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_12x64mmCharged</defaultProjectile>
         <warmupTime>1.3</warmupTime>
-        <range>75</range>
+        <range>80</range>
         <soundCast>Shot_ChargeBlaster</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
@@ -369,7 +472,8 @@
     <comps>
       <li Class="CombatExtended.CompProperties_AmmoUser">
         <magazineSize>5</magazineSize>
-        <reloadTime>7.2</reloadTime>
+   		<reloadOneAtATime>true</reloadOneAtATime>
+		<reloadTime>0.8</reloadTime>
         <ammoSet>AmmoSet_12x64mmCharged</ammoSet>
       </li>
       <li Class="CombatExtended.CompProperties_FireModes">
@@ -439,6 +543,9 @@
     </costList>
 	<recipeMaker>
       <researchPrerequisite>BlowbackOperation</researchPrerequisite>
+	  <skillRequirements>
+		<Crafting>6</Crafting>
+	  </skillRequirements>
     </recipeMaker>
     <verbs>
       <li Class="CombatExtended.VerbPropertiesCE">
@@ -555,6 +662,9 @@
     </comps>
     <recipeMaker>
       <researchPrerequisite>CE_Launchers</researchPrerequisite>
+	  <skillRequirements>
+				<Crafting>8</Crafting>
+	  </skillRequirements>
     </recipeMaker>
       <tools>
         <li Class="CombatExtended.ToolCE">
@@ -614,6 +724,12 @@
       <ComponentIndustrial>3</ComponentIndustrial>
 	  <WoodLog>15</WoodLog>
     </costList>
+	<recipeMaker>
+      <researchPrerequisite>BlowbackOperation</researchPrerequisite>
+	  <skillRequirements>
+				<Crafting>8</Crafting>
+	  </skillRequirements>
+    </recipeMaker>
     <verbs>
       <li Class="CombatExtended.VerbPropertiesCE">
         <recoilAmount>0.50</recoilAmount>
@@ -756,7 +872,7 @@
           <power>11</power>
           <cooldownTime>1.9</cooldownTime>
 		  <chanceFactor>3.0</chanceFactor>
-          <armorPenetration>0.546</armorPenetration>
+          <armorPenetration>0.446</armorPenetration>
           <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
         </li>
       </tools>
@@ -1141,6 +1257,105 @@
       <li>CE_MachineGun</li>  
 	  <li>CE_AI_AssaultWeapon</li>
 	  <li>AdvancedGun</li>
+    </weaponTags>
+  </ThingDef>
+  <!-- ================== Assault musket ================== -->
+  <ThingDef ParentName="BaseHumanMakeableGun_CE">
+    <defName>DA_1700SaltRifle</defName>
+    <label>Handheld Puckle Gun</label>
+    <graphicData>
+      <texPath>Things/Weapons/1776R</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	<soundInteract>Interact_Rifle</soundInteract>
+    <description>Rather heavy and carriable gatling Gun with a revolver assembly as the magazine it could hold 10 Musket balls, this could be rather devestating if the user has uranium, infected or High Explosive musket balls.</description>
+    <statBases>
+      <WorkToMake>22000</WorkToMake>
+      <SightsEfficiency>0.7</SightsEfficiency>
+      <ShotSpread>0.15</ShotSpread>
+      <SwayFactor>2.36</SwayFactor>
+	  <Bulk>17.90</Bulk>
+      <Mass>12.2</Mass>
+      <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+    </statBases>
+	<costList>
+      <Steel>85</Steel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+	  <WoodLog>15</WoodLog>
+    </costList>
+	<recipeMaker>
+      <researchPrerequisite>Gunsmithing</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>7</Crafting>
+			</skillRequirements>
+    </recipeMaker>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>1.25</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_MusketBall_Steel</defaultProjectile>
+        <warmupTime>1.1</warmupTime>
+        <range>32</range>
+        <ticksBetweenBurstShots>16</ticksBetweenBurstShots>
+        <burstShotCount>10</burstShotCount>
+        <soundCast>Shot_AssaultRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>10</muzzleFlashScale>
+        <recoilPattern>Mounted</recoilPattern>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>10</magazineSize>
+        <reloadTime>1.1</reloadTime>
+		<reloadOneAtATime>true</reloadOneAtATime>
+        <spawnUnloaded>TRUE</spawnUnloaded>
+        <ammoSet>AmmoSet_MusketBall</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+        <aimedBurstShotCount>5</aimedBurstShotCount>
+        <aiAimMode>SuppressFire</aiAimMode>
+      </li>
+    </comps>
+		<tools>
+		<li Class="CombatExtended.ToolCE">
+          <label>Shoulder rest</label>
+          <capacities>
+            <li>Blunt</li>
+          </capacities>
+          <power>13</power>
+          <cooldownTime>1.8</cooldownTime>
+          <chanceFactor>1.5</chanceFactor>
+          <armorPenetration>0.11</armorPenetration>
+          <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+        </li>
+        <li Class="CombatExtended.ToolCE">
+          <label>Revolver assembly</label>
+          <capacities>
+            <li>Blunt</li>
+          </capacities>
+          <power>9</power>
+          <cooldownTime>1.2</cooldownTime>
+          <armorPenetration>0.218</armorPenetration>
+          <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+        </li>
+        <li Class="CombatExtended.ToolCE">
+          <label>Bayonet</label>
+          <capacities>
+            <li>Stab</li>
+          </capacities>
+          <power>12</power>
+          <cooldownTime>1.9</cooldownTime>
+		  <chanceFactor>2.0</chanceFactor>
+          <armorPenetration>0.386</armorPenetration>
+          <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+        </li>
+      </tools>
+	<weaponTags>
+      <li>VSimpleGun</li>  
+      <li>SimpleGun</li> 
+	  <li>CE_AI_AssaultWeapon</li>
     </weaponTags>
   </ThingDef>
 </Defs>

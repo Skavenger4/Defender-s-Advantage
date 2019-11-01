@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	
+	<!-- ================== HE Musket Ball ================== -->
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseFragment">
+		<defName>Fragment_Tiny</defName>
+		<label>small fragments</label>
+		<graphicData>
+			<texPath>Things/Projectile/Fragments/Fragment_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>Fragment</damageDef>
+			<damageAmountBase>5</damageAmountBase>
+			<speed>20</speed>
+			<armorPenetrationBase>0.15</armorPenetrationBase>
+			<gravityFactor>15</gravityFactor>
+		</projectile>
+	</ThingDef>
+
+</Defs>
