@@ -16,8 +16,8 @@
     <ammoTypes>
       <Ammo_120mmS_Buck>Bullet_120mmS_Buck</Ammo_120mmS_Buck>
       <Ammo_120mmS_Bird>Bullet_120mmS_Bird</Ammo_120mmS_Bird>
-	  <Ammo_120mmS_Slug>Bullet_120mmS_Slug</Ammo_120mmS_Slug>
       <Ammo_120mmS_Beanbag>Bullet_120mmS_Beanbag</Ammo_120mmS_Beanbag>
+	  <Ammo_120mmS_Slug>Bullet_120mmS_Slug</Ammo_120mmS_Slug>
     </ammoTypes>
   </CombatExtended.AmmoSetDef>
 	
@@ -92,7 +92,7 @@
     <statBases>
       <MarketValue>4.02</MarketValue>
     </statBases>
-    <ammoClass>Slug</ammoClass>
+    <ammoClass>BuckShot</ammoClass>
     <cookOffProjectile>Bullet_120mmS_Slug</cookOffProjectile>
   </ThingDef>
 
@@ -219,32 +219,6 @@
   </RecipeDef>
 
   <RecipeDef ParentName="AmmoRecipeBase">
-    <defName>MakeAmmo_120mmS_Slug</defName>
-    <label>make 120mm (Thrumbo) shell x5</label>
-    <description>Craft 5 120mm (Thrumbo) shells.</description>
-    <jobString>Making 120mm (Thrumbo) shells.</jobString>
-    <ingredients>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>Steel</li>
-          </thingDefs>
-        </filter>
-        <count>45</count>
-      </li>
-    </ingredients>
-    <fixedIngredientFilter>
-      <thingDefs>
-        <li>Steel</li>
-      </thingDefs>
-    </fixedIngredientFilter>
-    <products>
-      <Ammo_120mmS_Slug>5</Ammo_120mmS_Slug>
-    </products>
-    <workAmount>4000</workAmount>
-  </RecipeDef>
-  
-  <RecipeDef ParentName="AmmoRecipeBase">
     <defName>MakeAmmo_120mmS_Beanbag</defName>
     <label>make 120mm (Beanbag) shell x5</label>
     <description>Craft 5 120mm (Beanbag) shells.</description>
@@ -278,5 +252,31 @@
     </products>
     <workAmount>2500</workAmount>
   </RecipeDef>
-	
+  
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_120mmS_Slug</defName>
+    <label>make 120mm (Thrumbo) shell x5</label>
+    <description>Craft 5 120mm (Thrumbo) shells.</description>
+    <jobString>Making 120mm (Thrumbo) shells.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>45</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_120mmS_Slug>5</Ammo_120mmS_Slug>
+    </products>
+    <workAmount>4000</workAmount>
+  </RecipeDef>
+  
 </Defs>
