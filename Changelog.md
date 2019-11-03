@@ -57,3 +57,77 @@ Version 1.2.1
 	25mm Anti Tank Rifle 
 		- Range 186 -> 156
 	- Secret Project 008 moved to 007
+Hot Fix
+*Removal of in-progress error causing patch*
+
+Version 1.3.0 (Reduced Morality + Increased chance of suffering + More usable Flamethrower Edition)
+Project 003 mostly Implemented
+Project 004 Implemented
+	Lance Charger
+		- Range 50 -> 55
+	Research
+		- MS - 620/MS - 162 now require Precision Rifling
+		+ Int. Skill to craft (7/5 Respectively)
+		Ms - 162 Crafting 9 -> 8
+		- Puckle Gun now requires smithing from gunsmithing
+	- Made it so Infected bullets don't affect mechanoids
+	- Considering the consideration of making Uranium bullets not work against mechanoids as well
+	Steel Musket Ball
+		- AP .35 -> .40
+	Silver Musket Ball
+		- Damage 18 -> 21
+		- AP .30 -> .25
+		- Material Recovery chance 5% -> 45%
+	Gold Musket Ball
+		- Damage 24 -> 25
+		- AP .20 -> .15
+		- Material Recovery chance 5% -> 45%
+	Wooden Musket Ball
+		- Speed 85 -> 75
+	Square Musket Ball
+		- Speed 85 -> 75
+		- Spread Multiplier 500% -> 450%
+	Incendiary Musket Ball
+		- Fire Statring 50% -> 75% Chance
+	25mm HE
+		- Damage 75 -> 50
+	25mm HEAT	
+		- Damage 42 -> 32
+	25mm Incendiary	
+		- Damage 20 -> 30
+	Secret Project 007 (40x158mm)
+		HE Damage 125 -> 100
+		EMP Added (Non-Exploding)
+Update Relevant Pictures 
+	Added Musket Using Tribal like Raiders (with less morality & more slaves this time)
+		- Needs new game to work though
+		Added Outcasts 
+			- Also Known as Cannon fodder, for backstory and lore
+			- only clubs and sometimes no clothes 
+			- could swarm a base with shear numbers
+		Added Musketeers 
+			- could be wearing armored apparel 
+			- Only Muskets and sometimes a liberator
+			- Could cause significant damage as there will be several
+		Added Heavy Musketeers 
+			- could be wearing armored apparel
+			- Always has a Hnadheld Puckle Gun (1776'r) and a good amount of ammunition
+			- very common at their settlements, heavy assault Groups and caravans
+			- normally has low quality main weapon though
+		Added General
+			- doesn't have a musket but a normal LMG as they are the leader of the faction
+			- Could arrive with an awful lot of outcasts to improve their own survival chances
+	Staring at the consideration of adding a wooly category
+	There may be some log errors marked in red
+	If you notice strange behavior with this mod
+*Secret Project 005 Activated*
+	*Hint* for Secret Project 005, look in the texture files.
+			
+		
+		
+		
+		
+		
+		
+		
+		

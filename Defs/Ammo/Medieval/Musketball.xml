@@ -203,7 +203,7 @@
 				<explosionDamageDef>PrometheumFlame</explosionDamageDef>
 				<explosionRadius>1</explosionRadius>
 				<preExplosionSpawnThingDef>FilthPrometheum</preExplosionSpawnThingDef>
-				<preExplosionSpawnChance>0.5</preExplosionSpawnChance>
+				<preExplosionSpawnChance>0.75</preExplosionSpawnChance>
 				<soundExplode>MortarIncendiary_Explode</soundExplode>
 				<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
 			</li>
@@ -246,7 +246,7 @@
 			<pelletCount>24</pelletCount>
 			<spreadMult>20</spreadMult>
 			<armorPenetrationBase>0.08</armorPenetrationBase>
-			<speed>85</speed>
+			<speed>75</speed>
 		</projectile>
 	</ThingDef>
 	
@@ -267,7 +267,7 @@
 		<label>Musket Ball (Steel)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageAmountBase>18</damageAmountBase>
-			<armorPenetrationBase>0.35</armorPenetrationBase>
+			<armorPenetrationBase>0.40</armorPenetrationBase>
 		</projectile>
 	</ThingDef>
 
@@ -284,9 +284,9 @@
 		<defName>Bullet_MusketBall_Silver</defName>
 		<label>Musket Ball (Silver)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>18</damageAmountBase>
-			<armorPenetrationBase>0.30</armorPenetrationBase>
-			<preExplosionSpawnChance>0.05</preExplosionSpawnChance>	
+			<damageAmountBase>21</damageAmountBase>
+			<armorPenetrationBase>0.25</armorPenetrationBase>
+			<preExplosionSpawnChance>0.45</preExplosionSpawnChance>	
 			<preExplosionSpawnThingDef>Silver</preExplosionSpawnThingDef>
 		</projectile>
 	</ThingDef>
@@ -295,9 +295,9 @@
 		<defName>Bullet_MusketBall_Gold</defName>
 		<label>Musket Ball (Gold)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>24</damageAmountBase>
-			<armorPenetrationBase>0.20</armorPenetrationBase>
-			<preExplosionSpawnChance>0.05</preExplosionSpawnChance>	
+			<damageAmountBase>25</damageAmountBase>
+			<armorPenetrationBase>0.15</armorPenetrationBase>
+			<preExplosionSpawnChance>0.45</preExplosionSpawnChance>	
 			<preExplosionSpawnThingDef>Gold</preExplosionSpawnThingDef>
 		</projectile>
 	</ThingDef>
@@ -364,9 +364,9 @@
 		<label>Musket Ball (Square)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageAmountBase>22</damageAmountBase>
-			<spreadMult>5</spreadMult>
+			<spreadMult>4.5</spreadMult>
 			<armorPenetrationBase>0.20</armorPenetrationBase>
-			<speed>85</speed>
+			<speed>75</speed>
 		</projectile>
 	</ThingDef>
   <!-- ==================== Recipes ========================== -->

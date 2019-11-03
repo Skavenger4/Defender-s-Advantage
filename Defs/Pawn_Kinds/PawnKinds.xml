@@ -51,9 +51,9 @@
   <PawnKindDef ParentName="TribalBase">
     <defName>TribalMusketeer</defName>
     <label>Musketeer</label>
-    <combatPower>50</combatPower>
+    <combatPower>65</combatPower>
     <minGenerationAge>15</minGenerationAge>
-    <maxGenerationAge>55</maxGenerationAge>
+    <maxGenerationAge>35</maxGenerationAge>
     <gearHealthRange>
       <min>0.4</min>
       <max>1.7</max>
@@ -64,6 +64,8 @@
     </apparelMoney>
     <apparelTags>
       <li>Tribal</li>
+	  <li>IndustrialBasic</li>
+	  <li>IndustrialMilitaryBasic</li>
     </apparelTags>
 	<apparelRequired>
       <li>Apparel_TribalBackpack</li>
@@ -78,7 +80,7 @@
     <modExtensions>
       <li Class="CombatExtended.LoadoutPropertiesExtension">
         <primaryMagazineCount>
-          <min>5</min>
+          <min>15</min>
           <max>20</max>
         </primaryMagazineCount>
         <sidearms>
@@ -93,6 +95,177 @@
             </weaponTags>
           </li>
         </sidearms>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="TribalBase">
+    <defName>HeavyMusketeer</defName>
+    <label>Heavy Musketeer</label>
+    <combatPower>105</combatPower>
+    <minGenerationAge>25</minGenerationAge>
+    <maxGenerationAge>55</maxGenerationAge>
+    <gearHealthRange>
+      <min>0.4</min>
+      <max>1.7</max>
+    </gearHealthRange>
+    <apparelMoney>
+      <min>400</min>
+      <max>650</max>
+    </apparelMoney>
+    <apparelTags>
+      <li>Tribal</li>
+	  <li>IndustrialBasic</li>
+	  <li>IndustrialMilitaryBasic</li>
+    </apparelTags>
+	<apparelRequired>
+      <li>Apparel_TribalBackpack</li>
+    </apparelRequired>
+    <weaponMoney>
+      <min>420</min>
+      <max>620</max>
+    </weaponMoney>
+    <weaponTags>
+	  <li>Gat_Gun</li>
+    </weaponTags>
+    <modExtensions>
+      <li Class="CombatExtended.LoadoutPropertiesExtension">
+        <primaryMagazineCount>
+          <min>5</min>
+          <max>10</max>
+        </primaryMagazineCount>
+        <sidearms>
+          <li>
+            <sidearmMoney>
+              <min>20</min>
+              <max>120</max>
+            </sidearmMoney>
+            <weaponTags>
+			  <li>CE_Sidearm</li>
+              <li>CE_Sidearm_Tribal</li>
+			  <li>VSimple_Sidearm</li>
+            </weaponTags>
+          </li>
+        </sidearms>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TribalBase">
+    <defName>MusketeerGrenadier</defName>
+    <label>Grenadier</label>
+    <combatPower>65</combatPower>
+    <maxGenerationAge>30</maxGenerationAge>
+    <canBeSapper>true</canBeSapper>
+    <gearHealthRange>
+      <min>0.5</min>
+      <max>1.8</max>
+    </gearHealthRange>
+    <apparelMoney>
+      <min>180</min>
+      <max>450</max>
+    </apparelMoney>
+    <apparelRequired>
+      <li>Apparel_TribalBackpack</li>
+	</apparelRequired>
+    <apparelTags>
+      <li>Tribal</li>
+	  <li>IndustrialBasic</li>
+    </apparelTags>
+    <weaponMoney>
+      <min>60</min>
+      <max>400</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>CE_GrenadeNeolithic</li>
+	  <li>GrenadeDestructive</li>
+    </weaponTags>
+    <modExtensions>
+      <li Class="CombatExtended.LoadoutPropertiesExtension">
+        <primaryMagazineCount>
+          <min>10</min>
+          <max>30</max>
+        </primaryMagazineCount>
+        <forcedSidearm>
+          <sidearmMoney>
+            <min>80</min>
+            <max>160</max>
+          </sidearmMoney>
+          <weaponTags>
+            <li>CE_Sidearm_Tribal</li>
+			<li>CE_Sidearm_Melee</li>
+			<li>VSimple_Sidearm</li>
+          </weaponTags>
+        </forcedSidearm>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TribalBase">
+    <defName>MusketeerOutcast</defName>
+    <label>Outcasts</label>
+    <combatPower>15</combatPower>
+    <maxGenerationAge>75</maxGenerationAge>
+    <canBeSapper>true</canBeSapper>
+    <gearHealthRange>
+      <min>0.1</min>
+      <max>0.8</max>
+    </gearHealthRange>
+    <apparelMoney>
+      <min>20</min>
+      <max>150</max>
+    </apparelMoney>
+    <apparelTags>
+      <li>Tribal</li>
+    </apparelTags>
+    <weaponMoney>
+      <min>42</min>
+      <max>80</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>CE_Sidearm_Tribal</li>
+    </weaponTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="TribalBase">
+    <defName>MusketeerGeneral</defName>
+    <label>General</label>
+	<factionLeader>true</factionLeader>
+    <combatPower>175</combatPower>
+    <baseRecruitDifficulty>0.95</baseRecruitDifficulty>
+    <gearHealthRange>
+      <min>1.0</min>
+      <max>1.8</max>
+    </gearHealthRange>
+    <apparelMoney>
+      <min>400</min>
+      <max>1050</max>
+    </apparelMoney>
+    <apparelRequired>
+      <li>Apparel_Backpack</li>
+	</apparelRequired>
+    <apparelTags>
+	  <li>IndustrialMilitaryBasic</li>
+    </apparelTags>
+    <weaponMoney>
+      <min>400</min>
+      <max>1000</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>CE_MachineGun</li>
+    </weaponTags>
+    <modExtensions>
+      <li Class="CombatExtended.LoadoutPropertiesExtension">
+        <primaryMagazineCount>
+          <min>3</min>
+          <max>5</max>
+        </primaryMagazineCount>
+        <forcedSidearm>
+          <sidearmMoney>
+            <min>80</min>
+            <max>460</max>
+          </sidearmMoney>
+          <weaponTags>
+			<li>CE_Sidearm</li>
+          </weaponTags>
+        </forcedSidearm>
       </li>
     </modExtensions>
   </PawnKindDef>

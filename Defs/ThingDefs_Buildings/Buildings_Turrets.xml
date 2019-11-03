@@ -132,7 +132,9 @@
 	<specialDisplayRadius>37</specialDisplayRadius>
     <minifiedDef>MinifiedThing</minifiedDef>
 	<recipeMaker>
-      <researchPrerequisite>Gunsmithing</researchPrerequisite>
+	  <skillRequirements>
+		<Crafting>8</Crafting>
+	  </skillRequirements>
     </recipeMaker>
   </ThingDef>
   <!--=============== Auto Rec.SMG ===============-->

@@ -364,9 +364,10 @@
 	  <WoodLog>10</WoodLog>
     </costList>
 	<recipeMaker>
-	  <researchPrerequisite>Gunsmithing</researchPrerequisite>
+	  <researchPrerequisite>PrecisionRifling</researchPrerequisite>
 	  <skillRequirements>
-		<Crafting>9</Crafting>
+		<Crafting>8</Crafting>
+		<Intellectual>5</Intellectual>
 	  </skillRequirements>
 	</recipeMaker>
     <verbs>
@@ -427,6 +428,7 @@
       </tools>
 	<weaponTags>
 	  <li>CE_AI_Rifle</li>
+	  <li>Simp_Charged</li>
     </weaponTags>
   </ThingDef>
   <!-- ==================== MS-620 ==================== -->
@@ -442,7 +444,7 @@
     <statBases>
       <WorkToMake>64000</WorkToMake>
       <SightsEfficiency>1.2</SightsEfficiency>
-      <ShotSpread>0.04</ShotSpread>
+      <ShotSpread>0.05</ShotSpread>
       <SwayFactor>1.31</SwayFactor>
       <Bulk>13.25</Bulk>
       <Mass>12.29</Mass>
@@ -455,9 +457,10 @@
 	  <WoodLog>15</WoodLog>
     </costList>
 	<recipeMaker>
-	  <researchPrerequisite>Gunsmithing</researchPrerequisite>
+	  <researchPrerequisite>PrecisionRifling</researchPrerequisite>
 	  <skillRequirements>
 		<Crafting>9</Crafting>
+		<Intellectual>7</Intellectual>
 	  </skillRequirements>
 	</recipeMaker>
     <verbs>
@@ -517,6 +520,7 @@
         </li>
       </tools>
 	<weaponTags>
+	  <li>Heavy_Simp_Charged</li>
 	  <li>CE_AI_Rifle</li>
     </weaponTags>
   </ThingDef>
@@ -880,6 +884,7 @@
         </li>
       </tools>
 	<weaponTags>
+	  <li>CE_AI_Rifle</li>
       <li>SimpleGun</li>
 	  <li>VSimpleGun</li>
 	  <li>Gun</li>
@@ -967,7 +972,7 @@
         </li>
       </tools>
 	<weaponTags>
-	  <li>Gun</li>
+	  <li>CE_AI_Rifle</li>
       <li>SimpleGun</li>
 	  <li>VSimpleGun</li>
     </weaponTags>
@@ -1172,7 +1177,7 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
 	<soundInteract>Interact_Rifle</soundInteract>
-    <description>Prototype Automatic Charge Lance that makes use of lancer bullets when there are no trade ships around, has a good fire rate but low range on single fire mode it's as good as a rifle. uses wood construction as it keeps the weight down.</description>
+    <description>Prototype Automatic Charge Lance that makes use of lancer bullets when there are no trade ships around, has a good fire rate but low range on single fire mode it's as good as a rifle. uses wood construction as it keeps the weight down, there is a magazine off to the side that makes it awkward to use.</description>
     <statBases>
       <WorkToMake>125000</WorkToMake>
       <SightsEfficiency>1.7</SightsEfficiency>
@@ -1202,10 +1207,10 @@
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_5x35mmCharged</defaultProjectile>
         <warmupTime>1.1</warmupTime>
-        <range>50</range>
+        <range>55</range>
         <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
         <burstShotCount>10</burstShotCount>
-        <soundCast>Shot_ChargeBlaster</soundCast>
+        <soundCast>ChargeLance_Fire</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
         <muzzleFlashScale>10</muzzleFlashScale>
         <recoilPattern>Mounted</recoilPattern>
@@ -1287,10 +1292,9 @@
 	  <WoodLog>15</WoodLog>
     </costList>
 	<recipeMaker>
-      <researchPrerequisite>Gunsmithing</researchPrerequisite>
-			<skillRequirements>
-				<Crafting>8</Crafting>
-			</skillRequirements>
+	  <skillRequirements>
+		<Crafting>8</Crafting>
+	  </skillRequirements>
     </recipeMaker>
     <verbs>
       <li Class="CombatExtended.VerbPropertiesCE">
@@ -1356,7 +1360,7 @@
         </li>
       </tools>
 	<weaponTags>
-      <li>VSimpleGun</li>  
+      <li>Gat_Gun</li>  
       <li>SimpleGun</li> 
 	  <li>CE_AI_AssaultWeapon</li>
     </weaponTags>

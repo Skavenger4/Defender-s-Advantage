@@ -41,18 +41,18 @@
 	<cookOffFlashScale>20</cookOffFlashScale>
   </ThingDef>
 
- 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo25x163mmBase">
-		<defName>Ammo_25x163mm_FMJ</defName>
-		<label>25x163mm cartridge (FMJ)</label>
-		<graphicData>
-			<texPath>Things/Ammo/HighCaliber/FMJ</texPath>
-			<graphicClass>Graphic_StackCount</graphicClass>
-		</graphicData>
-		<statBases>
-			<MarketValue>1.03</MarketValue>
-		</statBases>
-		<ammoClass>FullMetalJacket</ammoClass>
-		<cookOffProjectile>Bullet_25x163mm_FMJ</cookOffProjectile>
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo25x163mmBase">
+	<defName>Ammo_25x163mm_FMJ</defName>
+	<label>25x163mm cartridge (FMJ)</label>
+	<graphicData>
+	  <texPath>Things/Ammo/HighCaliber/FMJ</texPath>
+	  <graphicClass>Graphic_StackCount</graphicClass>
+	</graphicData>
+	<statBases>
+	  <MarketValue>1.03</MarketValue>
+	</statBases>
+	<ammoClass>FullMetalJacket</ammoClass>
+	<cookOffProjectile>Bullet_25x163mm_FMJ</cookOffProjectile>
 	</ThingDef>
   
   <ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo25x163mmBase">
@@ -65,10 +65,10 @@
     <statBases>
       <MarketValue>2.03</MarketValue>
     </statBases>
-		<ammoClass>GrenadeHE</ammoClass>
+	<ammoClass>GrenadeHE</ammoClass>
     <comps>
       <li Class="CombatExtended.CompProperties_ExplosiveCE">
-        <explosionDamage>75</explosionDamage>
+        <explosionDamage>50</explosionDamage>
         <explosionDamageDef>Bomb</explosionDamageDef>
         <explosionRadius>1</explosionRadius>
         <fragments>
@@ -165,7 +165,7 @@
 	<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
     <projectile Class="CombatExtended.ProjectilePropertiesCE">
       <damageDef>Bomb</damageDef>
-      <damageAmountBase>75</damageAmountBase>
+      <damageAmountBase>50</damageAmountBase>
       <explosionRadius>1</explosionRadius>
 		  <soundExplode>MortarBomb_Explode</soundExplode>
       <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
@@ -173,7 +173,7 @@
 		<comps>
 			<li Class="CombatExtended.CompProperties_ExplosiveCE">
 				<fragments>
-          <Fragment_Shell>45</Fragment_Shell>
+					<Fragment_Shell>45</Fragment_Shell>
 				</fragments>
 			</li>
 		</comps>
@@ -188,7 +188,7 @@
       <secondaryDamage>
         <li>
           <def>Bomb_Secondary</def>
-          <amount>42</amount>
+          <amount>32</amount>
         </li>
       </secondaryDamage>
     </projectile>
@@ -199,7 +199,7 @@
     <label>25x163mm bullet (AP-I)</label>
     <projectile Class="CombatExtended.ProjectilePropertiesCE">
       <damageDef>PrometheumFlame</damageDef>
-      <damageAmountBase>20</damageAmountBase>
+      <damageAmountBase>30</damageAmountBase>
       <explosionRadius>2</explosionRadius>
 	  <preExplosionSpawnThingDef>FilthPrometheum</preExplosionSpawnThingDef>
 	  <soundExplode>MortarIncendiary_Explode</soundExplode>

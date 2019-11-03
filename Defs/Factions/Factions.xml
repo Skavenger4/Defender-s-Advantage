@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <FactionDef ParentName="HumanFactionBase" Name="Musketeer_Base" Abstract="True">
+    <pawnSingular>Musket Man</pawnSingular>
+    <pawnsPlural>Musket Men</pawnsPlural>
+    <listOrderPriority>20</listOrderPriority>
+    <settlementGenerationWeight>1</settlementGenerationWeight>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <canMakeRandomly>true</canMakeRandomly>
+    <canStageAttacks>true</canStageAttacks>
+    <expandingIconTexture>Locations/Musketeerbase</expandingIconTexture>
+		<geneticVariance>2</geneticVariance>
+    <factionNameMaker>NamerFactionTribal</factionNameMaker>
+    <settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+    <pawnNameMaker>NamerPersonTribal</pawnNameMaker>
+    <techLevel>Medieval</techLevel>
+    <backstoryCategories>
+      <li>Tribal</li>
+	  <li>Civil</li>
+    </backstoryCategories>
+	<rescueesCanJoin>true</rescueesCanJoin>
+    <leaderTitle>general</leaderTitle>
+    <hairTags>
+      <li>Tribal</li>
+	  <li>Rural</li>
+	  <li>Urban</li>
+    </hairTags>
+	<caravanTraderKinds>
+      <li>Caravan_Outlander_BulkGoods</li>
+      <li>Caravan_Outlander_PirateMerchant</li>
+    </caravanTraderKinds>
+    <visitorTraderKinds>
+      <li>Visitor_Outlander_Standard</li>
+    </visitorTraderKinds>
+    <baseTraderKinds>
+      <li>Base_Outlander_Standard</li>
+    </baseTraderKinds>
+    <raidCommonalityFromPointsCurve>
+      <points>
+        <li>(0, 0.1)</li>
+		<li>(100, 0.3)</li>
+		<li>(200, 0.7)</li>
+		<li>(300, 0.9)</li>
+		<li>(400, 1.0)</li>
+		<li>(5000, 1.5)</li>
+      </points>
+    </raidCommonalityFromPointsCurve>
+    <allowedArrivalTemperatureRange>
+      <min>-50</min>
+      <max>55</max>
+    </allowedArrivalTemperatureRange>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,35)</li>
+        <li>(70, 50)</li>
+        <li>(800, 95)</li>
+        <li>(1300, 250)</li>
+        <li>(100000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+    <pawnGroupMakers>
+      <li>
+        <!-- Standard fights, ranged with Cannon Fodder -->
+        <kindDef>Combat</kindDef>
+        <commonality>100</commonality>
+        <options>
+          <HeavyMusketeer>10</HeavyMusketeer>
+          <TribalMusketeer>30</TribalMusketeer>
+          <MusketeerGrenadier>5</MusketeerGrenadier>
+          <MusketeerOutcast>20</MusketeerOutcast>
+		  <MusketeerGeneral>1</MusketeerGeneral>
+        </options>
+      </li>
+      <li>
+        <!-- Normal fights, Heavy Assault-->
+        <kindDef>Combat</kindDef>
+        <commonality>75</commonality>
+        <options>
+		  <MusketeerGeneral>2</MusketeerGeneral>
+          <HeavyMusketeer>30</HeavyMusketeer>
+          <TribalMusketeer>20</TribalMusketeer>
+          <MusketeerGrenadier>10</MusketeerGrenadier>
+        </options>
+      </li>
+	  <li>
+        <!-- Normal fights, ranged only -->
+        <kindDef>Combat</kindDef>
+        <commonality>50</commonality>
+        <options>
+		  <MusketeerGeneral>2</MusketeerGeneral>
+          <HeavyMusketeer>10</HeavyMusketeer>
+          <TribalMusketeer>30</TribalMusketeer>
+        </options>
+      </li>
+      <li>
+        <!-- Normal fights, Prisoners / Outcasts -->
+        <kindDef>Combat</kindDef>
+        <commonality>2</commonality>
+		<disallowedStrategies>
+          <li>Siege</li>
+		  <li>ImmediateAttackSmart</li>
+		  <li>ImmediateAttackSappers</li>
+        </disallowedStrategies>
+        <options>
+		  <MusketeerGeneral>5</MusketeerGeneral>
+          <MusketeerOutcast>100</MusketeerOutcast>
+      </options>
+      </li>
+	  <li>
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <HeavyMusketeer>25</HeavyMusketeer>
+          <TribalMusketeer>25</TribalMusketeer>
+          <MusketeerGrenadier>5</MusketeerGrenadier>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+          <Town_Trader>1</Town_Trader>
+        </traders>
+        <carriers>
+          <Muffalo>6</Muffalo>
+          <Dromedary>5</Dromedary>
+          <Alpaca>2</Alpaca>
+          <Elephant>1</Elephant>
+        </carriers>
+        <guards>
+          <HeavyMusketeer>25</HeavyMusketeer>
+          <TribalMusketeer>25</TribalMusketeer>
+          <MusketeerGrenadier>5</MusketeerGrenadier>
+		</guards>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+		  <MusketeerGeneral>20</MusketeerGeneral>
+		  <HeavyMusketeer>30</HeavyMusketeer>
+          <TribalMusketeer>10</TribalMusketeer>
+		  <MusketeerOutcast>40</MusketeerOutcast>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <homeIconPath>World/WorldObjects/DefaultSettlement</homeIconPath>
+  </FactionDef>
+
+  <FactionDef ParentName="Musketeer_Base">
+    <defName>MusketGroupA</defName>
+    <label>Musketeers</label>
+    <description>This group of people seem to have aquired varous musket type weapons and are rather hostile and may send in vast hordes of slaves, prisoners and outcasts. They have the tendency to have their bases run off of slave labor\n\nEven with their weaknesses they could be rather dangerous if they have Uranium, (HE), Incendiary or Infected Which could cause severe Illness or many scars if not well tended\n\nit will be difficult to turn them into an ally.</description>
+    <colorSpectrum>
+      <li>(0.25, 0.65, 0.05)</li>
+      <li>(0.25, 0.75, 0.05)</li>
+    </colorSpectrum>
+    <startingGoodwill>
+      <min>-100</min>
+      <max>-20</max>
+    </startingGoodwill>
+    <naturalColonyGoodwill>
+      <min>-100</min>
+      <max>-80</max>
+    </naturalColonyGoodwill>
+  </FactionDef>
+  
+</Defs>
