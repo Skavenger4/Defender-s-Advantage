@@ -134,7 +134,6 @@
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="MusketBallBase">
 		<defName>Ammo_MusketBall_Uranium</defName>
 		<label>Musket Ball (Uranium)</label>
-		<generateAllowChance>2</generateAllowChance>
 		<graphicData>
 			<texPath>Things/Ammo/Rifle/FMJ</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
@@ -149,7 +148,6 @@
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="MusketBallBase">
 		<defName>Ammo_MusketBall_Infected</defName>
 		<label>Musket Ball (Infected)</label>
-		<generateAllowChance>5</generateAllowChance>
 		<graphicData>
 			<texPath>Things/Ammo/Rifle/FMJ</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>

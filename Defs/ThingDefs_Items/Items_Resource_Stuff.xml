@@ -22,7 +22,7 @@
     <stackLimit>500</stackLimit>
     <smallVolume>true</smallVolume>
     <stuffProps>
-      <commonality>5</commonality>
+      <commonality>5.0</commonality>
     </stuffProps>
   </ThingDef>
 <!-- ==================== Recipes ========================== -->
@@ -262,8 +262,8 @@
 		<WorkToMake>1.2</WorkToMake>
 	    <Mass>1.1</Mass>
 	    <WornBulk>1.1</WornBulk>
-		<commonality>1.25</commonality>
       </statFactors>
+      <commonality>1.25</commonality>
       <categories>
         <li>Fabric</li>
       </categories>
@@ -308,7 +308,7 @@
         <li>Fabric</li>
       </categories>
       <color>(050,050,050)</color>
-	  <commonality>0.15</commonality>
+	  <commonality>.15</commonality>
     </stuffProps>
     <thingCategories>
       <li>Textiles</li>
@@ -353,7 +353,7 @@
         <li>Fabric</li>
       </categories>
       <color>(050,050,050)</color>
-	  <commonality>0.02</commonality>
+	  <commonality>.02</commonality>
     </stuffProps>
     <thingCategories>
       <li>Textiles</li>
@@ -423,7 +423,7 @@
 		<Mass>0.8</Mass>
       </statFactors>
       <color>(200,200,200)</color>
-	   <commonality>0.75</commonality>
+	   <commonality>.75</commonality>
     </stuffProps>
   </ThingDef>
 <!-- ==================== Recipes ========================== -->

@@ -123,9 +123,13 @@ Update Relevant Pictures
 *Secret Project 005 Activated*
 	*Hint* for Secret Project 005, look in the texture files.
 			
-		
-		
-		
+Version 1.3.1 (Bug Burning Edition)	
+	Fixed several bugs by removing redundant Zeros
+	Fixed Research descriptions and labels
+	Changed Pawn type label 
+		- General -> Section Commander
+	Removed Empty Folders
+	Flame Thrower Turret Moved to Secret Project 007
 		
 		
 		

@@ -226,7 +226,7 @@
   </PawnKindDef>
   <PawnKindDef ParentName="TribalBase">
     <defName>MusketeerGeneral</defName>
-    <label>General</label>
+    <label>Section Commander</label>
 	<factionLeader>true</factionLeader>
     <combatPower>175</combatPower>
     <baseRecruitDifficulty>0.95</baseRecruitDifficulty>

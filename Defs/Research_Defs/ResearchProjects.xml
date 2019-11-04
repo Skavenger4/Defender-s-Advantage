@@ -32,7 +32,7 @@
   <ResearchProjectDef>
     <defName>FiberTThree</defName>
     <label>Type 2.5 Fiber</label>
-    <description>Enables the production of Lightweight Insulator at the Refinery.</description>
+    <description>Enables the mixing of Lightweight Insulator and Type 2 Fiber at Tailor Benches.</description>
     <baseCost>5000</baseCost>
     <techLevel>Industrial</techLevel>
     <prerequisites>
@@ -57,8 +57,8 @@
   </ResearchProjectDef> 
   <ResearchProjectDef>
     <defName>FireFighting</defName>
-    <label>Very Heat Resistant Kit</label>
-    <description>Enables the production of Fireman Uniforms at the Tailor Bench.</description>
+    <label>Very Heat Resistant Fabric</label>
+    <description>Enables the production of Lightweight Insulator at the Refinery.</description>
     <baseCost>1000</baseCost>
     <techLevel>Industrial</techLevel>
     <prerequisites>
