@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+<!--========Harvetable Fuel From your excessive flamethrower use========-->	
+	<Operation Class="PatchOperationReplace">
+	<xpath>Defs/ThingDef[defName="BurnedTree"]/plant/harvestedThingDef</xpath>
+		<value>
+			<harvestedThingDef>Charcoal</harvestedThingDef>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+	<xpath>Defs/ThingDef[defName="BurnedTree"]/plant/harvestYield</xpath>
+		<value>
+			<harvestYield>10</harvestYield>
+		</value>
+	</Operation>
+	
+</Patch>

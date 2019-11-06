@@ -16,13 +16,14 @@
     <ammoTypes>
 	  <Ammo_40x158mm_FMJ>Bullet_40x158mm_FMJ</Ammo_40x158mm_FMJ>
       <Ammo_40x158mm_HE>Bullet_40x158mm_HE</Ammo_40x158mm_HE>
+	  <Ammo_40x158mm_EMP>Bullet_40x158mm_EMP</Ammo_40x158mm_EMP>
     </ammoTypes>
   </CombatExtended.AmmoSetDef>
   
   <!-- ==================== Ammo ========================== -->
 
   <ThingDef Class="CombatExtended.AmmoDef" Name="Ammo40x158mmBase" ParentName="SmallAmmoBase" Abstract="True">
-    <description>Old-school anti-air cartridge originally designed for [Topsecret Proj 008].</description>
+    <description>Old-school anti-air cartridge originally designed for [Topsecret Proj 007].</description>
     <statBases>
     <Mass>1.34</Mass>
     <Bulk>0.77</Bulk>
@@ -66,7 +67,7 @@
 		<ammoClass>GrenadeHE</ammoClass>
     <comps>
       <li Class="CombatExtended.CompProperties_ExplosiveCE">
-        <explosionDamage>125</explosionDamage>
+        <explosionDamage>100</explosionDamage>
         <explosionDamageDef>Bomb</explosionDamageDef>
         <explosionRadius>2</explosionRadius>
         <fragments>
@@ -76,6 +77,20 @@
         <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
       </li>
     </comps>
+  </ThingDef>
+	
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo40x158mmBase">
+    <defName>Ammo_40x158mm_EMP</defName>
+    <label>40x158mm cartridge (EMP)</label>
+    <graphicData>
+      <texPath>Things/Ammo/HighCaliber/FMJ</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>5.03</MarketValue>
+    </statBases>
+    <ammoClass>ElectroSlug</ammoClass>
+    <cookOffProjectile>Bullet_40x158mm_EMP</cookOffProjectile>
   </ThingDef>
 
   <!-- ================== Projectiles ================== -->
@@ -94,7 +109,7 @@
     </projectile>
   </ThingDef>
   
-	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Base40x158mmBullet">
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="Base40x158mmBullet">
 		<defName>Bullet_40x158mm_FMJ</defName>
 		<label>40x158mm bullet (FMJ)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
@@ -109,7 +124,7 @@
 	<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
     <projectile Class="CombatExtended.ProjectilePropertiesCE">
       <damageDef>Bomb</damageDef>
-      <damageAmountBase>125</damageAmountBase>
+      <damageAmountBase>100</damageAmountBase>
       <explosionRadius>2</explosionRadius>
 		  <soundExplode>MortarBomb_Explode</soundExplode>
       <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
@@ -122,6 +137,15 @@
 			</li>
 		</comps>
   </ThingDef>
+
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="Base40x158mmBullet">
+		<defName>Bullet_40x158mm_EMP</defName>
+		<label>40x158mm bullet (EMP)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>105</damageAmountBase>
+			<damageDef>EMP</damageDef>
+		</projectile>
+	</ThingDef>
   
   <!-- ==================== Recipes ========================== -->
 
@@ -183,6 +207,41 @@
     </fixedIngredientFilter>
     <products>
       <Ammo_40x158mm_HE>25</Ammo_40x158mm_HE>
+    </products>
+    <workAmount>12500</workAmount>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_40x158mm_EMP</defName>
+    <label>make 40x158mm (EMP) cartridge x25</label>
+    <description>Craft 25 40x158mm (EMP) cartridges.</description>
+    <jobString>Making 40x158mm (EMP) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>47</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+        <li>ComponentIndustrial</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_40x158mm_EMP>25</Ammo_40x158mm_EMP>
     </products>
     <workAmount>12500</workAmount>
   </RecipeDef>

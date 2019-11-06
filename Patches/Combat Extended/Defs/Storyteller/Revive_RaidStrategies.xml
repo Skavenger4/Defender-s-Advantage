@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- Bring Back immediate attack -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RaidStrategyDef[defName="ImmediateAttack"]/workerClass</xpath>
+		<value>
+			<workerClass>RaidStrategyWorker_ImmediateAttackSmart</workerClass>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RaidStrategyDef[defName="ImmediateAttack"]/selectionWeightPerPointsCurve/points</xpath>
+		<value>
+			<points>
+				<li>(300,1)</li>
+				<li>(700,0.5)</li>
+			</points>
+		</value>
+	</Operation>
+
+	<!-- Enable Stage then attack + make more powerful-->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RaidStrategyDef[defName="StageThenAttack"]/selectionWeightPerPointsCurve/points</xpath>
+		<value>
+			<points>
+				<li>(300,1)</li>
+				<li>(700,0.5)</li>
+			</points>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RaidStrategyDef[defName="StageThenAttack"]/pointsFactorCurve/points</xpath>
+		<value>
+			<points>
+				<li>0,1.5</li>
+			</points>
+		</value>
+	</Operation>
+
+	<!-- Make advanced tactics Anywhere -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RaidStrategyDef[defName="ImmediateAttackSmart"]/selectionWeightPerPointsCurve/points</xpath>
+		<value>
+			<points>
+				<li>(300,0)</li>
+				<li>(700,1)</li>
+			</points>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RaidStrategyDef[defName="ImmediateAttackSmart"]/pointsFactorCurve/points</xpath>
+		<value>
+			<points>
+				<li>0,95</li>
+			</points>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RaidStrategyDef[defName="ImmediateAttackSmart"]/arriveModes</xpath>
+		<value>
+			<arriveModes>
+				<li>EdgeDrop</li>
+				<li>EdgeWalkIn</li>
+				<li>CenterDrop</li>
+				<li>RandomDrop</li>
+				<li>EdgeDropGroups</li>
+				<li>EdgeWalkInGroups</li>
+			</arriveModes>
+		</value>
+	</Operation>
+
+	<!-- Renerf sapper points -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RaidStrategyDef[defName="ImmediateAttackSappers"]/pointsFactorCurve/points</xpath>
+		<value>
+			<points>
+				<li>0, 0.85</li>
+				<li>5000, 0.60</li>
+			</points>
+		</value>
+	</Operation>
+
+</Patch>
+

@@ -27,6 +27,54 @@
       </li>
     </comps>
   </ThingDef>
+  <!--===================High Capacity Puckle======-->
+  <ThingDef ParentName="BaseTurretGun">
+    <defName>DAT_Puckle</defName>
+    <label>High Capacity Puckle</label>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/ChargeRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <description>A modified Puckle Gun with an oversized revolving Magazine, it fires musket balls and could be devestating if grouped together.</description>
+    <statBases>
+      <MarketValue>500</MarketValue>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.09</ShotSpread>
+      <SwayFactor>0.96</SwayFactor>
+      <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>1.25</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_MusketBall_Steel</defaultProjectile>
+        <warmupTime>1.1</warmupTime>
+        <range>37</range>
+		<targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+        <burstShotCount>10</burstShotCount>
+        <soundCast>MediumMG</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>10</muzzleFlashScale>
+        <recoilPattern>Mounted</recoilPattern>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>25</magazineSize>
+        <reloadTime>12</reloadTime>
+        <spawnUnloaded>false</spawnUnloaded>
+        <ammoSet>AmmoSet_MusketBall</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+        <aimedBurstShotCount>5</aimedBurstShotCount>
+        <aiAimMode>SuppressFire</aiAimMode>
+      </li>
+    </comps>
+  </ThingDef>
   <!-- ================== Auto Rec.SMG ================== -->
   <ThingDef ParentName="BaseAutoTurretGun">
     <defName>DAT_TGUN_22LR</defName>
@@ -495,14 +543,14 @@
     <description>A Large Flame Thrower Capable of outranging any handheld Flame Thrower</description>
     <statBases>
       <MarketValue>1000</MarketValue>
-      <SightsEfficiency>1</SightsEfficiency>
-      <ShotSpread>0.49</ShotSpread>
+      <SightsEfficiency>0.8</SightsEfficiency>
+      <ShotSpread>0.69</ShotSpread>
       <SwayFactor>2.96</SwayFactor>
       <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
     </statBases>
     <verbs>
       <li Class="CombatExtended.VerbPropertiesCE">
-        <recoilAmount>1.45</recoilAmount>
+        <recoilAmount>1.65</recoilAmount>
         <verbClass>CombatExtended.Verb_ShootCE</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_Flamethrower_Napalm</defaultProjectile>
@@ -513,7 +561,7 @@
           <canTargetLocations>true</canTargetLocations>
         </targetParams>
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
-        <burstShotCount>50</burstShotCount>
+        <burstShotCount>100</burstShotCount>
         <soundCast>HissFlamethrower</soundCast>
         <muzzleFlashScale>5</muzzleFlashScale>
         <recoilPattern>Mounted</recoilPattern>
@@ -527,7 +575,7 @@
         <ammoSet>AmmoSet_Flamethrower</ammoSet>
       </li>
       <li Class="CombatExtended.CompProperties_FireModes">
-        <aimedBurstShotCount>20</aimedBurstShotCount>
+        <aimedBurstShotCount>50</aimedBurstShotCount>
         <aiAimMode>SuppressFire</aiAimMode>
       </li>
     </comps>
@@ -535,7 +583,7 @@
   <!-- ================== Bus Blunderer ================== -->
   <ThingDef ParentName="BaseTurretGun">
     <defName>DAT_120mmShotgun</defName>
-    <label>120mm Shotgun</label>
+    <label>Bus Blunderer</label>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/ChargeRifle</texPath>
       <graphicClass>Graphic_Single</graphicClass>

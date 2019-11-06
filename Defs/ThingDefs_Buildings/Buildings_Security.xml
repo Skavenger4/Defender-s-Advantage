@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <ThingDef Name="TrapMineBase" ParentName="BuildingBase" Abstract="True">
+  <ThingDef Name="TrapMineBaseB" ParentName="BuildingBase" Abstract="True">
     <thingClass>Building_TrapExplosive</thingClass>
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
@@ -27,32 +27,53 @@
       <Beauty>-4</Beauty>
       <TrapSpringChance>1.0</TrapSpringChance>
     </statBases>
-    <designationCategory>Security</designationCategory>
+	<designationCategory>Security</designationCategory>
     <building>
       <isTrap>true</isTrap>
       <trapPeacefulWildAnimalsSpringChanceFactor>0.75</trapPeacefulWildAnimalsSpringChanceFactor>
       <expandHomeArea>false</expandHomeArea>
 			<ai_chillDestination>false</ai_chillDestination>
     </building>
-    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+	<constructionSkillPrerequisite>5</constructionSkillPrerequisite>
     <researchPrerequisites>
-      <li>IEDs</li>
+      <li>Landmines</li>
     </researchPrerequisites>
     <placeWorkers>
       <li>PlaceWorker_NeverAdjacentTrap</li>
     </placeWorkers>
   </ThingDef>
+  <ThingDef ParentName="ResourceBase">
+    <defName>TrapFrag_MineB</defName>
+    <label>Dissasembled Landmine Components</label>
+    <description>These dissasembled landmine components could be easily assembled into landmines</description>
+    <graphicData>
+      <texPath>Things/Item/Unfinished/UnfinishedGun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>0.5</MarketValue>
+      <Mass>0.2</Mass>
+	  <MaxHitPoints>50</MaxHitPoints>
+	  <Flammability>1.0</Flammability>
+    </statBases>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <stackLimit>50</stackLimit>
+    <stuffProps>
+      <commonality>0.1</commonality>
+    </stuffProps>
+  </ThingDef>
   <!-- ==== It would be very nice if I could find some way to add fragments to the mines as for now I have no clue how to unless I make some sort of dll. . . that may take an awfuly long time ===-->
-  <ThingDef ParentName="TrapMineBase">
+  <ThingDef ParentName="TrapMineBaseB">
     <defName>TrapFrag_Mine</defName>
     <label>Landmine</label>
     <description>A landmine, good at culling loads of tribals and un-armored foes. Reprehensible on Earth but almost nessecary on rimworlds for defending your claims.</description>
     <graphicData>
       <texPath>Things/Building/Security/IEDHighExplosive</texPath>
     </graphicData>
-    <costList>
-      <Steel>5</Steel>
-	  <FSX>1</FSX>
+	<costList>
+      <TrapFrag_MineB>1</TrapFrag_MineB>
     </costList>
     <comps>
 	  <li Class="CompProperties_Explosive">
@@ -60,24 +81,25 @@
         <explosiveDamageType>APMine</explosiveDamageType>
         <startWickHitPointsPercent>0.2</startWickHitPointsPercent>
         <wickTicks>
-          <min>7</min>
-          <max>7</max>
+          <min>10</min>
+          <max>10</max>
         </wickTicks>
       </li>
 	</comps>
     <specialDisplayRadius>2.5</specialDisplayRadius>
   </ThingDef>
 
-  <ThingDef ParentName="TrapMineBase">
+  
+  
+  <ThingDef ParentName="TrapMineBaseB">
     <defName>TrapAT_Mine</defName>
     <label>Anti Tank Mine</label>
     <description>An Anti Tank Mine,Great for damaging Centipedies and other heaviliy armored foes. Reprehensible on Earth but almost nessecary on rimworlds for defending your claims.</description>
     <graphicData>
       <texPath>Things/Building/Security/IEDHighExplosive</texPath>
     </graphicData>
-    <costList>
-      <Steel>5</Steel>
-	  <FSX>2</FSX>
+	<costList>
+      <TrapFrag_MineB>3</TrapFrag_MineB>
     </costList>
     <comps>
       <li Class="CompProperties_Explosive">
@@ -85,8 +107,8 @@
         <explosiveDamageType>ATMine</explosiveDamageType>
         <startWickHitPointsPercent>0.2</startWickHitPointsPercent>
         <wickTicks>
-          <min>7</min>
-          <max>7</max>
+          <min>10</min>
+          <max>10</max>
         </wickTicks>
       </li>
     </comps>

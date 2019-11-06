@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingCategoryDef>
+      <defName>AmmoFlamethrower</defName>
+      <label>flamethrower fuel</label>
+      <parent>AmmoAdvanced</parent>
+      <iconPath>UI/Icons/ThingCategories/CaliberFuel</iconPath>
+    </ThingCategoryDef>
+	
+	<!-- ==================== AmmoSet ========================== -->
+
+  <CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_Flamethrower</defName>
+    <label>flamethrower fuel</label>
+    <ammoTypes>
+      <Ammo_Flamethrower_Napalm>Bullet_Flamethrower_Napalm</Ammo_Flamethrower_Napalm>
+      <Ammo_Flamethrower_Prometheum>Bullet_Flamethrower_Prometheum</Ammo_Flamethrower_Prometheum>
+    </ammoTypes>
+  </CombatExtended.AmmoSetDef>
+	
+	<!-- ==================== Ammo ========================== -->
+
+  <ThingDef Class="CombatExtended.AmmoDef" Name="FlamethrowerBase" ParentName="SpacerSmallAmmoBase" Abstract="True">
+    <description>Fuel for use with a flamethrower.</description>
+    <statBases>
+      <MaxHitPoints>70</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Mass>0.05</Mass>
+      <Bulk>0.1</Bulk>
+    </statBases>
+	<tradeTags>
+	  <li>CE_AutoEnableTrade</li>
+	  <li>CE_AutoEnableCrafting_DrugLab</li>
+	</tradeTags>
+    <thingCategories>
+      <li>AmmoFlamethrower</li>
+    </thingCategories>
+    <stackLimit>500</stackLimit>
+  </ThingDef>
+  
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="FlamethrowerBase">
+    <defName>Ammo_Flamethrower_Napalm</defName>
+    <label>Napalm</label>
+    <graphicData>
+      <texPath>Things/Ammo/FuelCell/Incendiary</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>0.3</MarketValue>
+    </statBases>
+    <ammoClass>IncendiaryFuel</ammoClass>
+  </ThingDef>
+
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="FlamethrowerBase">
+    <defName>Ammo_Flamethrower_Prometheum</defName>
+    <label>jellied Prometheum</label>
+    <graphicData>
+      <texPath>Things/Ammo/FuelCell/Incendiary</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>0.7</MarketValue>
+    </statBases>
+    <ammoClass>IncendiaryFuel</ammoClass>
+  </ThingDef>
+	
+</Defs>

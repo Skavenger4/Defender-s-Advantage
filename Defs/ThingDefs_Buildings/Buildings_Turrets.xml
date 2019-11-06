@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
   <ThingDef Name="BuildingBase" Abstract="True">
     <category>Building</category>
     <thingClass>Building</thingClass>
@@ -93,7 +92,51 @@
       <unfinishedThingDef>UnfinishedTurretGun</unfinishedThingDef>
     </recipeMaker>
   </ThingDef>
-
+  
+  <ThingDef Name="TurretMannedCraftableBaseB" ParentName="TurretMannedBase" Abstract="True">
+    <recipeMaker>
+      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li>TableMachining</li>
+		<li>FueledSmithy</li>
+		<li>ElectricSmithy</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedTurretGun</unfinishedThingDef>
+    </recipeMaker>
+  </ThingDef>
+  <!--=============== Puckle Gun ===============-->
+  <ThingDef ParentName="TurretMannedCraftableBaseB">
+    <defName>Turret_TPG_25Z</defName>
+    <label>Puckle Gun</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets/MachineGunBase</texPath>
+    </graphicData>
+    <statBases>
+      <Flammability>1.0</Flammability>
+      <WorkToMake>11500</WorkToMake>
+      <Mass>50.0</Mass>
+      <Bulk>40</Bulk>
+    </statBases>
+    <description>A Puckle Gun, Rather cheap to and easy to build.</description>
+    <costList>
+      <Steel>95</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <building>
+      <turretGunDef>DAT_Puckle</turretGunDef>
+      <turretTopGraphicPath>Things/Building/Turrets/Puckle_gun</turretTopGraphicPath>
+    </building>
+	<specialDisplayRadius>37</specialDisplayRadius>
+    <minifiedDef>MinifiedThing</minifiedDef>
+	<recipeMaker>
+	  <skillRequirements>
+		<Crafting>8</Crafting>
+	  </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
   <!--=============== Auto Rec.SMG ===============-->
   <ThingDef ParentName="TurretAutoBase">
     <defName>Turret_DAT_TGUN_22LR</defName>
@@ -382,7 +425,6 @@
     </recipeMaker>
     <minifiedDef>MinifiedThing</minifiedDef>
   </ThingDef>
-  
   <ThingDef ParentName="TurretMannedBase">
     <defName>Turret_2_25mm_B</defName>
     <label>25mm Dual Seige Autocannon</label>
@@ -412,7 +454,6 @@
     </recipeMaker>
     <minifiedDef>MinifiedThing</minifiedDef>
   </ThingDef>
-  
   <!--=============== Triple Mounts =============-->
   <ThingDef ParentName="TurretMannedBase">
     <defName>Turret_3_25mm</defName>
@@ -442,7 +483,6 @@
     </recipeMaker>
     <minifiedDef>MinifiedThing</minifiedDef>
   </ThingDef>
-  
   <ThingDef ParentName="TurretMannedBase">
     <defName>Turret_3_25mmB</defName>
     <label>25mm Triple Seige Autocannon</label>
@@ -485,6 +525,12 @@
       <Mass>2000</Mass>
       <Bulk>8000</Bulk>
     </statBases>
+	<comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>500</basePowerConsumption>
+      </li>
+    </comps>
     <description>A Large Flamethrower that has a very Large ammo Capacity.</description>
     <costList>
       <Steel>575</Steel>
@@ -493,7 +539,7 @@
     <specialDisplayRadius>35</specialDisplayRadius>
     <building>
       <turretGunDef>DAT_FTT</turretGunDef>
-      <turretTopGraphicPath>Things/Building/Turrets/25mm_top</turretTopGraphicPath>
+      <turretTopGraphicPath>Things/Building/Turrets/Flame_Shotgun</turretTopGraphicPath>
 	  <turretTopDrawSize>4</turretTopDrawSize>
     </building>
 	<size>(2,2)</size>
@@ -502,10 +548,9 @@
     </recipeMaker>
     <minifiedDef>MinifiedThing</minifiedDef>
   </ThingDef>
-  
   <ThingDef ParentName="TurretMannedBase">
     <defName>Turret_SG</defName>
-    <label>120mm Shotgun</label>
+    <label>Bus Blunderer</label>
     <graphicData>
       <texPath>Things/Building/Turrets/25mm_Base_Static</texPath>
     </graphicData>
@@ -522,7 +567,7 @@
     </costList>
     <building>
       <turretGunDef>DAT_120mmShotgun</turretGunDef>
-      <turretTopGraphicPath>Things/Building/Turrets/25mm_top</turretTopGraphicPath>
+      <turretTopGraphicPath>Things/Building/Turrets/Flame_Shotgun</turretTopGraphicPath>
 	  <turretTopDrawSize>4</turretTopDrawSize>
     </building>
 	<size>(2,2)</size>
@@ -531,5 +576,4 @@
     </recipeMaker>
     <minifiedDef>MinifiedThing</minifiedDef>
   </ThingDef>
-  
 </Defs>

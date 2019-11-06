@@ -14,7 +14,8 @@
       <MarketValue>0.5</MarketValue>
       <Mass>0.2</Mass>
 	  <MaxHitPoints>50</MaxHitPoints>
-	  <DeteriorationRate>1.0</DeteriorationRate>
+	  <Flammability>1.4</Flammability>
+	  <DeteriorationRate>2</DeteriorationRate>
     </statBases>
     <thingCategories>
       <li>ResourcesRaw</li>
@@ -22,8 +23,63 @@
     <stackLimit>500</stackLimit>
     <smallVolume>true</smallVolume>
     <stuffProps>
-      <commonality>5</commonality>
+      <commonality>5.0</commonality>
     </stuffProps>
+  </ThingDef>
+  <!-- ==================== Construction Foam ========================== -->
+  <ThingDef ParentName="ResourceBase">
+    <defName>CFoam</defName>
+    <label>Construction Foam</label>
+    <description>This Ultra Light foam is perfect for quick builds of temporary structures, It is almost fireproof but ugly, when buildings/furniture are built it is not very durable.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/StoneBlocks</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+	  <color>(200,200,200)</color>
+    </graphicData>
+	<techLevel>Ultra</techLevel>
+    <statBases>
+      <MarketValue>0.5</MarketValue>
+      <Mass>0.2</Mass>
+	  <Bulk>0.015</Bulk>
+	  <MaxHitPoints>25</MaxHitPoints>
+	  <Beauty>-10</Beauty>
+	  <Flammability>0.01</Flammability>
+      <DeteriorationRate>0</DeteriorationRate>
+      <StuffPower_Armor_Sharp>0.15</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.45</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>2.5</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>48</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>48</StuffPower_Insulation_Heat>
+      <SharpDamageMultiplier>0.15</SharpDamageMultiplier>
+      <BluntDamageMultiplier>0.15</BluntDamageMultiplier>
+    </statBases>
+	<stuffProps>
+      <stuffAdjective>Foam</stuffAdjective>
+      <categories>
+        <li>Woody</li>
+      </categories>
+      <commonality>0.02</commonality>
+      <color>(200,200,200)</color>
+      <constructEffect>ConstructWood</constructEffect>
+      <appearance>Planks</appearance>
+      <soundImpactStuff>BulletImpact_Wood</soundImpactStuff>
+      <soundMeleeHitSharp>MeleeHit_Wood</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Wood</soundMeleeHitBlunt>
+      <statFactors>
+		<Mass>0.5</Mass>
+        <MaxHitPoints>0.25</MaxHitPoints>
+        <Beauty>-5</Beauty>
+        <Flammability>0.01</Flammability>
+        <WorkToMake>0.35</WorkToMake>
+		<WorkToBuild>0.35</WorkToBuild>
+        <DoorOpenSpeed>1.3</DoorOpenSpeed>
+      </statFactors>
+    </stuffProps>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <stackLimit>75</stackLimit>
+    <smallVolume>false</smallVolume>
   </ThingDef>
 <!-- ==================== Recipes ========================== -->
 	<RecipeDef>
@@ -262,8 +318,8 @@
 		<WorkToMake>1.2</WorkToMake>
 	    <Mass>1.1</Mass>
 	    <WornBulk>1.1</WornBulk>
-		<commonality>1.25</commonality>
       </statFactors>
+      <commonality>1.25</commonality>
       <categories>
         <li>Fabric</li>
       </categories>
@@ -308,7 +364,7 @@
         <li>Fabric</li>
       </categories>
       <color>(050,050,050)</color>
-	  <commonality>0.15</commonality>
+	  <commonality>.15</commonality>
     </stuffProps>
     <thingCategories>
       <li>Textiles</li>
@@ -353,7 +409,7 @@
         <li>Fabric</li>
       </categories>
       <color>(050,050,050)</color>
-	  <commonality>0.02</commonality>
+	  <commonality>.02</commonality>
     </stuffProps>
     <thingCategories>
       <li>Textiles</li>
@@ -423,7 +479,7 @@
 		<Mass>0.8</Mass>
       </statFactors>
       <color>(200,200,200)</color>
-	   <commonality>0.75</commonality>
+	   <commonality>.75</commonality>
     </stuffProps>
   </ThingDef>
 <!-- ==================== Recipes ========================== -->
@@ -658,7 +714,7 @@
       </products>
       <workAmount>4500</workAmount>
       <workSpeedStat>TailoringSpeed</workSpeedStat>
-      <workSkill>Crafting</workSkill>
+      <workSkill>Intellectual</workSkill>
       <effectWorking>Tailor</effectWorking>
       <soundWorking>Recipe_Tailor</soundWorking>
 	  <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>

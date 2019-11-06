@@ -32,7 +32,7 @@
   <ResearchProjectDef>
     <defName>FiberTThree</defName>
     <label>Type 2.5 Fiber</label>
-    <description>Enables the production of Lightweight Insulator at the Refinery.</description>
+    <description>Enables the mixing of Lightweight Insulator and Type 2 Fiber at Tailor Benches.</description>
     <baseCost>5000</baseCost>
     <techLevel>Industrial</techLevel>
     <prerequisites>
@@ -57,8 +57,8 @@
   </ResearchProjectDef> 
   <ResearchProjectDef>
     <defName>FireFighting</defName>
-    <label>Very Heat Resistant Kit</label>
-    <description>Enables the production of Fireman Uniforms at the Tailor Bench.</description>
+    <label>Very Heat Resistant Fabric</label>
+    <description>Enables the production of Lightweight Insulator at the Refinery.</description>
     <baseCost>1000</baseCost>
     <techLevel>Industrial</techLevel>
     <prerequisites>
@@ -66,6 +66,20 @@
 	  <li>FiberTThree</li>
     </prerequisites>
     <researchViewX>7</researchViewX>
-    <researchViewY>4.5</researchViewY>
+    <researchViewY>4.4</researchViewY>
+  </ResearchProjectDef> 
+  <!--=============================== Landmine Production ===================================-->
+   <ResearchProjectDef>
+    <defName>Landmines</defName>
+    <label>Landmine Production</label>
+    <description>Enables the production of Landmines and FSX.</description>
+    <baseCost>1500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>IEDs</li>
+	  <li>DrugProduction</li>	  
+    </prerequisites>
+    <researchViewX>6</researchViewX>
+    <researchViewY>0.25</researchViewY>
   </ResearchProjectDef> 
 </Defs>
