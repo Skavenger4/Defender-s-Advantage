@@ -128,6 +128,7 @@
     <building>
       <turretGunDef>DAT_Puckle</turretGunDef>
       <turretTopGraphicPath>Things/Building/Turrets/Puckle_gun</turretTopGraphicPath>
+	  <turretTopDrawSize>3</turretTopDrawSize>
     </building>
 	<specialDisplayRadius>37</specialDisplayRadius>
     <minifiedDef>MinifiedThing</minifiedDef>
@@ -573,6 +574,41 @@
 	<size>(2,2)</size>
     <recipeMaker>
       <researchPrerequisite>CE_TurretHeavyWeapons</researchPrerequisite>
+    </recipeMaker>
+    <minifiedDef>MinifiedThing</minifiedDef>
+  </ThingDef>
+  <!--=============== QF 25mm Cannon ===============-->
+  <ThingDef ParentName="TurretMannedBase">
+    <defName>Turret_QF25mm</defName>
+    <label>QF 25mm Autocannon</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets/25mm_Base_Static</texPath>
+    </graphicData>
+    <statBases>
+	  <MaxHitPoints>750</MaxHitPoints>
+      <WorkToMake>153500</WorkToMake>
+      <Mass>785</Mass>
+      <Bulk>1200</Bulk>
+    </statBases>
+	<comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>1200</basePowerConsumption>
+      </li>
+    </comps>
+    <description>A Quickfiring 25mm Auto Cannon that has a good ammo Capacity and Targeting radar to Improve Accuracy.</description>
+    <costList>
+      <Steel>750</Steel>
+      <ComponentIndustrial>32</ComponentIndustrial>
+    </costList>
+    <building>
+      <turretGunDef>DAT_QF25mm</turretGunDef>
+      <turretTopGraphicPath>Things/Building/Turrets/QF_25mm</turretTopGraphicPath>
+	  <turretTopDrawSize>4</turretTopDrawSize>
+    </building>
+	<size>(2,2)</size>
+	<recipeMaker>
+      <researchPrerequisite>QF_AutoCannons</researchPrerequisite>
     </recipeMaker>
     <minifiedDef>MinifiedThing</minifiedDef>
   </ThingDef>

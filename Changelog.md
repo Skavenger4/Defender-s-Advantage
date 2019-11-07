@@ -167,4 +167,41 @@ Version 1.4.0 (What Happened to my steam library + More Musketeer unit Dieversit
 		- Range 17 -> 15
 	Module 003 <Musket Ball Recycling Removed due to obselesence [Right after adding it]> 
 	
-	 
+Version 1.5.0 (Spiteful [and far quicker than] CE Compatibility patch update + 
+I'm sure that .22LR Could penetrate at least 0.5mm of steel armor Edition)
+	Fixed 7.92mm Mauser to actually be usable + Added sabot / AP - Incendiary 
+	Fixed tiny shell fragments
+	Fixed Musket Balls . . .  That took too much time (no longer balanced though)
+	Fixed 25x163mm to actually be usable
+	- Added AP-I
+	- Name Change FMJ -> AP
+	- Sabot Damage 30 -> 40
+	(+ Several other changes)
+	Fixed {Secret Project 007} to actually be usable (In Future of course)
+	- Name Change FMJ -> AP
+	- Added HEAT Rounds 
+	Fixed 120x300mm to actually be usable
+	- Pellet Count (Bean) 25 -> 75
+	Updated Relevant Images
+	Buff all armor + weight values of Balistic Fabric
+	Buff all armor + weight values of Apparel
+	Tested 94.202% of changes (for balance. . .)
+	Fixed Ludicrous range of flamethower Turret 
+		- Recoil 1.65 -> 0.45
+		- Spread 0.69 -> 1.69
+	Fixed Graphic Size of Static Puckle Gun
+	Added 1 Heavier Autocannon [There is more to come]
+	QF 25mm (Turreted)
+	- Range 200 
+	- RPM 1800
+	- Recoil 1.01
+	- Sights Effecincy 4.2 (Due to Radar)
+	- Uses 1200W
+	Added Melee Armor Penetration for all of the guns (This took even more time)
+	Moved Searchlight into Purgatory
+	Note. . .
+	- the Am 180 is still able to defeat body armor (Just like in real life)
+	I'm not changing the range of the guns as when you target a point on the map. . .
+	[the guns will be able to hit targets further than they should]
+	
+	

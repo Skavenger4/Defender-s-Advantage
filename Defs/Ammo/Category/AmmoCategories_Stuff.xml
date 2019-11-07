@@ -77,4 +77,10 @@
 		<description>Square Musket Ball, seemingly ridiculous but with increased damage but poor armor penetration.</description>
 	</CombatExtended.AmmoCategoryDef>
 	
+	<CombatExtended.AmmoCategoryDef>
+		<defName>Illumination</defName>
+		<label>Illumination Round</label>
+		<labelShort>Illumination</labelShort>
+		<description>Illumination Round That is able to light a large area to almost daylight conditions.</description>
+	</CombatExtended.AmmoCategoryDef>
 </Defs>

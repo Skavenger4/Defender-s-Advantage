@@ -544,13 +544,13 @@
     <statBases>
       <MarketValue>1000</MarketValue>
       <SightsEfficiency>0.8</SightsEfficiency>
-      <ShotSpread>0.69</ShotSpread>
+      <ShotSpread>1.69</ShotSpread>
       <SwayFactor>2.96</SwayFactor>
       <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
     </statBases>
     <verbs>
       <li Class="CombatExtended.VerbPropertiesCE">
-        <recoilAmount>1.65</recoilAmount>
+        <recoilAmount>0.45</recoilAmount>
         <verbClass>CombatExtended.Verb_ShootCE</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Bullet_Flamethrower_Napalm</defaultProjectile>
@@ -623,6 +623,55 @@
       </li>
       <li Class="CombatExtended.CompProperties_FireModes">
         <aiAimMode>AimedShot</aiAimMode>
+      </li>
+    </comps>
+  </ThingDef>
+  <!-- ================== QF 25 mm Autocannon ================== -->
+  <ThingDef ParentName="BaseTurretGun">
+    <defName>DAT_QF25mm</defName>
+    <label>Quick Firing 25mm Autocannon</label>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/ChargeRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <description>Quick Firing 25mm Autocannon (Please be Careful).</description>
+    <statBases>
+      <MarketValue>3000</MarketValue>
+      <SightsEfficiency>4.2</SightsEfficiency>
+      <ShotSpread>0.02</ShotSpread>
+      <SwayFactor>1.39</SwayFactor>
+      <RangedWeapon_Cooldown>2.57</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>1.01</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_25x163mm_FMJ</defaultProjectile>
+        <warmupTime>1.2</warmupTime>
+        <range>200</range>
+		<minRange>10</minRange>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+        <burstShotCount>50</burstShotCount>
+        <soundCast>HeavyMG</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>5</muzzleFlashScale>
+        <recoilPattern>Mounted</recoilPattern>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>200</magazineSize>
+        <reloadTime>12.2</reloadTime>
+        <spawnUnloaded>false</spawnUnloaded>
+        <ammoSet>AmmoSet_25x163mm</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+        <aimedBurstShotCount>10</aimedBurstShotCount>
+        <aiAimMode>SuppressFire</aiAimMode>
       </li>
     </comps>
   </ThingDef>

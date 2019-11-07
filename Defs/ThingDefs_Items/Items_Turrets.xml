@@ -205,4 +205,30 @@
   </thingCategories>
   </ThingDef>
   
+   <ThingDef ParentName="MinifiedBase">
+    <defName>MinifiedTurret_QF25mm</defName>
+    <label>QF 25mm Autocannon</label>
+	<description>A Minified QF 25mm Autocannon</description>
+    <statBases>
+      <Mass>785</Mass>
+      <Bulk>1200</Bulk>
+    </statBases>
+  <thingCategories>
+      <li>WeaponsTurrets</li>
+  </thingCategories>
+  </ThingDef>
+  
+   <ThingDef ParentName="MinifiedBase">
+    <defName>MinifiedTurret_Searchlight</defName>
+    <label>Searchlight</label>
+	<description>A Minified Searchlight</description>
+    <statBases>
+      <Mass>69</Mass>
+      <Bulk>40</Bulk>
+    </statBases>
+  <thingCategories>
+      <li>WeaponsTurrets</li>
+  </thingCategories>
+  </ThingDef>
+  
 </Defs>

@@ -20,7 +20,7 @@
 		</value>
 	</Operation>
 
-	<!-- Enable Stage then attack + make more powerful-->
+	<!-- Re-enable Stage then attack + make more powerful-->
 
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/RaidStrategyDef[defName="StageThenAttack"]/selectionWeightPerPointsCurve/points</xpath>
@@ -36,7 +36,7 @@
 		<xpath>Defs/RaidStrategyDef[defName="StageThenAttack"]/pointsFactorCurve/points</xpath>
 		<value>
 			<points>
-				<li>0,1.5</li>
+				<li>0,1.25</li>
 			</points>
 		</value>
 	</Operation>

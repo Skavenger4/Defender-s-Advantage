@@ -46,7 +46,7 @@
 	  <Flammability>0.01</Flammability>
       <DeteriorationRate>0</DeteriorationRate>
       <StuffPower_Armor_Sharp>0.15</StuffPower_Armor_Sharp>
-      <StuffPower_Armor_Blunt>0.45</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Blunt>4.45</StuffPower_Armor_Blunt>
       <StuffPower_Armor_Heat>2.5</StuffPower_Armor_Heat>
       <StuffPower_Insulation_Cold>48</StuffPower_Insulation_Cold>
       <StuffPower_Insulation_Heat>48</StuffPower_Insulation_Heat>
@@ -300,7 +300,7 @@
     </graphicData>
     <statBases>
       <StuffPower_Armor_Sharp>0.35</StuffPower_Armor_Sharp>
-      <StuffPower_Armor_Blunt>0.10</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Blunt>1.00</StuffPower_Armor_Blunt>
       <StuffPower_Armor_Heat>0.10</StuffPower_Armor_Heat>
       <StuffPower_Insulation_Cold>5</StuffPower_Insulation_Cold>
       <StuffPower_Insulation_Heat>5</StuffPower_Insulation_Heat>
@@ -340,8 +340,8 @@
       <color>(050,050,050)</color>
     </graphicData>
     <statBases>
-      <StuffPower_Armor_Sharp>0.50</StuffPower_Armor_Sharp>
-      <StuffPower_Armor_Blunt>0.20</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Sharp>0.85</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>1.20</StuffPower_Armor_Blunt>
       <StuffPower_Armor_Heat>0.2</StuffPower_Armor_Heat>
       <StuffPower_Insulation_Cold>10</StuffPower_Insulation_Cold>
       <StuffPower_Insulation_Heat>10</StuffPower_Insulation_Heat>
@@ -381,8 +381,8 @@
       <color>(050,050,050)</color>
     </graphicData>
     <statBases>
-      <StuffPower_Armor_Sharp>0.50</StuffPower_Armor_Sharp>
-      <StuffPower_Armor_Blunt>0.35</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Sharp>0.85</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>1.35</StuffPower_Armor_Blunt>
       <StuffPower_Armor_Heat>3.0</StuffPower_Armor_Heat>
       <StuffPower_Insulation_Cold>75</StuffPower_Insulation_Cold>
       <StuffPower_Insulation_Heat>60</StuffPower_Insulation_Heat>
@@ -427,7 +427,7 @@
     </graphicData>
     <statBases>
 	  <StuffPower_Armor_Sharp>0.05</StuffPower_Armor_Sharp>
-      <StuffPower_Armor_Blunt>0.20</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Blunt>2.50</StuffPower_Armor_Blunt>
       <StuffPower_Armor_Heat>4.50</StuffPower_Armor_Heat>
       <StuffPower_Insulation_Cold>70</StuffPower_Insulation_Cold>
       <StuffPower_Insulation_Heat>70</StuffPower_Insulation_Heat>
@@ -435,20 +435,20 @@
       <MarketValue>5</MarketValue>
       <Mass>0.015</Mass>
 	  <Bulk>0.015</Bulk>
-      <Flammability>0.01</Flammability>
+      <Flammability>0</Flammability>
       <DeteriorationRate>5</DeteriorationRate>
     </statBases>
 	<stuffProps>
 	  <statOffsets>
 		<Insulation_Heat>20</Insulation_Heat>
-		<Insulation_Cold>10</Insulation_Cold>
+		<Insulation_Cold>15</Insulation_Cold>
 	  </statOffsets>
 	  <statFactors>
 		<Flammability>0.01</Flammability>
 		<MaxHitPoints>0.5</MaxHitPoints>
 		<WorkToMake>0.5</WorkToMake>
 		<Mass>0.5</Mass>
-		<WornBulk>1.75</WornBulk>
+		<WornBulk>2.50</WornBulk>
 	  </statFactors>
       <categories>
         <li>Fabric</li>

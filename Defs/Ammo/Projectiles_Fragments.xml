@@ -5,7 +5,7 @@
 	
 	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseFragment">
 		<defName>Fragment_Tiny</defName>
-		<label>small fragments</label>
+		<label>Tiny fragments</label>
 		<graphicData>
 			<texPath>Things/Projectile/Fragments/Fragment_Small</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -15,6 +15,8 @@
 			<damageAmountBase>5</damageAmountBase>
 			<speed>20</speed>
 			<armorPenetrationBase>0.15</armorPenetrationBase>
+			<armorPenetrationSharp>0.5</armorPenetrationSharp>
+			<armorPenetrationBlunt>5</armorPenetrationBlunt>
 			<gravityFactor>15</gravityFactor>
 		</projectile>
 	</ThingDef>

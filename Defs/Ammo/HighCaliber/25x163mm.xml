@@ -18,6 +18,7 @@
       <Ammo_25x163mm_HE>Bullet_25x163mm_HE</Ammo_25x163mm_HE>
 	  <Ammo_25x163mm_HEAT>Bullet_25x163mm_HEAT</Ammo_25x163mm_HEAT>
       <Ammo_25x163mm_Incendiary>Bullet_25x163mm_Incendiary</Ammo_25x163mm_Incendiary>
+      <Ammo_25x163mm_AP_I>Bullet_25x163mm_AP_I</Ammo_25x163mm_AP_I>
 	  <Ammo_25x163mm_Sabot>Bullet_25x163mm_Sabot</Ammo_25x163mm_Sabot>
     </ammoTypes>
   </CombatExtended.AmmoSetDef>
@@ -43,7 +44,7 @@
 
   <ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo25x163mmBase">
 	<defName>Ammo_25x163mm_FMJ</defName>
-	<label>25x163mm cartridge (FMJ)</label>
+	<label>25x163mm cartridge (AP)</label>
 	<graphicData>
 	  <texPath>Things/Ammo/HighCaliber/FMJ</texPath>
 	  <graphicClass>Graphic_StackCount</graphicClass>
@@ -72,7 +73,9 @@
         <explosionDamageDef>Bomb</explosionDamageDef>
         <explosionRadius>1</explosionRadius>
         <fragments>
-          <Fragment_Shell>45</Fragment_Shell>
+          <Fragment_Large>5</Fragment_Large>
+		  <Fragment_Small>40</Fragment_Small>
+		  <Fragment_Tiny>70</Fragment_Tiny>
         </fragments>
         <fragRange>4</fragRange>
         <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
@@ -96,7 +99,7 @@
   
   <ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo25x163mmBase">
     <defName>Ammo_25x163mm_Incendiary</defName>
-    <label>25x163mm cartridge (AP-I)</label>
+    <label>25x163mm cartridge (Incendiary)</label>
     <graphicData>
       <texPath>Things/Ammo/HighCaliber/Incendiary</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -114,10 +117,25 @@
         <preExplosionSpawnChance>0.5</preExplosionSpawnChance>
         <soundExplode>MortarIncendiary_Explode</soundExplode>
         <fragments>
-          <Fragment_Shell>10</Fragment_Shell>
+          <Fragment_Large>7</Fragment_Large>
+		  <Fragment_Small>15</Fragment_Small>
         </fragments>
       </li>
     </comps>
+  </ThingDef>
+  
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo25x163mmBase">
+    <defName>Ammo_25x163mm_AP_I</defName>
+    <label>25x163mm cartridge (Incendiary)</label>
+    <graphicData>
+      <texPath>Things/Ammo/HighCaliber/Incendiary</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>1.54</MarketValue>
+    </statBases>
+    <ammoClass>IncendiaryAP</ammoClass>
+	<cookOffProjectile>Bullet_25x163mm_AP_I</cookOffProjectile>
   </ThingDef>
   
    	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo25x163mmBase">
@@ -152,10 +170,11 @@
   
   <ThingDef Class="CombatExtended.AmmoDef" ParentName="Base25x163mmBullet">
 	<defName>Bullet_25x163mm_FMJ</defName>
-	<label>25x163mm bullet (FMJ)</label>
+	<label>25x163mm bullet (AP)</label>
 	<projectile Class="CombatExtended.ProjectilePropertiesCE">
 	  <damageAmountBase>104</damageAmountBase>
-	  <armorPenetrationBase>1.256</armorPenetrationBase>
+	  <armorPenetrationSharp>42</armorPenetrationSharp>
+	  <armorPenetrationBlunt>125.540</armorPenetrationBlunt>
 	</projectile>
   </ThingDef>
 
@@ -167,13 +186,17 @@
       <damageDef>Bomb</damageDef>
       <damageAmountBase>50</damageAmountBase>
       <explosionRadius>1</explosionRadius>
+      <armorPenetrationSharp>0</armorPenetrationSharp>
+      <armorPenetrationBlunt>75.504</armorPenetrationBlunt>
 		  <soundExplode>MortarBomb_Explode</soundExplode>
       <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
     </projectile>
 		<comps>
 			<li Class="CombatExtended.CompProperties_ExplosiveCE">
 				<fragments>
-					<Fragment_Shell>45</Fragment_Shell>
+					<Fragment_Large>5</Fragment_Large>
+					<Fragment_Small>40</Fragment_Small>
+					<Fragment_Tiny>70</Fragment_Tiny>
 				</fragments>
 			</li>
 		</comps>
@@ -183,12 +206,13 @@
     <defName>Bullet_25x163mm_HEAT</defName>
     <label>25x163mm bullet (HEAT)</label>
     <projectile Class="CombatExtended.ProjectilePropertiesCE">
-      <damageAmountBase>56</damageAmountBase>
-      <armorPenetrationBase>1.566</armorPenetrationBase>
+      <damageAmountBase>103</damageAmountBase>
+      <armorPenetrationSharp>42</armorPenetrationSharp>
+	  <armorPenetrationBlunt>175.540</armorPenetrationBlunt>
       <secondaryDamage>
         <li>
           <def>Bomb_Secondary</def>
-          <amount>32</amount>
+          <amount>47</amount>
         </li>
       </secondaryDamage>
     </projectile>
@@ -196,7 +220,7 @@
 
   <ThingDef Class="CombatExtended.AmmoDef" ParentName="Base25x163mmBullet">
     <defName>Bullet_25x163mm_Incendiary</defName>
-    <label>25x163mm bullet (AP-I)</label>
+    <label>25x163mm bullet (Incendiary)</label>
     <projectile Class="CombatExtended.ProjectilePropertiesCE">
       <damageDef>PrometheumFlame</damageDef>
       <damageAmountBase>30</damageAmountBase>
@@ -208,10 +232,28 @@
 		<comps>
 			<li Class="CombatExtended.CompProperties_ExplosiveCE">
 				<fragments>
-          <Fragment_Shell>10</Fragment_Shell>
+					<Fragment_Large>2</Fragment_Large>
+					<Fragment_Small>15</Fragment_Small>
+					<Fragment_Tiny>35</Fragment_Tiny>
 				</fragments>
 			</li>
 		</comps>
+  </ThingDef>
+  
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="Base25x163mmBullet">
+    <defName>Bullet_25x163mm_AP_I</defName>
+    <label>25x163mm bullet (AP-I)</label>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageAmountBase>94</damageAmountBase>
+      <armorPenetrationSharp>42</armorPenetrationSharp>
+	  <armorPenetrationBlunt>175.540</armorPenetrationBlunt>
+      <secondaryDamage>
+        <li>
+          <def>Flame_Secondary</def>
+          <amount>27</amount>
+        </li>
+      </secondaryDamage>
+    </projectile>
   </ThingDef>
   
   <ThingDef Class="CombatExtended.AmmoDef" ParentName="Base25x163mmBullet">
@@ -219,8 +261,9 @@
 		<label>proto 25x163mm bullet (Sabot)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageDef>RadSabot</damageDef>
-			<damageAmountBase>30</damageAmountBase>
-			<armorPenetrationBase>2.056</armorPenetrationBase>
+			<damageAmountBase>40</damageAmountBase>
+			<armorPenetrationSharp>126</armorPenetrationSharp>
+			<armorPenetrationBlunt>225.540</armorPenetrationBlunt>
 			<speed>375</speed>
 		</projectile>
 	</ThingDef>
@@ -325,6 +368,41 @@
 
   <RecipeDef ParentName="AmmoRecipeBase">
     <defName>MakeAmmo_25x163mm_Incendiary</defName>
+    <label>make 25x163mm (Incendiary) cartridge x100</label>
+    <description>Craft 100 25x163mm (Incendiary) cartridges.</description>
+    <jobString>Making 25x163mm (Incendiary) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>46</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Prometheum</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+        <li>Prometheum</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_25x163mm_Incendiary>100</Ammo_25x163mm_Incendiary>
+    </products>
+    <workAmount>18750</workAmount>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_25x163mm_AP_I</defName>
     <label>make 25x163mm (AP-I) cartridge x100</label>
     <description>Craft 100 25x163mm (AP-I) cartridges.</description>
     <jobString>Making 25x163mm (AP-I) cartridges.</jobString>
@@ -353,7 +431,7 @@
       </thingDefs>
     </fixedIngredientFilter>
     <products>
-      <Ammo_25x163mm_Incendiary>100</Ammo_25x163mm_Incendiary>
+      <Ammo_25x163mm_AP_I>100</Ammo_25x163mm_AP_I>
     </products>
     <workAmount>18750</workAmount>
   </RecipeDef>

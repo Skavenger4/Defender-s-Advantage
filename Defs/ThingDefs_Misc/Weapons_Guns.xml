@@ -136,10 +136,11 @@
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <power>8</power>
-        <cooldownTime>1.6</cooldownTime>
+        <power>2</power>
+        <cooldownTime>0.6</cooldownTime>
         <chanceFactor>1.5</chanceFactor>
-        <armorPenetration>0.102</armorPenetration>
+        <armorPenetrationSharp>0</armorPenetrationSharp>
+		<armorPenetrationBlunt>0.55</armorPenetrationBlunt>
         <linkedBodyPartsGroup>Grip</linkedBodyPartsGroup>
       </li>
       <li Class="CombatExtended.ToolCE">
@@ -147,9 +148,10 @@
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <power>8</power>
+        <power>2</power>
         <cooldownTime>1.6</cooldownTime>
-        <armorPenetration>0.102</armorPenetration>
+        <armorPenetrationSharp>0</armorPenetrationSharp>
+		<armorPenetrationBlunt>0.55</armorPenetrationBlunt>
         <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
       </li>
       <li Class="CombatExtended.ToolCE">
@@ -157,9 +159,10 @@
         <capacities>
           <li>Poke</li>
         </capacities>
-        <power>8</power>
-        <cooldownTime>1.6</cooldownTime>
-        <armorPenetration>0.075</armorPenetration>
+        <power>2</power>
+        <cooldownTime>0.6</cooldownTime>
+        <armorPenetrationSharp>0</armorPenetrationSharp>
+		<armorPenetrationBlunt>0.55</armorPenetrationBlunt>
         <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
       </li>
     </tools>
@@ -219,20 +222,22 @@
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <power>7</power>
+        <power>2</power>
         <cooldownTime>0.6</cooldownTime>
         <chanceFactor>1.5</chanceFactor>
-        <armorPenetration>0.102</armorPenetration>
+        <armorPenetrationSharp>0</armorPenetrationSharp>
+		<armorPenetrationBlunt>0.55</armorPenetrationBlunt>
         <linkedBodyPartsGroup>Grip</linkedBodyPartsGroup>
       </li>
       <li Class="CombatExtended.ToolCE">
-        <label>barrel</label>
+        <label>trigger gaurd</label>
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <power>6</power>
-        <cooldownTime>1.6</cooldownTime>
-        <armorPenetration>0.102</armorPenetration>
+        <power>2</power>
+        <cooldownTime>1.0</cooldownTime>
+        <armorPenetrationSharp>0</armorPenetrationSharp>
+		<armorPenetrationBlunt>2.55</armorPenetrationBlunt>
         <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
       </li>
       <li Class="CombatExtended.ToolCE">
@@ -240,9 +245,10 @@
         <capacities>
           <li>Poke</li>
         </capacities>
-        <power>8</power>
-        <cooldownTime>1.6</cooldownTime>
-        <armorPenetration>0.075</armorPenetration>
+        <power>2</power>
+        <cooldownTime>0.6</cooldownTime>
+        <armorPenetrationSharp>0</armorPenetrationSharp>
+		<armorPenetrationBlunt>2.55</armorPenetrationBlunt>
         <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
       </li>
     </tools>
@@ -308,7 +314,8 @@
           <power>9</power>
           <cooldownTime>1.8</cooldownTime>
           <chanceFactor>1.5</chanceFactor>
-          <armorPenetration>0.11</armorPenetration>
+          <armorPenetrationSharp>0</armorPenetrationSharp>
+		  <armorPenetrationBlunt>3.75</armorPenetrationBlunt>
           <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
         </li>
         <li Class="CombatExtended.ToolCE">
@@ -318,7 +325,8 @@
           </capacities>
           <power>10</power>
           <cooldownTime>1.9</cooldownTime>
-          <armorPenetration>0.118</armorPenetration>
+          <armorPenetrationSharp>0</armorPenetrationSharp>
+		  <armorPenetrationBlunt>2.75</armorPenetrationBlunt>
           <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
         </li>
         <li Class="CombatExtended.ToolCE">
@@ -329,7 +337,8 @@
           <power>12</power>
           <cooldownTime>1.9</cooldownTime>
 		  <chanceFactor>3.0</chanceFactor>
-          <armorPenetration>0.586</armorPenetration>
+          <armorPenetrationSharp>5</armorPenetrationSharp>
+		  <armorPenetrationBlunt>6.75</armorPenetrationBlunt>
           <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
         </li>
       </tools>
@@ -399,10 +408,11 @@
           <capacities>
             <li>Blunt</li>
           </capacities>
-          <power>9</power>
+          <power>11</power>
           <cooldownTime>1.8</cooldownTime>
           <chanceFactor>1.5</chanceFactor>
-          <armorPenetration>0.11</armorPenetration>
+          <armorPenetrationSharp>0</armorPenetrationSharp>
+		  <armorPenetrationBlunt>2.75</armorPenetrationBlunt>
           <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
         </li>
         <li Class="CombatExtended.ToolCE">
@@ -410,9 +420,10 @@
           <capacities>
             <li>Blunt</li>
           </capacities>
-          <power>10</power>
+          <power>9</power>
           <cooldownTime>1.9</cooldownTime>
-          <armorPenetration>0.118</armorPenetration>
+          <armorPenetrationSharp>0</armorPenetrationSharp>
+		  <armorPenetrationBlunt>1.75</armorPenetrationBlunt>
           <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
         </li>
         <li Class="CombatExtended.ToolCE">
@@ -422,7 +433,8 @@
           </capacities>
           <power>10</power>
           <cooldownTime>1.9</cooldownTime>
-          <armorPenetration>0.086</armorPenetration>
+          <armorPenetrationSharp>0</armorPenetrationSharp>
+		  <armorPenetrationBlunt>2.25</armorPenetrationBlunt>
           <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
         </li>
       </tools>
@@ -492,10 +504,11 @@
           <capacities>
             <li>Blunt</li>
           </capacities>
-          <power>9</power>
+          <power>12</power>
           <cooldownTime>1.8</cooldownTime>
           <chanceFactor>1.5</chanceFactor>
-          <armorPenetration>0.11</armorPenetration>
+          <armorPenetrationSharp>0</armorPenetrationSharp>
+		  <armorPenetrationBlunt>3.25</armorPenetrationBlunt>
           <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
         </li>
         <li Class="CombatExtended.ToolCE">
@@ -505,7 +518,8 @@
           </capacities>
           <power>10</power>
           <cooldownTime>1.9</cooldownTime>
-          <armorPenetration>0.118</armorPenetration>
+          <armorPenetrationSharp>0</armorPenetrationSharp>
+		  <armorPenetrationBlunt>2.75</armorPenetrationBlunt>
           <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
         </li>
         <li Class="CombatExtended.ToolCE">
@@ -513,9 +527,10 @@
           <capacities>
             <li>Poke</li>
           </capacities>
-          <power>10</power>
+          <power>11</power>
           <cooldownTime>1.9</cooldownTime>
-          <armorPenetration>0.086</armorPenetration>
+          <armorPenetrationSharp>0</armorPenetrationSharp>
+		  <armorPenetrationBlunt>1.75</armorPenetrationBlunt>
           <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
         </li>
       </tools>
@@ -583,14 +598,27 @@
       </li>
     </comps>
 		<tools>
-        <li Class="CombatExtended.ToolCE">
-          <label>barrel</label>
+		<li Class="CombatExtended.ToolCE">
+          <label>stock</label>
           <capacities>
             <li>Blunt</li>
           </capacities>
-          <power>15</power>
+          <power>12</power>
+          <cooldownTime>1.8</cooldownTime>
+          <chanceFactor>1.5</chanceFactor>
+          <armorPenetrationSharp>0</armorPenetrationSharp>
+		  <armorPenetrationBlunt>2.75</armorPenetrationBlunt>
+          <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+        </li>
+        <li Class="CombatExtended.ToolCE">
+          <label>bipod</label>
+          <capacities>
+            <li>Blunt</li>
+          </capacities>
+          <power>9</power>
           <cooldownTime>1.9</cooldownTime>
-          <armorPenetration>0.218</armorPenetration>
+          <armorPenetrationSharp>0</armorPenetrationSharp>
+		  <armorPenetrationBlunt>3.75</armorPenetrationBlunt>
           <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
         </li>
         <li Class="CombatExtended.ToolCE">
@@ -598,9 +626,10 @@
           <capacities>
             <li>Poke</li>
           </capacities>
-          <power>10</power>
+          <power>15</power>
           <cooldownTime>1.9</cooldownTime>
-          <armorPenetration>0.086</armorPenetration>
+          <armorPenetrationSharp>0</armorPenetrationSharp>
+		  <armorPenetrationBlunt>2.75</armorPenetrationBlunt>
           <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
         </li>
       </tools>
@@ -683,17 +712,19 @@
           <power>11</power>
           <cooldownTime>1.8</cooldownTime>
           <chanceFactor>1.5</chanceFactor>
-          <armorPenetration>0.11</armorPenetration>
+          <armorPenetrationSharp>0</armorPenetrationSharp>
+		  <armorPenetrationBlunt>2.75</armorPenetrationBlunt>
           <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
         </li>
         <li Class="CombatExtended.ToolCE">
-          <label>barrel</label>
+          <label>backpack fuel tank</label>
           <capacities>
             <li>Blunt</li>
           </capacities>
-          <power>10</power>
+          <power>16</power>
           <cooldownTime>1.9</cooldownTime>
-          <armorPenetration>0.118</armorPenetration>
+          <armorPenetrationSharp>0</armorPenetrationSharp>
+		  <armorPenetrationBlunt>2.75</armorPenetrationBlunt>
           <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
         </li>
         <li Class="CombatExtended.ToolCE">
@@ -703,7 +734,8 @@
           </capacities>
           <power>10</power>
           <cooldownTime>1.9</cooldownTime>
-          <armorPenetration>0.086</armorPenetration>
+          <armorPenetrationSharp>0</armorPenetrationSharp>
+		  <armorPenetrationBlunt>2.25</armorPenetrationBlunt>
           <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
         </li>
       </tools>
@@ -768,13 +800,14 @@
     </comps>
 		<tools>
         <li Class="CombatExtended.ToolCE">
-          <label>barrel</label>
+          <label>High capacity magazine</label>
           <capacities>
             <li>Blunt</li>
           </capacities>
-          <power>10</power>
+          <power>9</power>
           <cooldownTime>1.9</cooldownTime>
-          <armorPenetration>0.218</armorPenetration>
+          <armorPenetrationSharp>0</armorPenetrationSharp>
+		  <armorPenetrationBlunt>1.25</armorPenetrationBlunt>
           <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
         </li>
         <li Class="CombatExtended.ToolCE">
@@ -784,7 +817,8 @@
           </capacities>
           <power>10</power>
           <cooldownTime>1.9</cooldownTime>
-          <armorPenetration>0.086</armorPenetration>
+          <armorPenetrationSharp>0</armorPenetrationSharp>
+		  <armorPenetrationBlunt>1.75</armorPenetrationBlunt>
           <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
         </li>
 		<li Class="CombatExtended.ToolCE">
@@ -795,7 +829,8 @@
           <power>8</power>
           <cooldownTime>1.8</cooldownTime>
           <chanceFactor>1.5</chanceFactor>
-          <armorPenetration>0.11</armorPenetration>
+          <armorPenetrationSharp>0</armorPenetrationSharp>
+		  <armorPenetrationBlunt>2.75</armorPenetrationBlunt>
           <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
         </li>
       </tools>
@@ -859,7 +894,8 @@
           <power>9</power>
           <cooldownTime>1.8</cooldownTime>
           <chanceFactor>1.5</chanceFactor>
-          <armorPenetration>0.11</armorPenetration>
+          <armorPenetrationSharp>0</armorPenetrationSharp>
+		  <armorPenetrationBlunt>2.75</armorPenetrationBlunt>
           <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
         </li>
         <li Class="CombatExtended.ToolCE">
@@ -869,7 +905,8 @@
           </capacities>
           <power>10</power>
           <cooldownTime>1.9</cooldownTime>
-          <armorPenetration>0.118</armorPenetration>
+          <armorPenetrationSharp>0</armorPenetrationSharp>
+		  <armorPenetrationBlunt>1.75</armorPenetrationBlunt>
           <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
         </li>
         <li Class="CombatExtended.ToolCE">
@@ -880,7 +917,8 @@
           <power>11</power>
           <cooldownTime>1.9</cooldownTime>
 		  <chanceFactor>3.0</chanceFactor>
-          <armorPenetration>0.446</armorPenetration>
+          <armorPenetrationSharp>2.5</armorPenetrationSharp>
+		  <armorPenetrationBlunt>4.25</armorPenetrationBlunt>
           <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
         </li>
       </tools>
@@ -947,7 +985,8 @@
           <power>9</power>
           <cooldownTime>1.8</cooldownTime>
           <chanceFactor>1.5</chanceFactor>
-          <armorPenetration>0.11</armorPenetration>
+          <armorPenetrationSharp>0</armorPenetrationSharp>
+		  <armorPenetrationBlunt>2.75</armorPenetrationBlunt>
           <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
         </li>
         <li Class="CombatExtended.ToolCE">
@@ -957,7 +996,8 @@
           </capacities>
           <power>10</power>
           <cooldownTime>1.9</cooldownTime>
-          <armorPenetration>0.118</armorPenetration>
+          <armorPenetrationSharp>0</armorPenetrationSharp>
+		  <armorPenetrationBlunt>1.75</armorPenetrationBlunt>
           <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
         </li>
         <li Class="CombatExtended.ToolCE">
@@ -968,7 +1008,8 @@
           <power>11</power>
           <cooldownTime>1.9</cooldownTime>
 		  <chanceFactor>3.0</chanceFactor>
-          <armorPenetration>0.546</armorPenetration>
+          <armorPenetrationSharp>2.5</armorPenetrationSharp>
+		  <armorPenetrationBlunt>4.25</armorPenetrationBlunt>
           <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
         </li>
       </tools>
@@ -1023,6 +1064,12 @@
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
     </verbs>
+	<modExtensions>
+      <li Class="CombatExtended.GunDrawExtension">
+        <DrawSize>1.15,1.15</DrawSize>
+        <DrawOffset>-0.0,-0.0</DrawOffset>
+      </li>
+    </modExtensions>
     <comps>
       <li Class="CombatExtended.CompProperties_AmmoUser">
         <magazineSize>1</magazineSize>
@@ -1035,34 +1082,37 @@
     </comps>
 	<tools>
         <li Class="CombatExtended.ToolCE">
-          <label>stock</label>
+          <label>recoil compinsated stock</label>
+          <capacities>
+            <li>Blunt</li>
+          </capacities>
+          <power>19</power>
+          <cooldownTime>2.8</cooldownTime>
+          <chanceFactor>1.5</chanceFactor>
+          <armorPenetrationSharp>0</armorPenetrationSharp>
+		  <armorPenetrationBlunt>7.75</armorPenetrationBlunt>
+          <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+        </li>
+        <li Class="CombatExtended.ToolCE">
+          <label>reinforced gun sight</label>
           <capacities>
             <li>Blunt</li>
           </capacities>
           <power>15</power>
-          <cooldownTime>2.8</cooldownTime>
-          <chanceFactor>1.5</chanceFactor>
-          <armorPenetration>0.11</armorPenetration>
-          <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
-        </li>
-        <li Class="CombatExtended.ToolCE">
-          <label>barrel</label>
-          <capacities>
-            <li>Blunt</li>
-          </capacities>
-          <power>13</power>
           <cooldownTime>2.2</cooldownTime>
-          <armorPenetration>0.118</armorPenetration>
+          <armorPenetrationSharp>0</armorPenetrationSharp>
+		  <armorPenetrationBlunt>5.75</armorPenetrationBlunt>
           <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
         </li>
         <li Class="CombatExtended.ToolCE">
-          <label>muzzle</label>
+          <label>muzzle brake</label>
           <capacities>
             <li>Poke</li>
           </capacities>
-          <power>10</power>
+          <power>12</power>
           <cooldownTime>1.9</cooldownTime>
-          <armorPenetration>0.086</armorPenetration>
+          <armorPenetrationSharp>0</armorPenetrationSharp>
+		  <armorPenetrationBlunt>3.75</armorPenetrationBlunt>
           <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
         </li>
       </tools>
@@ -1120,6 +1170,12 @@
 		<recoilPattern>Mounted</recoilPattern>
       </li>
     </verbs>
+	<modExtensions>
+      <li Class="CombatExtended.GunDrawExtension">
+        <DrawSize>1.15,1.15</DrawSize>
+        <DrawOffset>-0.0,-0.0</DrawOffset>
+      </li>
+    </modExtensions>
     <comps>
       <li Class="CombatExtended.CompProperties_AmmoUser">
         <magazineSize>50</magazineSize>
@@ -1134,34 +1190,37 @@
     </comps>
 	<tools>
         <li Class="CombatExtended.ToolCE">
-          <label>stock</label>
+          <label>recoil compinsated stock</label>
           <capacities>
             <li>Blunt</li>
           </capacities>
-          <power>15</power>
+          <power>17</power>
           <cooldownTime>2.8</cooldownTime>
           <chanceFactor>1.5</chanceFactor>
-          <armorPenetration>0.11</armorPenetration>
+          <armorPenetrationSharp>0</armorPenetrationSharp>
+		  <armorPenetrationBlunt>5.75</armorPenetrationBlunt>
           <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
         </li>
         <li Class="CombatExtended.ToolCE">
-          <label>barrel</label>
+          <label>reinforced gun sight</label>
           <capacities>
             <li>Blunt</li>
           </capacities>
-          <power>13</power>
+          <power>14</power>
           <cooldownTime>2.2</cooldownTime>
-          <armorPenetration>0.118</armorPenetration>
+          <armorPenetrationSharp>0</armorPenetrationSharp>
+		  <armorPenetrationBlunt>3.25</armorPenetrationBlunt>
           <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
         </li>
         <li Class="CombatExtended.ToolCE">
-          <label>muzzle</label>
+          <label>muzzle brake</label>
           <capacities>
             <li>Poke</li>
           </capacities>
           <power>10</power>
           <cooldownTime>1.9</cooldownTime>
-          <armorPenetration>0.086</armorPenetration>
+          <armorPenetrationSharp>0</armorPenetrationSharp>
+		  <armorPenetrationBlunt>2.25</armorPenetrationBlunt>
           <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
         </li>
       </tools>
@@ -1238,17 +1297,19 @@
           <power>10</power>
           <cooldownTime>1.8</cooldownTime>
           <chanceFactor>1.5</chanceFactor>
-          <armorPenetration>0.11</armorPenetration>
+          <armorPenetrationSharp>0</armorPenetrationSharp>
+		  <armorPenetrationBlunt>2.75</armorPenetrationBlunt>
           <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
         </li>
         <li Class="CombatExtended.ToolCE">
-          <label>barrel</label>
+          <label>Side drum magazine</label>
           <capacities>
             <li>Blunt</li>
           </capacities>
           <power>9</power>
           <cooldownTime>1.2</cooldownTime>
-          <armorPenetration>0.218</armorPenetration>
+          <armorPenetrationSharp>0</armorPenetrationSharp>
+		  <armorPenetrationBlunt>1.75</armorPenetrationBlunt>
           <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
         </li>
         <li Class="CombatExtended.ToolCE">
@@ -1258,7 +1319,8 @@
           </capacities>
           <power>10</power>
           <cooldownTime>1.9</cooldownTime>
-          <armorPenetration>0.086</armorPenetration>
+          <armorPenetrationSharp>0</armorPenetrationSharp>
+		  <armorPenetrationBlunt>2.25</armorPenetrationBlunt>
           <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
         </li>
       </tools>
@@ -1336,7 +1398,8 @@
           <power>13</power>
           <cooldownTime>1.8</cooldownTime>
           <chanceFactor>1.5</chanceFactor>
-          <armorPenetration>0.11</armorPenetration>
+          <armorPenetrationSharp>0</armorPenetrationSharp>
+		  <armorPenetrationBlunt>2.25</armorPenetrationBlunt>
           <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
         </li>
         <li Class="CombatExtended.ToolCE">
@@ -1346,7 +1409,8 @@
           </capacities>
           <power>9</power>
           <cooldownTime>1.2</cooldownTime>
-          <armorPenetration>0.218</armorPenetration>
+          <armorPenetrationSharp>0</armorPenetrationSharp>
+		  <armorPenetrationBlunt>1.75</armorPenetrationBlunt>
           <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
         </li>
         <li Class="CombatExtended.ToolCE">
@@ -1357,7 +1421,8 @@
           <power>12</power>
           <cooldownTime>1.9</cooldownTime>
 		  <chanceFactor>2.0</chanceFactor>
-          <armorPenetration>0.386</armorPenetration>
+          <armorPenetrationSharp>2.5</armorPenetrationSharp>
+		  <armorPenetrationBlunt>4.75</armorPenetrationBlunt>
           <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
         </li>
       </tools>
@@ -1367,5 +1432,5 @@
 	  <li>CE_AI_AssaultWeapon</li>
     </weaponTags>
   </ThingDef>
-  <!-- ================== Primitive Grenade Launcher ================== -->
-</Defs>
+  <!-- ================== Primitive Grenade Launcher ================== --> 
+  </Defs>

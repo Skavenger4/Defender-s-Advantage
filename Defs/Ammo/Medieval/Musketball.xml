@@ -244,9 +244,10 @@
 		<label>Musket Ball (Wood)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageAmountBase>1</damageAmountBase>
-			<pelletCount>24</pelletCount>
+			<pelletCount>32</pelletCount>
 			<spreadMult>20</spreadMult>
-			<armorPenetrationBase>0.08</armorPenetrationBase>
+			<armorPenetrationSharp>0.0</armorPenetrationSharp>
+			<armorPenetrationBlunt>2.504</armorPenetrationBlunt>
 			<speed>75</speed>
 		</projectile>
 	</ThingDef>
@@ -255,10 +256,11 @@
 		<defName>Bullet_MusketBall_Stone</defName>
 		<label>Musket Ball (Stone)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
-			<damageAmountBase>7</damageAmountBase>
-			<pelletCount>4</pelletCount>
+			<damageAmountBase>8</damageAmountBase>
+			<pelletCount>5</pelletCount>
 			<spreadMult>5</spreadMult>
-			<armorPenetrationBase>0.20</armorPenetrationBase>
+			<armorPenetrationSharp>0.55</armorPenetrationSharp>
+			<armorPenetrationBlunt>15.504</armorPenetrationBlunt>
 			<speed>95</speed>
 		</projectile>
 	</ThingDef>
@@ -268,7 +270,8 @@
 		<label>Musket Ball (Steel)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageAmountBase>18</damageAmountBase>
-			<armorPenetrationBase>0.40</armorPenetrationBase>
+			<armorPenetrationSharp>2.25</armorPenetrationSharp>
+			<armorPenetrationBlunt>25.504</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
 
@@ -277,7 +280,8 @@
 		<label>Musket Ball (Plasteel)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageAmountBase>19</damageAmountBase>
-			<armorPenetrationBase>0.55</armorPenetrationBase>
+			<armorPenetrationSharp>4.25</armorPenetrationSharp>
+			<armorPenetrationBlunt>25.504</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
 	
@@ -286,7 +290,8 @@
 		<label>Musket Ball (Silver)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageAmountBase>21</damageAmountBase>
-			<armorPenetrationBase>0.25</armorPenetrationBase>
+			<armorPenetrationSharp>0.35</armorPenetrationSharp>
+			<armorPenetrationBlunt>25.504</armorPenetrationBlunt>
 			<preExplosionSpawnChance>0.45</preExplosionSpawnChance>	
 			<preExplosionSpawnThingDef>Silver</preExplosionSpawnThingDef>
 		</projectile>
@@ -297,7 +302,8 @@
 		<label>Musket Ball (Gold)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageAmountBase>25</damageAmountBase>
-			<armorPenetrationBase>0.15</armorPenetrationBase>
+			<armorPenetrationSharp>0.25</armorPenetrationSharp>
+			<armorPenetrationBlunt>25.504</armorPenetrationBlunt>
 			<preExplosionSpawnChance>0.45</preExplosionSpawnChance>	
 			<preExplosionSpawnThingDef>Gold</preExplosionSpawnThingDef>
 		</projectile>
@@ -309,7 +315,8 @@
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageDef>RadBul</damageDef>
 			<damageAmountBase>10</damageAmountBase>
-			<armorPenetrationBase>0.65</armorPenetrationBase>
+			<armorPenetrationSharp>5.25</armorPenetrationSharp>
+			<armorPenetrationBlunt>25.504</armorPenetrationBlunt>
 			<speed>105</speed>
 		</projectile>
 	</ThingDef>
@@ -320,7 +327,8 @@
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageDef>InfBul</damageDef>
 			<damageAmountBase>5</damageAmountBase>
-			<armorPenetrationBase>0.55</armorPenetrationBase>
+			<armorPenetrationSharp>2.25</armorPenetrationSharp>
+			<armorPenetrationBlunt>25.504</armorPenetrationBlunt>
 			<speed>105</speed>
 		</projectile>
 	</ThingDef>
@@ -332,8 +340,10 @@
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageDef>Bomb</damageDef>
 			<speed>100</speed>
-			<damageAmountBase>15</damageAmountBase>
+			<damageAmountBase>10</damageAmountBase>
 			<explosionRadius>.5</explosionRadius>
+			<armorPenetrationSharp>0</armorPenetrationSharp>
+			<armorPenetrationBlunt>10.504</armorPenetrationBlunt>
 			<soundExplode>MortarBomb_Explode</soundExplode>
 			<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
 		</projectile>
@@ -366,7 +376,8 @@
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageAmountBase>22</damageAmountBase>
 			<spreadMult>4.5</spreadMult>
-			<armorPenetrationBase>0.20</armorPenetrationBase>
+			<armorPenetrationSharp>0.25</armorPenetrationSharp>
+			<armorPenetrationBlunt>35.504</armorPenetrationBlunt>
 			<speed>75</speed>
 		</projectile>
 	</ThingDef>

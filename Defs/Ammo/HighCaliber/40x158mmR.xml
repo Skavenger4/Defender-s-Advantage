@@ -16,6 +16,7 @@
     <ammoTypes>
 	  <Ammo_40x158mm_FMJ>Bullet_40x158mm_FMJ</Ammo_40x158mm_FMJ>
       <Ammo_40x158mm_HE>Bullet_40x158mm_HE</Ammo_40x158mm_HE>
+	  <Ammo_40x158mm_HEAT>Bullet_40x158mm_HEAT</Ammo_40x158mm_HEAT>
 	  <Ammo_40x158mm_EMP>Bullet_40x158mm_EMP</Ammo_40x158mm_EMP>
     </ammoTypes>
   </CombatExtended.AmmoSetDef>
@@ -42,7 +43,7 @@
 
  	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo40x158mmBase">
 		<defName>Ammo_40x158mm_FMJ</defName>
-		<label>40x158mm cartridge (FMJ)</label>
+		<label>40x158mm cartridge (AP)</label>
 		<graphicData>
 			<texPath>Things/Ammo/HighCaliber/FMJ</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
@@ -71,12 +72,28 @@
         <explosionDamageDef>Bomb</explosionDamageDef>
         <explosionRadius>2</explosionRadius>
         <fragments>
-          <Fragment_Shell>125</Fragment_Shell>
+          <Fragment_Large>15</Fragment_Large>
+		  <Fragment_Small>40</Fragment_Small>
+		  <Fragment_Tiny>90</Fragment_Tiny>
         </fragments>
         <fragRange>5</fragRange>
         <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
       </li>
     </comps>
+  </ThingDef>
+  
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo40x158mmBase">
+    <defName>Ammo_40x158mm_HEAT</defName>
+    <label>40x158mm cartridge (HEAT)</label>
+    <graphicData>
+      <texPath>Things/Ammo/HighCaliber/HE</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>5.03</MarketValue>
+    </statBases>
+	<ammoClass>ExplosiveAP</ammoClass>
+    <cookOffProjectile>Bullet_40x158mm_HEAT</cookOffProjectile>
   </ThingDef>
 	
   <ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo40x158mmBase">
@@ -111,10 +128,11 @@
   
   <ThingDef Class="CombatExtended.AmmoDef" ParentName="Base40x158mmBullet">
 		<defName>Bullet_40x158mm_FMJ</defName>
-		<label>40x158mm bullet (FMJ)</label>
+		<label>40x158mm bullet (AP)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageAmountBase>210</damageAmountBase>
-			<armorPenetrationBase>1.376</armorPenetrationBase>
+			<armorPenetrationSharp>52</armorPenetrationSharp>
+			<armorPenetrationBlunt>325.540</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
 
@@ -125,17 +143,38 @@
     <projectile Class="CombatExtended.ProjectilePropertiesCE">
       <damageDef>Bomb</damageDef>
       <damageAmountBase>100</damageAmountBase>
+	  <armorPenetrationSharp>0</armorPenetrationSharp>
+	  <armorPenetrationBlunt>225.504</armorPenetrationBlunt>
       <explosionRadius>2</explosionRadius>
 		  <soundExplode>MortarBomb_Explode</soundExplode>
       <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
     </projectile>
 		<comps>
 			<li Class="CombatExtended.CompProperties_ExplosiveCE">
-				<fragments>
-					<Fragment_Shell>105</Fragment_Shell>
-				</fragments>
+			  <fragments>
+			    <Fragment_Large>15</Fragment_Large>
+			    <Fragment_Small>40</Fragment_Small>
+				<Fragment_Tiny>90</Fragment_Tiny>
+			  </fragments>
 			</li>
 		</comps>
+  </ThingDef>
+  
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="Base40x158mmBullet">
+    <defName>Bullet_40x158mm_HEAT</defName>
+    <label>40x158mm bullet (HEAT)</label>
+	<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+      <damageAmountBase>210</damageAmountBase>
+      <armorPenetrationSharp>52</armorPenetrationSharp>
+	  <armorPenetrationBlunt>325.540</armorPenetrationBlunt>
+      <secondaryDamage>
+        <li>
+          <def>Bomb_Secondary</def>
+          <amount>107</amount>
+        </li>
+      </secondaryDamage>
+    </projectile>
   </ThingDef>
 
   <ThingDef Class="CombatExtended.AmmoDef" ParentName="Base40x158mmBullet">
@@ -207,6 +246,41 @@
     </fixedIngredientFilter>
     <products>
       <Ammo_40x158mm_HE>25</Ammo_40x158mm_HE>
+    </products>
+    <workAmount>12500</workAmount>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_40x158mm_HEAT</defName>
+    <label>make 40x158mm (HEAT) cartridge x25</label>
+    <description>Craft 25 40x158mm (HEAT) cartridges.</description>
+    <jobString>Making 40x158mm (HEAT) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>47</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSX</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+        <li>FSX</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_40x158mm_HEAT>25</Ammo_40x158mm_HEAT>
     </products>
     <workAmount>12500</workAmount>
   </RecipeDef>
