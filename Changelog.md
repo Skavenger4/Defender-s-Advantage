@@ -204,4 +204,9 @@ I'm sure that .22LR Could penetrate at least 0.5mm of steel armor Edition)
 	I'm not changing the range of the guns as when you target a point on the map. . .
 	[the guns will be able to hit targets further than they should]
 	
-	
+Version 1.5.1(??? Edition)
+	Name Change
+	B-00 Type K Burner -> BA-5 Type E Burner
+	Update Relevant Images
+
+

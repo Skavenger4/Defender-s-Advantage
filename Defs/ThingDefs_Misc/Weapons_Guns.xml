@@ -641,7 +641,7 @@
   <!-- ================== LR Flame thrower ================== -->
   <ThingDef ParentName="BaseHumanMakeableGun_CE">
     <defName>DA_Gun_Flamethrower</defName>
-    <label>B-00 Type K Burner</label>
+    <label>BA-5 Type E Burner</label>
     <description>Conventional backpack flamethrower with a more ergonomic "wand", it has a large ammo capacity but is very heavy and bulky. it also takes a while to reload.</description>
     <graphicData>
       <texPath>Things/Weapons/Flame</texPath>
