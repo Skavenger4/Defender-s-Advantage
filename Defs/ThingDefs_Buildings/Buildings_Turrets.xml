@@ -531,6 +531,8 @@
         <compClass>CompPowerTrader</compClass>
         <basePowerConsumption>500</basePowerConsumption>
       </li>
+	  <li Class="CompProperties_Flickable"/>
+	  <li Class="CompProperties_Breakdownable"/>
     </comps>
     <description>A Large Flamethrower that has a very Large ammo Capacity.</description>
     <costList>
@@ -585,7 +587,7 @@
       <texPath>Things/Building/Turrets/25mm_Base_Static</texPath>
     </graphicData>
     <statBases>
-	  <MaxHitPoints>750</MaxHitPoints>
+	  <MaxHitPoints>1000</MaxHitPoints>
       <WorkToMake>153500</WorkToMake>
       <Mass>785</Mass>
       <Bulk>1200</Bulk>
@@ -593,13 +595,17 @@
 	<comps>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
-        <basePowerConsumption>1200</basePowerConsumption>
+        <basePowerConsumption>1600</basePowerConsumption>
       </li>
+	  <li Class="CompProperties_Flickable"/>
+	  <li Class="CompProperties_Breakdownable"/>
     </comps>
     <description>A Quickfiring 25mm Auto Cannon that has a good ammo Capacity and Targeting radar to Improve Accuracy.</description>
     <costList>
-      <Steel>750</Steel>
-      <ComponentIndustrial>32</ComponentIndustrial>
+      <Steel>650</Steel>
+      <ComponentIndustrial>26</ComponentIndustrial>
+	  <ComponentSpacer>5</ComponentSpacer>
+	  <Plasteel>100</Plasteel>
     </costList>
     <building>
       <turretGunDef>DAT_QF25mm</turretGunDef>
@@ -609,7 +615,18 @@
 	<size>(2,2)</size>
 	<recipeMaker>
       <researchPrerequisite>QF_AutoCannons</researchPrerequisite>
+	  <skillRequirements>
+		<Crafting>12</Crafting>
+		<Intellectual>6</Intellectual>
+	  </skillRequirements>
     </recipeMaker>
     <minifiedDef>MinifiedThing</minifiedDef>
   </ThingDef>
+  <!--=============== [Secret Project 006] ===============-->
+  <!--=============== [Secret Project 006] ===============-->
+  <!--=============== [Secret Project 006] ===============-->
+  <!--=============== QF Single [Secret Project 007] ===============-->
+  <!--=============== QF Dual [Secret Project 007] ===============-->
+  <!--=============== QF Quad [Secret Project 007] ===============-->
+  <!--=============== Oct. will require a stack size of 1000+ ===============-->
 </Defs>

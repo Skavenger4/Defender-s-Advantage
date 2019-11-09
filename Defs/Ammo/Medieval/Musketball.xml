@@ -32,8 +32,8 @@
 	<ThingDef Class="CombatExtended.AmmoDef" Name="MusketBallBase" ParentName="SmallAmmoBase" Abstract="True">
 		<description>Large caliber musket rounds that could pack a decent punch even against armored targets.</description>
 		<statBases>
-		<Mass>0.01</Mass>
-		<Bulk>0.02</Bulk>
+		<Mass>0.010</Mass>
+		<Bulk>0.014</Bulk>
 		</statBases>
 	<tradeTags>
 		<li>CE_AutoEnableTrade</li>
@@ -55,6 +55,7 @@
 		</graphicData>
 		<statBases>
 			<MarketValue>0.03</MarketValue>
+			<Mass>0.006</Mass>
 		</statBases>
 		<ammoClass>WoodMB</ammoClass>
 		<cookOffProjectile>Bullet_MusketBall_Wood</cookOffProjectile>
@@ -96,7 +97,8 @@
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>
-			<MarketValue>0.75</MarketValue>
+			<MarketValue>0.95</MarketValue>
+			<Mass>0.011</Mass>
 		</statBases>
 		<ammoClass>PlasteelMB</ammoClass>
 		<cookOffProjectile>Bullet_MusketBall_Plasteel</cookOffProjectile>
@@ -110,7 +112,8 @@
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>
-			<MarketValue>0.15</MarketValue>
+			<MarketValue>0.46</MarketValue>
+			<Mass>0.013</Mass>
 		</statBases>
 		<ammoClass>SilverMB</ammoClass>
 		<cookOffProjectile>Bullet_MusketBall_Silver</cookOffProjectile>
@@ -125,7 +128,8 @@
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>
-			<MarketValue>1.15</MarketValue>
+			<MarketValue>4.72</MarketValue>
+			<Mass>0.015</Mass>
 		</statBases>
 		<ammoClass>GoldMB</ammoClass>
 		<cookOffProjectile>Bullet_MusketBall_Gold</cookOffProjectile>
@@ -140,7 +144,8 @@
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>
-			<MarketValue>0.45</MarketValue>
+			<MarketValue>0.15</MarketValue>
+			<Mass>0.020</Mass>
 		</statBases>
 		<ammoClass>UraniumMB</ammoClass>
 		<cookOffProjectile>Bullet_MusketBall_Uranium</cookOffProjectile>
@@ -170,7 +175,8 @@
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>
-			<MarketValue>0.45</MarketValue>
+			<MarketValue>0.16</MarketValue>
+			<Mass>0.017</Mass>
 		</statBases>
 		<ammoClass>HEMB</ammoClass>
 		<comps>
@@ -195,7 +201,8 @@
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>
-			<MarketValue>0.35</MarketValue>
+			<MarketValue>0.15</MarketValue>
+			<Mass>0.017</Mass>
 		</statBases>
 		<ammoClass>IncendiaryMB</ammoClass>
 		<comps>
@@ -219,7 +226,7 @@
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>
-			<MarketValue>0.05</MarketValue>
+			<MarketValue>0.09</MarketValue>
 		</statBases>
 		<ammoClass>SquareMB</ammoClass>
 		<cookOffProjectile>Bullet_MusketBall_Square</cookOffProjectile>

@@ -209,4 +209,55 @@ Version 1.5.1(??? Edition)
 	B-00 Type K Burner -> BA-5 Type E Burner
 	Update Relevant Images
 
+Version 1.5.2 (I'm still using windows XP for coding + Balance Patches Edition)
+	Fixed armor values
+		Light Uniform 
+			- Material effect multiplier 1x -> 6x
+			- Base Blunt value 400% -> 100%
+		Uniform 
+			- Base Armor value 3mm -> 2.5mm
+			- Base Blunt value 1200% -> 200%
+			- Material effect multiplier 5x -> 8x
+		Uniform Kai
+			- Base Armor value 5mm -> 4mm
+			- Material effect multiplier 8x -> 12x
+			- Base Blunt value 2000% -> 250%
+		Balistic Fabric 1
+			- Blunt 100% -> 2%
+		Balistic Fabric 2
+			- Blunt 120% -> 5%
+		Balistic Fabric 2.5
+			- Blunt 135% -> 125%
+		Model 451-66
+			- Blunt 250% -> 100%
+		QF 25mm Autocannon
+			- Weapon sway 1.39 -> 5.39
+			- Sights effectiveness 4.2 -> 3.5
+			- Power use 1200w -> 1600w
+			- Health 750 -> 1000
+			Cost changes
+				- Steel 750 -> 650
+				- Components 32 -> 26
+				- Plasteel 100
+				- Advanced components 5
+			<ROF not increased as it would near instantly turn centipides into swiss cheese>
+			<IRL the fire rate would be ~3600+ I left it at 1800 though>
+			<Still causes massive amounts of chaos if using (HE) shells>
+			Skill Requirements 
+				- Crafting 12
+				- Int. 6
+		All Powered Manned Turrets now flickable + breakdownable
+	Considering Re-Implenting Module 003 of project 005 as it was not obsolite
+	<Realized the sound for the flamethrower hiss is in CE Guns mod>
+	Handheld  flamethrower
+		- Range 15 -> 16
+	Fixed weights of New Mauser Bullets
+	Fixed weights of Musket balls
+	Fixed market value of musket balls
+	<Considering the creation of another mod for raids that are 2.5x larger overall>
+	<Module 004 of Project 005 may be delayed>
+	
+	
+	
+	
 

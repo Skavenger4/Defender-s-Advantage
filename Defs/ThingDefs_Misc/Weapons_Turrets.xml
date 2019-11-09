@@ -636,10 +636,10 @@
     </graphicData>
     <description>Quick Firing 25mm Autocannon (Please be Careful).</description>
     <statBases>
-      <MarketValue>3000</MarketValue>
-      <SightsEfficiency>4.2</SightsEfficiency>
+      <MarketValue>3500</MarketValue>
+      <SightsEfficiency>3.5</SightsEfficiency>
       <ShotSpread>0.02</ShotSpread>
-      <SwayFactor>1.39</SwayFactor>
+      <SwayFactor>5.39</SwayFactor>
       <RangedWeapon_Cooldown>2.57</RangedWeapon_Cooldown>
     </statBases>
     <verbs>
@@ -675,4 +675,11 @@
       </li>
     </comps>
   </ThingDef>
+  <!--=============== [Secret Project 006] ===============-->
+  <!--=============== [Secret Project 006] ===============-->
+  <!--=============== [Secret Project 006] ===============-->
+  <!--=============== QF Single [Secret Project 007] ===============-->
+  <!--=============== QF Dual [Secret Project 007] ===============-->
+  <!--=============== QF Quad [Secret Project 007] ===============-->
+  <!--=============== Oct. will require a stack size of 1000+ ===============-->
 </Defs>
