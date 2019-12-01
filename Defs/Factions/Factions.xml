@@ -44,7 +44,7 @@
 		<li>(200, 0.7)</li>
 		<li>(300, 0.9)</li>
 		<li>(400, 1.0)</li>
-		<li>(5000, 1.5)</li>
+		<li>(5000, 2.0)</li>
       </points>
     </raidCommonalityFromPointsCurve>
     <allowedArrivalTemperatureRange>
@@ -66,26 +66,26 @@
         <kindDef>Combat</kindDef>
         <commonality>100</commonality>
         <options>
-		  <MusketeerAdvanced>5</MusketeerAdvanced>
-          <HeavyMusketeer>10</HeavyMusketeer>
-          <TribalMusketeer>30</TribalMusketeer>
-          <MusketeerGrenadier>5</MusketeerGrenadier>
-          <MusketeerOutcast>20</MusketeerOutcast>
-		  <MusketeerSlave>15</MusketeerSlave>
-		  <MusketeerGeneral>2</MusketeerGeneral>
+		  <MusketeerAdvanced>2</MusketeerAdvanced>
+          <HeavyMusketeer>20</HeavyMusketeer>
+          <TribalMusketeer>60</TribalMusketeer>
+          <MusketeerGrenadier>10</MusketeerGrenadier>
+          <MusketeerOutcast>40</MusketeerOutcast>
+		  <MusketeerSlave>30</MusketeerSlave>
+		  <MusketeerGeneral>4</MusketeerGeneral>
 		  <MusketeerCC>1</MusketeerCC>
         </options>
       </li>
       <li>
         <!-- Normal fights, Heavy Assault-->
         <kindDef>Combat</kindDef>
-        <commonality>75</commonality>
+        <commonality>50</commonality>
         <options>
-		  <MusketeerAdvanced>5</MusketeerAdvanced>
-		  <MusketeerGeneral>2</MusketeerGeneral>
-          <HeavyMusketeer>30</HeavyMusketeer>
-          <TribalMusketeer>20</TribalMusketeer>
-          <MusketeerGrenadier>10</MusketeerGrenadier>
+		  <MusketeerAdvanced>2</MusketeerAdvanced>
+		  <MusketeerGeneral>4</MusketeerGeneral>
+          <HeavyMusketeer>60</HeavyMusketeer>
+          <TribalMusketeer>40</TribalMusketeer>
+          <MusketeerGrenadier>20</MusketeerGrenadier>
 		  <MusketeerCC>1</MusketeerCC>
         </options>
       </li>
@@ -94,17 +94,17 @@
         <kindDef>Combat</kindDef>
         <commonality>50</commonality>
         <options>
-		  <MusketeerAdvanced>5</MusketeerAdvanced>
-		  <MusketeerGeneral>2</MusketeerGeneral>
-          <HeavyMusketeer>10</HeavyMusketeer>
-          <TribalMusketeer>30</TribalMusketeer>
+		  <MusketeerAdvanced>2</MusketeerAdvanced>
+		  <MusketeerGeneral>4</MusketeerGeneral>
+          <HeavyMusketeer>20</HeavyMusketeer>
+          <TribalMusketeer>60</TribalMusketeer>
 		  <MusketeerCC>1</MusketeerCC>
         </options>
       </li>
       <li>
         <!-- Normal fights, Prisoners / Outcasts -->
         <kindDef>Combat</kindDef>
-        <commonality>2</commonality>
+        <commonality>25</commonality>
 		<disallowedStrategies>
           <li>Siege</li>
 		  <li>ImmediateAttackSmart</li>
@@ -113,8 +113,8 @@
         <options>
 		  <MusketeerCC>1</MusketeerCC>
 		  <MusketeerGeneral>5</MusketeerGeneral>
-		  <MusketeerSlave>50</MusketeerSlave>
-          <MusketeerOutcast>100</MusketeerOutcast>
+		  <MusketeerSlave>75</MusketeerSlave>
+          <MusketeerOutcast>150</MusketeerOutcast>
       </options>
       </li>
 	  <li>

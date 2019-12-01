@@ -675,11 +675,107 @@
       </li>
     </comps>
   </ThingDef>
-  <!--=============== [Secret Project 006] ===============-->
-  <!--=============== [Secret Project 006] ===============-->
-  <!--=============== [Secret Project 006] ===============-->
+  <!--=============== Charge Blaster Turret ===============-->
+  <ThingDef ParentName="BaseTurretGun">
+    <defName>DAT_SCB</defName>
+    <label>Static Charge Blaster</label>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/ChargeRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <description>A Faster Firing and more versitile heavy Charge blaster that could use use several ammo types, Including mechanoid bullets.</description>
+    <statBases>
+      <MarketValue>3500</MarketValue>
+      <SightsEfficiency>3.5</SightsEfficiency>
+      <ShotSpread>0.02</ShotSpread>
+      <SwayFactor>2.39</SwayFactor>
+      <RangedWeapon_Cooldown>2.57</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>0.71</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_12x64mmCharged</defaultProjectile>
+        <warmupTime>0.7</warmupTime>
+        <range>86</range>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+        <burstShotCount>25</burstShotCount>
+        <soundCast>Shot_ChargeBlaster</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>5</muzzleFlashScale>
+        <recoilPattern>Mounted</recoilPattern>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>200</magazineSize>
+        <reloadTime>12.2</reloadTime>
+        <spawnUnloaded>false</spawnUnloaded>
+        <ammoSet>AmmoSet_HCBT</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+        <aimedBurstShotCount>10</aimedBurstShotCount>
+        <aiAimMode>SuppressFire</aiAimMode>
+      </li>
+    </comps>
+  </ThingDef>
+  <!--=============== Breech loading Cannon ===============-->
+  <!--
+  <ThingDef ParentName="BaseTurretGun">
+    <defName>DAT_BLC</defName>
+    <label>Breech loading Cannon</label>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/ChargeRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <description>A Breech loading Cannon.</description>
+    <statBases>
+      <MarketValue>3500</MarketValue>
+      <SightsEfficiency>0.7</SightsEfficiency>
+      <ShotSpread>0.12</ShotSpread>
+      <SwayFactor>0.39</SwayFactor>
+      <RangedWeapon_Cooldown>2.57</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_CannonBall_Steel</defaultProjectile>
+        <warmupTime>1.2</warmupTime>
+        <range>65</range>
+		<minRange>5</minRange>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+        <soundCast>HeavyMG</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>5</muzzleFlashScale>
+        <recoilPattern>Mounted</recoilPattern>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>1</magazineSize>
+        <reloadTime>6.1</reloadTime>
+        <spawnUnloaded>false</spawnUnloaded>
+        <ammoSet>AmmoSet_CannonBall</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+        <aiAimMode>AimedShot</aiAimMode>
+      </li>
+    </comps>
+  </ThingDef>
+  -->
   <!--=============== QF Single [Secret Project 007] ===============-->
+  <!--=============== 56 Round Belt ===============-->
   <!--=============== QF Dual [Secret Project 007] ===============-->
+  <!--=============== 168 Round Belt ===============-->
   <!--=============== QF Quad [Secret Project 007] ===============-->
-  <!--=============== Oct. will require a stack size of 1000+ ===============-->
+  <!--=============== 448 Round Belt ===============-->
+  <!--=============== Oct. will require a stack size of 1120 ===============-->
 </Defs>

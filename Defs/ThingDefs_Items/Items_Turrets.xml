@@ -231,4 +231,32 @@
   </thingCategories>
   </ThingDef>
   
+  <ThingDef ParentName="MinifiedBase">
+    <defName>MinifiedTurret_HCBT</defName>
+    <label>Heavy Charge Blaster Turret</label>
+	<description>A Minified Heavy Charge Blaster Turret</description>
+    <statBases>
+      <Mass>150</Mass>
+      <Bulk>120</Bulk>
+    </statBases>
+  <thingCategories>
+      <li>WeaponsTurrets</li>
+  </thingCategories>
+  </ThingDef>
+  
+  <!--
+  <ThingDef ParentName="MinifiedBase">
+    <defName>MinifiedTurret_BLC</defName>
+    <label>Breech loading Cannon</label>
+	<description>A Minified Breech loading Cannon</description>
+    <statBases>
+      <Mass>45</Mass>
+      <Bulk>260</Bulk>
+    </statBases>
+  <thingCategories>
+      <li>WeaponsTurrets</li>
+  </thingCategories>
+  </ThingDef>
+  -->
+  
 </Defs>

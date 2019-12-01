@@ -16,8 +16,53 @@
     <ammoTypes>
 	  <Ammo_40x158mm_FMJ>Bullet_40x158mm_FMJ</Ammo_40x158mm_FMJ>
       <Ammo_40x158mm_HE>Bullet_40x158mm_HE</Ammo_40x158mm_HE>
+	  <Ammo_40x158mm_LVHE>Bullet_40x158mm_LVHE</Ammo_40x158mm_LVHE>
 	  <Ammo_40x158mm_HEAT>Bullet_40x158mm_HEAT</Ammo_40x158mm_HEAT>
 	  <Ammo_40x158mm_EMP>Bullet_40x158mm_EMP</Ammo_40x158mm_EMP>
+    </ammoTypes>
+  </CombatExtended.AmmoSetDef>
+  
+  <CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_40x158mm2</defName>
+    <label>Dual Linked 40x158mm</label>
+    <ammoTypes>
+	  <Ammo_40x158mm_2FMJ>Bullet_40x158mm_2FMJ</Ammo_40x158mm_2FMJ>
+      <Ammo_40x158mm_2HE>Bullet_40x158mm_2HE</Ammo_40x158mm_2HE>
+	  <Ammo_40x158mm_2LVHE>Bullet_40x158mm_2LVHE</Ammo_40x158mm_2LVHE>
+	  <Ammo_40x158mm_2HEAT>Bullet_40x158mm_2HEAT</Ammo_40x158mm_2HEAT>
+	  <Ammo_40x158mm_2EMP>Bullet_40x158mm_2EMP</Ammo_40x158mm_2EMP>
+    </ammoTypes>
+  </CombatExtended.AmmoSetDef>
+  
+  <CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_40x158mm4</defName>
+    <label>Quad Linked 40x158mm</label>
+    <ammoTypes>
+	  <Ammo_40x158mm_4FMJ>Bullet_40x158mm_4FMJ</Ammo_40x158mm_4FMJ>
+      <Ammo_40x158mm_4HE>Bullet_40x158mm_4HE</Ammo_40x158mm_4HE>
+	  <Ammo_40x158mm_4LVHE>Bullet_40x158mm_4LVHE</Ammo_40x158mm_4LVHE>
+	  <Ammo_40x158mm_4HEAT>Bullet_40x158mm_4HEAT</Ammo_40x158mm_4HEAT>
+	  <Ammo_40x158mm_4EMP>Bullet_40x158mm_4EMP</Ammo_40x158mm_4EMP>
+    </ammoTypes>
+  </CombatExtended.AmmoSetDef>
+  
+  <CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_40x158mm8</defName>
+    <label>Oct. Linked 40x158mm</label>
+    <ammoTypes>
+	  <Ammo_40x158mm_8FMJ>Bullet_40x158mm_8FMJ</Ammo_40x158mm_8FMJ>
+      <Ammo_40x158mm_8HE>Bullet_40x158mm_8HE</Ammo_40x158mm_8HE>
+	  <Ammo_40x158mm_8LVHE>Bullet_40x158mm_8LVHE</Ammo_40x158mm_8LVHE>
+	  <Ammo_40x158mm_8HEAT>Bullet_40x158mm_8HEAT</Ammo_40x158mm_8HEAT>
+	  <Ammo_40x158mm_8EMP>Bullet_40x158mm_8EMP</Ammo_40x158mm_8EMP>
+    </ammoTypes>
+  </CombatExtended.AmmoSetDef>
+  
+  <CombatExtended.AmmoSetDef>
+    <defName>AmmoSet_40x158mm_Caseless</defName>
+    <label>Caseless and Recoilless 40x158mm</label>
+    <ammoTypes>
+	  <Ammo_40x158mm_LVHE>Bullet_40x158mm_LVHE</Ammo_40x158mm_LVHE>
     </ammoTypes>
   </CombatExtended.AmmoSetDef>
   
@@ -36,9 +81,42 @@
     <thingCategories>
       <li>Ammo40x158mm</li>
     </thingCategories>
-    <stackLimit>500</stackLimit>
+    <stackLimit>200</stackLimit>
 	<cookOffFlashScale>20</cookOffFlashScale>
     <cookOffSound>MortarBomb_Explode</cookOffSound>
+  </ThingDef>
+  
+  <ThingDef Class="CombatExtended.AmmoDef" Name="Ammo40x158mmBase2" ParentName="SmallAmmoBase" Abstract="True">
+    <description>Dual Linked Old-school anti-air cartridge originally designed for [Secret Proj 007].</description>
+    <statBases>
+    <Mass>2.68</Mass>
+    <Bulk>1.54</Bulk>
+    </statBases>
+  <tradeTags>
+    <li>CE_AutoEnableTrade</li>
+  </tradeTags>
+    <thingCategories>
+      <li>Ammo40x158mm</li>
+    </thingCategories>
+    <stackLimit>200</stackLimit>
+	<cookOffFlashScale>20</cookOffFlashScale>
+    <cookOffSound>MortarBomb_Explode</cookOffSound>
+  </ThingDef>
+  
+  <ThingDef Class="CombatExtended.AmmoDef" Name="Ammo40x158mmBase4" ParentName="Ammo40x158mmBase2" Abstract="True">
+    <description>Quad Linked Old-school anti-air cartridge originally designed for [Secret Proj 007].</description>
+    <statBases>
+    <Mass>5.36</Mass>
+    <Bulk>3.08</Bulk>
+    </statBases>
+  </ThingDef>
+  
+  <ThingDef Class="CombatExtended.AmmoDef" Name="Ammo40x158mmBase8" ParentName="Ammo40x158mmBase2" Abstract="True">
+    <description>Oct. Linked Old-school anti-air cartridge originally designed for [Secret Proj 007].</description>
+    <statBases>
+    <Mass>10.72</Mass>
+    <Bulk>6.16</Bulk>
+    </statBases>
   </ThingDef>
 
  	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo40x158mmBase">
@@ -83,6 +161,34 @@
   </ThingDef>
   
   <ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo40x158mmBase">
+    <defName>Ammo_40x158mm_LVHE</defName>
+    <label>Caseless 40x158mm cartridge (LV-HE)</label>
+	<description>Low Velocity Caseless cartridge originally designed for [Secret Proj 007].</description>
+    <graphicData>
+      <texPath>Things/Ammo/HighCaliber/HE</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>5.03</MarketValue>
+    </statBases>
+		<ammoClass>LV-HE</ammoClass>
+    <comps>
+      <li Class="CombatExtended.CompProperties_ExplosiveCE">
+        <explosionDamage>100</explosionDamage>
+        <explosionDamageDef>Bomb</explosionDamageDef>
+        <explosionRadius>2</explosionRadius>
+        <fragments>
+          <Fragment_Large>35</Fragment_Large>
+		  <Fragment_Small>90</Fragment_Small>
+		  <Fragment_Tiny>150</Fragment_Tiny>
+        </fragments>
+        <fragRange>6</fragRange>
+        <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo40x158mmBase">
     <defName>Ammo_40x158mm_HEAT</defName>
     <label>40x158mm cartridge (HEAT)</label>
     <graphicData>
@@ -110,6 +216,297 @@
     <cookOffProjectile>Bullet_40x158mm_EMP</cookOffProjectile>
   </ThingDef>
 
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo40x158mmBase2">
+		<defName>Ammo_40x158mm_2FMJ</defName>
+		<label>Dual Linked 40x158mm cartridge (AP)</label>
+		<graphicData>
+			<texPath>Things/Ammo/HighCaliber/FMJ</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>5.06</MarketValue>
+		</statBases>
+		<ammoClass>FullMetalJacket</ammoClass>
+		<cookOffProjectile>Bullet_40x158mm_FMJ</cookOffProjectile>
+	</ThingDef>
+  
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo40x158mmBase2">
+    <defName>Ammo_40x158mm_2HE</defName>
+    <label>Dual Linked 40x158mm cartridge (HE)</label>
+    <graphicData>
+      <texPath>Things/Ammo/HighCaliber/HE</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>10.03</MarketValue>
+    </statBases>
+		<ammoClass>GrenadeHE</ammoClass>
+    <comps>
+      <li Class="CombatExtended.CompProperties_ExplosiveCE">
+        <explosionDamage>100</explosionDamage>
+        <explosionDamageDef>Bomb</explosionDamageDef>
+        <explosionRadius>2</explosionRadius>
+        <fragments>
+          <Fragment_Large>20</Fragment_Large>
+		  <Fragment_Small>80</Fragment_Small>
+		  <Fragment_Tiny>175</Fragment_Tiny>
+        </fragments>
+        <fragRange>5</fragRange>
+        <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo40x158mmBase2">
+    <defName>Ammo_40x158mm_2LVHE</defName>
+    <label>Dual Linked Caseless 40x158mm cartridge (LV-HE)</label>
+	<description>Low Velocity Caseless cartridge originally designed for [Secret Proj 007].</description>
+    <graphicData>
+      <texPath>Things/Ammo/HighCaliber/HE</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>10.03</MarketValue>
+    </statBases>
+		<ammoClass>LV-HE</ammoClass>
+    <comps>
+      <li Class="CombatExtended.CompProperties_ExplosiveCE">
+        <explosionDamage>100</explosionDamage>
+        <explosionDamageDef>Bomb</explosionDamageDef>
+        <explosionRadius>2</explosionRadius>
+        <fragments>
+          <Fragment_Large>35</Fragment_Large>
+		  <Fragment_Small>90</Fragment_Small>
+		  <Fragment_Tiny>150</Fragment_Tiny>
+        </fragments>
+        <fragRange>6</fragRange>
+        <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo40x158mmBase2">
+    <defName>Ammo_40x158mm_2HEAT</defName>
+    <label>Dual Linked 40x158mm cartridge (HEAT)</label>
+    <graphicData>
+      <texPath>Things/Ammo/HighCaliber/HE</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>10.03</MarketValue>
+    </statBases>
+	<ammoClass>ExplosiveAP</ammoClass>
+    <cookOffProjectile>Bullet_40x158mm_HEAT</cookOffProjectile>
+  </ThingDef>
+	
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo40x158mmBase2">
+    <defName>Ammo_40x158mm_2EMP</defName>
+    <label>Dual Linked 40x158mm cartridge (EMP)</label>
+    <graphicData>
+      <texPath>Things/Ammo/HighCaliber/FMJ</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>10.03</MarketValue>
+    </statBases>
+    <ammoClass>ElectroSlug</ammoClass>
+    <cookOffProjectile>Bullet_40x158mm_EMP</cookOffProjectile>
+  </ThingDef>
+  
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo40x158mmBase4">
+		<defName>Ammo_40x158mm_4FMJ</defName>
+		<label>Quad Linked 40x158mm cartridge (AP)</label>
+		<graphicData>
+			<texPath>Things/Ammo/HighCaliber/FMJ</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>10.30</MarketValue>
+		</statBases>
+		<ammoClass>FullMetalJacket</ammoClass>
+		<cookOffProjectile>Bullet_40x158mm_FMJ</cookOffProjectile>
+	</ThingDef>
+  
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo40x158mmBase4">
+    <defName>Ammo_40x158mm_4HE</defName>
+    <label>Quad Linked 40x158mm cartridge (HE)</label>
+    <graphicData>
+      <texPath>Things/Ammo/HighCaliber/HE</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>20.03</MarketValue>
+    </statBases>
+		<ammoClass>GrenadeHE</ammoClass>
+    <comps>
+      <li Class="CombatExtended.CompProperties_ExplosiveCE">
+        <explosionDamage>100</explosionDamage>
+        <explosionDamageDef>Bomb</explosionDamageDef>
+        <explosionRadius>2</explosionRadius>
+        <fragments>
+          <Fragment_Large>20</Fragment_Large>
+		  <Fragment_Small>80</Fragment_Small>
+		  <Fragment_Tiny>175</Fragment_Tiny>
+        </fragments>
+        <fragRange>5</fragRange>
+        <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo40x158mmBase4">
+    <defName>Ammo_40x158mm_4LVHE</defName>
+    <label>Quad Linked Caseless 40x158mm cartridge (LV-HE)</label>
+	<description>Low Velocity Caseless cartridge originally designed for [Secret Proj 007].</description>
+    <graphicData>
+      <texPath>Things/Ammo/HighCaliber/HE</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>20.03</MarketValue>
+    </statBases>
+		<ammoClass>LV-HE</ammoClass>
+    <comps>
+      <li Class="CombatExtended.CompProperties_ExplosiveCE">
+        <explosionDamage>100</explosionDamage>
+        <explosionDamageDef>Bomb</explosionDamageDef>
+        <explosionRadius>2</explosionRadius>
+        <fragments>
+          <Fragment_Large>35</Fragment_Large>
+		  <Fragment_Small>90</Fragment_Small>
+		  <Fragment_Tiny>150</Fragment_Tiny>
+        </fragments>
+        <fragRange>6</fragRange>
+        <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo40x158mmBase4">
+    <defName>Ammo_40x158mm_4HEAT</defName>
+    <label>Quad Linked 40x158mm cartridge (HEAT)</label>
+    <graphicData>
+      <texPath>Things/Ammo/HighCaliber/HE</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>20.03</MarketValue>
+    </statBases>
+	<ammoClass>ExplosiveAP</ammoClass>
+    <cookOffProjectile>Bullet_40x158mm_HEAT</cookOffProjectile>
+  </ThingDef>
+	
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo40x158mmBase4">
+    <defName>Ammo_40x158mm_4EMP</defName>
+    <label>Quad Linked 40x158mm cartridge (EMP)</label>
+    <graphicData>
+      <texPath>Things/Ammo/HighCaliber/FMJ</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>20.03</MarketValue>
+    </statBases>
+    <ammoClass>ElectroSlug</ammoClass>
+    <cookOffProjectile>Bullet_40x158mm_EMP</cookOffProjectile>
+  </ThingDef>
+  
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo40x158mmBase8">
+		<defName>Ammo_40x158mm_8FMJ</defName>
+		<label>Oct. Linked 40x158mm cartridge (AP)</label>
+		<graphicData>
+			<texPath>Things/Ammo/HighCaliber/FMJ</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>20.00</MarketValue>
+		</statBases>
+		<ammoClass>FullMetalJacket</ammoClass>
+		<cookOffProjectile>Bullet_40x158mm_FMJ</cookOffProjectile>
+	</ThingDef>
+  
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo40x158mmBase8">
+    <defName>Ammo_40x158mm_8HE</defName>
+    <label>Oct. Linked 40x158mm cartridge (HE)</label>
+    <graphicData>
+      <texPath>Things/Ammo/HighCaliber/HE</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>40.03</MarketValue>
+    </statBases>
+		<ammoClass>GrenadeHE</ammoClass>
+    <comps>
+      <li Class="CombatExtended.CompProperties_ExplosiveCE">
+        <explosionDamage>100</explosionDamage>
+        <explosionDamageDef>Bomb</explosionDamageDef>
+        <explosionRadius>2</explosionRadius>
+        <fragments>
+          <Fragment_Large>20</Fragment_Large>
+		  <Fragment_Small>80</Fragment_Small>
+		  <Fragment_Tiny>175</Fragment_Tiny>
+        </fragments>
+        <fragRange>5</fragRange>
+        <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo40x158mmBase8">
+    <defName>Ammo_40x158mm_8LVHE</defName>
+    <label>Oct. Linked Caseless 40x158mm cartridge (LV-HE)</label>
+	<description>Low Velocity Caseless cartridge originally designed for [Secret Proj 007].</description>
+    <graphicData>
+      <texPath>Things/Ammo/HighCaliber/HE</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>40.03</MarketValue>
+    </statBases>
+		<ammoClass>LV-HE</ammoClass>
+    <comps>
+      <li Class="CombatExtended.CompProperties_ExplosiveCE">
+        <explosionDamage>100</explosionDamage>
+        <explosionDamageDef>Bomb</explosionDamageDef>
+        <explosionRadius>2</explosionRadius>
+        <fragments>
+          <Fragment_Large>35</Fragment_Large>
+		  <Fragment_Small>90</Fragment_Small>
+		  <Fragment_Tiny>150</Fragment_Tiny>
+        </fragments>
+        <fragRange>6</fragRange>
+        <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo40x158mmBase8">
+    <defName>Ammo_40x158mm_8HEAT</defName>
+    <label>Oct. Linked 40x158mm cartridge (HEAT)</label>
+    <graphicData>
+      <texPath>Things/Ammo/HighCaliber/HE</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>40.03</MarketValue>
+    </statBases>
+	<ammoClass>ExplosiveAP</ammoClass>
+    <cookOffProjectile>Bullet_40x158mm_HEAT</cookOffProjectile>
+  </ThingDef>
+	
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo40x158mmBase8">
+    <defName>Ammo_40x158mm_8EMP</defName>
+    <label>Oct. Linked 40x158mm cartridge (EMP)</label>
+    <graphicData>
+      <texPath>Things/Ammo/HighCaliber/FMJ</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>40.03</MarketValue>
+    </statBases>
+    <ammoClass>ElectroSlug</ammoClass>
+    <cookOffProjectile>Bullet_40x158mm_EMP</cookOffProjectile>
+  </ThingDef>
+  
   <!-- ================== Projectiles ================== -->
 
   <ThingDef Class="CombatExtended.AmmoDef" Name="Base40x158mmBullet" ParentName="BaseBullet" Abstract="true">
@@ -119,7 +516,7 @@
     </graphicData>
     <projectile Class="CombatExtended.ProjectilePropertiesCE">
       <damageDef>Bullet</damageDef>
-      <speed>175</speed>
+      <speed>165</speed>
 	  <soundExplode>MortarBomb_Explode</soundExplode>
 	  <flyOverhead>false</flyOverhead>
       <dropsCasings>true</dropsCasings>
@@ -131,7 +528,7 @@
 		<label>40x158mm bullet (AP)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<damageAmountBase>210</damageAmountBase>
-			<armorPenetrationSharp>55</armorPenetrationSharp>
+			<armorPenetrationSharp>52</armorPenetrationSharp>
 			<armorPenetrationBlunt>325.540</armorPenetrationBlunt>
 		</projectile>
 	</ThingDef>
@@ -161,12 +558,39 @@
   </ThingDef>
   
   <ThingDef Class="CombatExtended.AmmoDef" ParentName="Base40x158mmBullet">
+    <defName>Bullet_40x158mm_LVHE</defName>
+    <label>40x158mm bullet (LV-HE)</label>
+	<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+	  <speed>15</speed>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>100</damageAmountBase>
+	  <armorPenetrationSharp>0</armorPenetrationSharp>
+	  <armorPenetrationBlunt>295.504</armorPenetrationBlunt>
+      <explosionRadius>2</explosionRadius>
+		  <soundExplode>MortarBomb_Explode</soundExplode>
+      <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+	  <flyOverhead>false</flyOverhead>
+      <dropsCasings>false</dropsCasings>
+    </projectile>
+	<comps>
+	  <li Class="CombatExtended.CompProperties_ExplosiveCE">
+		<fragments>
+		  <Fragment_Large>35</Fragment_Large>
+		  <Fragment_Small>90</Fragment_Small>
+		  <Fragment_Tiny>150</Fragment_Tiny>
+	    </fragments>
+	  </li>
+	</comps>
+  </ThingDef>
+  
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="Base40x158mmBullet">
     <defName>Bullet_40x158mm_HEAT</defName>
     <label>40x158mm bullet (HEAT)</label>
 	<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
     <projectile Class="CombatExtended.ProjectilePropertiesCE">
       <damageAmountBase>210</damageAmountBase>
-      <armorPenetrationSharp>72</armorPenetrationSharp>
+      <armorPenetrationSharp>62</armorPenetrationSharp>
 	  <armorPenetrationBlunt>325.540</armorPenetrationBlunt>
       <secondaryDamage>
         <li>
@@ -182,7 +606,316 @@
 	<label>40x158mm bullet (EMP)</label>
 	<projectile Class="CombatExtended.ProjectilePropertiesCE">
 	  <damageAmountBase>150</damageAmountBase>
-	  <speed>195</speed>
+	  <speed>145</speed>
+	  <secondaryDamage>
+		<li>
+		  <def>EMP</def>
+		  <amount>107</amount>
+		</li>
+	  </secondaryDamage>
+	</projectile>
+  </ThingDef>
+  
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="Base40x158mmBullet">
+		<defName>Bullet_40x158mm_2FMJ</defName>
+		<label>40x158mm bullet (AP)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<pelletCount>2</pelletCount>
+			<spreadMult>0</spreadMult>
+			<damageAmountBase>210</damageAmountBase>
+			<armorPenetrationSharp>52</armorPenetrationSharp>
+			<armorPenetrationBlunt>325.540</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="Base40x158mmBullet">
+    <defName>Bullet_40x158mm_2HE</defName>
+    <label>40x158mm bullet (HE)</label>
+	<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+	  <pelletCount>2</pelletCount>
+	  <spreadMult>0</spreadMult>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>75</damageAmountBase>
+	  <armorPenetrationSharp>0</armorPenetrationSharp>
+	  <armorPenetrationBlunt>275.504</armorPenetrationBlunt>
+      <explosionRadius>2</explosionRadius>
+		  <soundExplode>MortarBomb_Explode</soundExplode>
+      <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+    </projectile>
+	<comps>
+	  <li Class="CombatExtended.CompProperties_ExplosiveCE">
+		<fragments>
+		  <Fragment_Large>20</Fragment_Large>
+		  <Fragment_Small>80</Fragment_Small>
+		  <Fragment_Tiny>175</Fragment_Tiny>
+	    </fragments>
+	  </li>
+	</comps>
+  </ThingDef>
+  
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="Base40x158mmBullet">
+    <defName>Bullet_40x158mm_2LVHE</defName>
+    <label>40x158mm bullet (LV-HE)</label>
+	<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+	  <pelletCount>2</pelletCount>
+	  <spreadMult>0</spreadMult>
+	  <speed>75</speed>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>100</damageAmountBase>
+	  <armorPenetrationSharp>0</armorPenetrationSharp>
+	  <armorPenetrationBlunt>295.504</armorPenetrationBlunt>
+      <explosionRadius>2</explosionRadius>
+		  <soundExplode>MortarBomb_Explode</soundExplode>
+      <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+	  <flyOverhead>true</flyOverhead>
+      <dropsCasings>false</dropsCasings>
+    </projectile>
+	<comps>
+	  <li Class="CombatExtended.CompProperties_ExplosiveCE">
+		<fragments>
+		  <Fragment_Large>35</Fragment_Large>
+		  <Fragment_Small>90</Fragment_Small>
+		  <Fragment_Tiny>150</Fragment_Tiny>
+	    </fragments>
+	  </li>
+	</comps>
+  </ThingDef>
+  
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="Base40x158mmBullet">
+    <defName>Bullet_40x158mm_2HEAT</defName>
+    <label>40x158mm bullet (HEAT)</label>
+	<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+	  <pelletCount>2</pelletCount>
+	  <spreadMult>0</spreadMult>
+      <damageAmountBase>210</damageAmountBase>
+      <armorPenetrationSharp>62</armorPenetrationSharp>
+	  <armorPenetrationBlunt>325.540</armorPenetrationBlunt>
+      <secondaryDamage>
+        <li>
+          <def>Bomb_Secondary</def>
+          <amount>107</amount>
+        </li>
+      </secondaryDamage>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="Base40x158mmBullet">
+	<defName>Bullet_40x158mm_2EMP</defName>
+	<label>40x158mm bullet (EMP)</label>
+	<projectile Class="CombatExtended.ProjectilePropertiesCE">
+	  <pelletCount>2</pelletCount>
+	  <spreadMult>0</spreadMult>
+	  <damageAmountBase>150</damageAmountBase>
+	  <speed>145</speed>
+	  <secondaryDamage>
+		<li>
+		  <def>EMP</def>
+		  <amount>107</amount>
+		</li>
+	  </secondaryDamage>
+	</projectile>
+  </ThingDef>
+  
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="Base40x158mmBullet">
+		<defName>Bullet_40x158mm_4FMJ</defName>
+		<label>40x158mm bullet (AP)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<pelletCount>4</pelletCount>
+			<spreadMult>0</spreadMult>
+			<damageAmountBase>210</damageAmountBase>
+			<armorPenetrationSharp>52</armorPenetrationSharp>
+			<armorPenetrationBlunt>325.540</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="Base40x158mmBullet">
+    <defName>Bullet_40x158mm_4HE</defName>
+    <label>40x158mm bullet (HE)</label>
+	<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+	  <pelletCount>4</pelletCount>
+	  <spreadMult>0</spreadMult>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>75</damageAmountBase>
+	  <armorPenetrationSharp>0</armorPenetrationSharp>
+	  <armorPenetrationBlunt>275.504</armorPenetrationBlunt>
+      <explosionRadius>2</explosionRadius>
+		  <soundExplode>MortarBomb_Explode</soundExplode>
+      <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+    </projectile>
+	<comps>
+	  <li Class="CombatExtended.CompProperties_ExplosiveCE">
+		<fragments>
+		  <Fragment_Large>20</Fragment_Large>
+		  <Fragment_Small>80</Fragment_Small>
+		  <Fragment_Tiny>175</Fragment_Tiny>
+	    </fragments>
+	  </li>
+	</comps>
+  </ThingDef>
+  
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="Base40x158mmBullet">
+    <defName>Bullet_40x158mm_4LVHE</defName>
+    <label>40x158mm bullet (LV-HE)</label>
+	<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+	  <pelletCount>4</pelletCount>
+	  <spreadMult>0</spreadMult>
+	  <speed>75</speed>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>100</damageAmountBase>
+	  <armorPenetrationSharp>0</armorPenetrationSharp>
+	  <armorPenetrationBlunt>295.504</armorPenetrationBlunt>
+      <explosionRadius>2</explosionRadius>
+		  <soundExplode>MortarBomb_Explode</soundExplode>
+      <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+	  <flyOverhead>true</flyOverhead>
+      <dropsCasings>false</dropsCasings>
+    </projectile>
+	<comps>
+	  <li Class="CombatExtended.CompProperties_ExplosiveCE">
+		<fragments>
+		  <Fragment_Large>35</Fragment_Large>
+		  <Fragment_Small>90</Fragment_Small>
+		  <Fragment_Tiny>150</Fragment_Tiny>
+	    </fragments>
+	  </li>
+	</comps>
+  </ThingDef>
+  
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="Base40x158mmBullet">
+    <defName>Bullet_40x158mm_4HEAT</defName>
+    <label>40x158mm bullet (HEAT)</label>
+	<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+	  <pelletCount>4</pelletCount>
+	  <spreadMult>0</spreadMult>
+      <damageAmountBase>210</damageAmountBase>
+      <armorPenetrationSharp>62</armorPenetrationSharp>
+	  <armorPenetrationBlunt>325.540</armorPenetrationBlunt>
+      <secondaryDamage>
+        <li>
+          <def>Bomb_Secondary</def>
+          <amount>107</amount>
+        </li>
+      </secondaryDamage>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="Base40x158mmBullet">
+	<defName>Bullet_40x158mm_4EMP</defName>
+	<label>40x158mm bullet (EMP)</label>
+	<projectile Class="CombatExtended.ProjectilePropertiesCE">
+	  <pelletCount>4</pelletCount>
+	  <spreadMult>0</spreadMult>
+	  <damageAmountBase>150</damageAmountBase>
+	  <speed>145</speed>
+	  <secondaryDamage>
+		<li>
+		  <def>EMP</def>
+		  <amount>107</amount>
+		</li>
+	  </secondaryDamage>
+	</projectile>
+  </ThingDef>
+  
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="Base40x158mmBullet">
+		<defName>Bullet_40x158mm_8FMJ</defName>
+		<label>40x158mm bullet (AP)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<pelletCount>8</pelletCount>
+			<spreadMult>0</spreadMult>
+			<damageAmountBase>210</damageAmountBase>
+			<armorPenetrationSharp>52</armorPenetrationSharp>
+			<armorPenetrationBlunt>325.540</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="Base40x158mmBullet">
+    <defName>Bullet_40x158mm_8HE</defName>
+    <label>40x158mm bullet (HE)</label>
+	<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+	  <pelletCount>8</pelletCount>
+	  <spreadMult>0</spreadMult>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>75</damageAmountBase>
+	  <armorPenetrationSharp>0</armorPenetrationSharp>
+	  <armorPenetrationBlunt>275.504</armorPenetrationBlunt>
+      <explosionRadius>2</explosionRadius>
+		  <soundExplode>MortarBomb_Explode</soundExplode>
+      <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+    </projectile>
+	<comps>
+	  <li Class="CombatExtended.CompProperties_ExplosiveCE">
+		<fragments>
+		  <Fragment_Large>20</Fragment_Large>
+		  <Fragment_Small>80</Fragment_Small>
+		  <Fragment_Tiny>175</Fragment_Tiny>
+	    </fragments>
+	  </li>
+	</comps>
+  </ThingDef>
+  
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="Base40x158mmBullet">
+    <defName>Bullet_40x158mm_8LVHE</defName>
+    <label>40x158mm bullet (LV-HE)</label>
+	<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+	  <pelletCount>8</pelletCount>
+	  <spreadMult>0</spreadMult>
+	  <speed>75</speed>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>100</damageAmountBase>
+	  <armorPenetrationSharp>0</armorPenetrationSharp>
+	  <armorPenetrationBlunt>295.504</armorPenetrationBlunt>
+      <explosionRadius>2</explosionRadius>
+		  <soundExplode>MortarBomb_Explode</soundExplode>
+      <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+	  <flyOverhead>true</flyOverhead>
+      <dropsCasings>false</dropsCasings>
+    </projectile>
+	<comps>
+	  <li Class="CombatExtended.CompProperties_ExplosiveCE">
+		<fragments>
+		  <Fragment_Large>35</Fragment_Large>
+		  <Fragment_Small>90</Fragment_Small>
+		  <Fragment_Tiny>150</Fragment_Tiny>
+	    </fragments>
+	  </li>
+	</comps>
+  </ThingDef>
+  
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="Base40x158mmBullet">
+    <defName>Bullet_40x158mm_8HEAT</defName>
+    <label>40x158mm bullet (HEAT)</label>
+	<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+    <projectile Class="CombatExtended.ProjectilePropertiesCE">
+	  <pelletCount>8</pelletCount>
+	  <spreadMult>0</spreadMult>
+      <damageAmountBase>210</damageAmountBase>
+      <armorPenetrationSharp>62</armorPenetrationSharp>
+	  <armorPenetrationBlunt>325.540</armorPenetrationBlunt>
+      <secondaryDamage>
+        <li>
+          <def>Bomb_Secondary</def>
+          <amount>107</amount>
+        </li>
+      </secondaryDamage>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="Base40x158mmBullet">
+	<defName>Bullet_40x158mm_8EMP</defName>
+	<label>40x158mm bullet (EMP)</label>
+	<projectile Class="CombatExtended.ProjectilePropertiesCE">
+	  <pelletCount>8</pelletCount>
+	  <spreadMult>0</spreadMult>
+	  <damageAmountBase>150</damageAmountBase>
+	  <speed>145</speed>
 	  <secondaryDamage>
 		<li>
 		  <def>EMP</def>
@@ -220,7 +953,6 @@
     <workAmount>12500</workAmount>
   </RecipeDef>
   
-  
   <RecipeDef ParentName="AmmoRecipeBase">
     <defName>MakeAmmo_40x158mm_HE</defName>
     <label>make 40x158mm (HE) cartridge x25</label>
@@ -252,6 +984,41 @@
     </fixedIngredientFilter>
     <products>
       <Ammo_40x158mm_HE>25</Ammo_40x158mm_HE>
+    </products>
+    <workAmount>12500</workAmount>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_40x158mm_LVHE</defName>
+    <label>make 40x158mm (LV-HE) cartridge x25</label>
+    <description>Craft 25 40x158mm (LV-HE) cartridges.</description>
+    <jobString>Making 40x158mm (LV-HE) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>47</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSX</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+        <li>FSX</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_40x158mm_LVHE>25</Ammo_40x158mm_LVHE>
     </products>
     <workAmount>12500</workAmount>
   </RecipeDef>

@@ -83,4 +83,25 @@
 		<labelShort>Illumination</labelShort>
 		<description>Illumination Round That is able to light a large area to almost daylight conditions.</description>
 	</CombatExtended.AmmoCategoryDef>
+	
+	<CombatExtended.AmmoCategoryDef>
+		<defName>SteelCB</defName>
+		<label>Steel Cannon Ball</label>
+		<labelShort>Steel Cannon Ball</labelShort>
+		<description>Steel Cannon Ball, standard good armor penetration, not very costly.</description>
+	</CombatExtended.AmmoCategoryDef>
+	
+	<CombatExtended.AmmoCategoryDef>
+		<defName>BMAP</defName>
+		<label>Bi-Metal Cannon Ball</label>
+		<labelShort>Bi-Metal Cannon Ball</labelShort>
+		<description>Bi-Metal Cannon Ball, great armor penetration, could take out centipides, rather costly.</description>
+	</CombatExtended.AmmoCategoryDef>
+	
+	<CombatExtended.AmmoCategoryDef>
+		<defName>LV-HE</defName>
+		<label>Low velocity High Explosive</label>
+		<labelShort>Low velocity High Explosive</labelShort>
+		<description>These Low Velocity High Explosive Shells are usually used in seiges or for lobbing shells over walls and structures</description>
+	</CombatExtended.AmmoCategoryDef>
 </Defs>

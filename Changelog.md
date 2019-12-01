@@ -257,7 +257,42 @@ Version 1.5.2 (I'm still using windows XP for coding + Balance Patches Edition)
 	<Considering the creation of another mod for raids that are 2.5x larger overall>
 	<Module 004 of Project 005 may be delayed>
 	
+Version 1.6.0 (Extremely Late + What's the AP of .22LR + Grenadiers++ Edition)
+	Added Flamethrower Turret Graphic [Burn those raiders + bad tenants]
+	Added Static Charge Blaster
+		- Range 86
+		- ROF 1200 RPM
+		- Takes All Mechanoid Rounds + the larger 8x35mm rounds
+		- Requires power
+	Added Primitive Grenade Launcher (Patching all grenades will take far too much time)
+	Grenadiers May Have this equipped too (Have fun)
+		- Range 22
+		- Currently could only launch one type of grenade
+		- Could be dangerous but low speed allows one to leave the area
+		- low accuarcy requires a good shooter
+	Added 40mm Seige rifle
+	Heavy Grenadiers May Have this equipped (Have fun)
+		- Range 37
+		- Weight 10.60KG
+		- Poor Acuaracy
+	Added Insulated Version of Type 1 Fabric (Type 1-B Fabric)
+	[Redacted Content]
+	Name Change
+		- All fabrics no longer Have the Term "Fabric"
+	Changes
+		- reduced number of advanced gunners that appear
+		- Construction Foam Flamabillity 1% -> 0%
+	Balistic Fabric 1
+		- Sharp .35 -> .50
+		- Value 2.9 -> 2.5
+		- Mass 110% -> 95%
+		- Worn Bulk 110% -> 95%
+		- Still rather flammable
+	Charge Balster Proto
+		- Mass 25.29 -> 22.29
+		- Range 100 -> 86
+		- Now able to use 5x35mm Bullets too
+		- Reload Time 7.5 -> 6.5 Seconds 
+	Prepeared Files For (If you look it's not) Secret Project 007  
 	
 	
-	
-

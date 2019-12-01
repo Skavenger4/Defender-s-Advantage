@@ -542,7 +542,7 @@
     <specialDisplayRadius>35</specialDisplayRadius>
     <building>
       <turretGunDef>DAT_FTT</turretGunDef>
-      <turretTopGraphicPath>Things/Building/Turrets/Flame_Shotgun</turretTopGraphicPath>
+      <turretTopGraphicPath>Things/Building/Turrets/FTT</turretTopGraphicPath>
 	  <turretTopDrawSize>4</turretTopDrawSize>
     </building>
 	<size>(2,2)</size>
@@ -622,11 +622,88 @@
     </recipeMaker>
     <minifiedDef>MinifiedThing</minifiedDef>
   </ThingDef>
-  <!--=============== [Secret Project 006] ===============-->
-  <!--=============== [Secret Project 006] ===============-->
-  <!--=============== [Secret Project 006] ===============-->
+  <!--=============== Charge Blaster Turret ===============-->
+  <ThingDef ParentName="TurretMannedCraftableBase">
+    <defName>Turret_HCBT</defName>
+    <label>Heavy Charge Blaster Turret</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets/MachineGunBase</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>450</MaxHitPoints>
+      <WorkToMake>120000</WorkToMake>
+      <Mass>80.0</Mass>
+      <Bulk>50</Bulk>
+    </statBases>
+	<comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>1250</basePowerConsumption>
+      </li>
+	  <li Class="CompProperties_Flickable"/>
+	  <li Class="CompProperties_Breakdownable"/>
+    </comps>
+    <description>A Heavy Charge Blaster Turret with a longer barrel to Improve range.</description>
+    <costList>
+      <ComponentIndustrial>10</ComponentIndustrial>
+	  <ComponentSpacer>4</ComponentSpacer>
+	  <Plasteel>250</Plasteel>
+    </costList>
+    <building>
+      <turretGunDef>DAT_SCB</turretGunDef>
+      <turretTopGraphicPath>Things/Building/Turrets/Advanced_Turrets</turretTopGraphicPath>
+    </building>
+	<specialDisplayRadius>86</specialDisplayRadius>
+    <minifiedDef>MinifiedThing</minifiedDef>
+	<recipeMaker>
+      <researchPrerequisite>CE_ChargeTurret</researchPrerequisite>
+	  <skillRequirements>
+		<Crafting>10</Crafting>
+		<Intellectual>8</Intellectual>
+	  </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <!--=============== Old fashoned cannon ===============-->
+  <!--
+  <ThingDef ParentName="TurretMannedBase">
+    <defName>Turret_BLC</defName>
+    <label>Breech loading Cannon</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets/25mm_Base_Seige</texPath>
+    </graphicData>
+    <statBases>
+	  <MaxHitPoints>500</MaxHitPoints>
+      <WorkToMake>25000</WorkToMake>
+      <Mass>45</Mass>
+      <Bulk>260</Bulk>
+    </statBases>
+    <description>A Breech loading Cannon that's able to take out large groups of people or centipides.</description>
+    <costList>
+      <Steel>175</Steel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+	  <WoodLog>50</WoodLog>
+    </costList>
+    <building>
+      <turretGunDef>DAT_BLC</turretGunDef>
+      <turretTopGraphicPath>Things/Building/Turrets/Flame_Shotgun</turretTopGraphicPath>
+	  <turretTopDrawSize>4</turretTopDrawSize>
+    </building>
+	<size>(2,2)</size>
+    <recipeMaker>
+	  <recipeUsers>
+		<li>FueledSmithy</li>
+		<li>ElectricSmithy</li>
+      </recipeUsers>
+	  <skillRequirements>
+		<Crafting>7</Crafting>
+	  </skillRequirements>
+    </recipeMaker>
+    <minifiedDef>MinifiedThing</minifiedDef>
+  </ThingDef>
+  -->
   <!--=============== QF Single [Secret Project 007] ===============-->
+  <!--=============== + Seige (Because History) ===============-->
   <!--=============== QF Dual [Secret Project 007] ===============-->
   <!--=============== QF Quad [Secret Project 007] ===============-->
-  <!--=============== Oct. will require a stack size of 1000+ ===============-->
+  <!--=============== Oct. will require a stack size of 1120 ===============-->
 </Defs>

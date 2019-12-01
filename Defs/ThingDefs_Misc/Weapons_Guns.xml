@@ -1121,11 +1121,10 @@
     </weaponTags>
   </ThingDef>
   <!-- ================== Charge Lance / Charge Blaster Proto ================== -->
-  <!-- == Tried to have it use both the 12x64mmCharged and the 5x35mmCharged With different ammo caps. and fire rate . . . it didn't work DM me if you have a solution == -->
   <ThingDef ParentName="BaseHumanMakeableGun_CE">
     <defName>DA_CBproto</defName>
     <label>Charge Blaster proto</label>
-    <description>Designed with the intention to use the mechanoid built charge blaster cartriges, has a slow overall fire rate but much lower recoil, has a very high weight and longer range than most rifles.</description>
+    <description>Designed with the intention to use the mechanoid built charge blaster cartriges, has a slow overall fire rate but much lower recoil, has a high weight and longer range than most rifles. It is also able to use smaller mechanoid bullets with a secondary barrel.</description>
     <graphicData>
       <texPath>Things/Weapons/Charge_Balsterproto</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -1138,7 +1137,7 @@
       <ShotSpread>0.01</ShotSpread>
       <SwayFactor>4.56</SwayFactor>
       <Bulk>33.25</Bulk>
-      <Mass>25.29</Mass>
+      <Mass>22.29</Mass>
       <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
     </statBases>
     <costList>
@@ -1179,9 +1178,9 @@
     <comps>
       <li Class="CombatExtended.CompProperties_AmmoUser">
         <magazineSize>50</magazineSize>
-        <reloadTime>7.5</reloadTime>
+        <reloadTime>6.5</reloadTime>
 		<spawnUnloaded>TRUE</spawnUnloaded>
-        <ammoSet>AmmoSet_12x64mmCharged</ammoSet>
+        <ammoSet>AmmoSet_CBProto</ammoSet>
       </li>
       <li Class="CombatExtended.CompProperties_FireModes">
         <aimedBurstShotCount>3</aimedBurstShotCount>
@@ -1433,5 +1432,198 @@
     </weaponTags>
   </ThingDef>
   <!-- ================== Primitive Grenade Launcher ================== --> 
-  <!-- ================== [This will take a while] ================== --> 
+  <ThingDef ParentName="BaseHumanMakeableGun_CE_B">
+    <defName>DA_PGL</defName>
+    <label>Primitive Grenade Launcher</label>
+    <description>A Primitive Grenade Launcher that's able to launch modified grenades at a longer range.</description>
+    <graphicData>
+      <texPath>Things/Weapons/PGL</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <statBases>
+      <WorkToMake>12500</WorkToMake>
+      <SightsEfficiency>0.95</SightsEfficiency>
+      <ShotSpread>2.1</ShotSpread>
+      <SwayFactor>2.31</SwayFactor>
+      <Bulk>20.25</Bulk>
+      <Mass>9.49</Mass>
+      <RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>25</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+	  <WoodLog>35</WoodLog>
+    </costList>
+	<recipeMaker>
+      <researchPrerequisite>Smithing</researchPrerequisite>
+	  <skillRequirements>
+				<Crafting>7</Crafting>
+	  </skillRequirements>
+    </recipeMaker>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_Stielhandgranate</defaultProjectile>
+        <warmupTime>2.2</warmupTime>
+        <range>22</range>
+        <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+        <soundCast>ThrowGrenade</soundCast>
+		<targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <onlyManualCast>true</onlyManualCast>
+        <ignorePartialLoSBlocker>true</ignorePartialLoSBlocker>
+        <muzzleFlashScale>0</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>1</magazineSize>
+        <reloadTime>3.5</reloadTime>
+        <ammoSet>AmmoSet_Stielhandgranate</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+        <aiAimMode>AimedShot</aiAimMode>
+      </li>
+    </comps>
+	<tools>
+        <li Class="CombatExtended.ToolCE">
+          <label>Stock</label>
+          <capacities>
+            <li>Blunt</li>
+          </capacities>
+          <power>13</power>
+          <cooldownTime>2.1</cooldownTime>
+          <chanceFactor>1.5</chanceFactor>
+          <armorPenetrationSharp>0</armorPenetrationSharp>
+		  <armorPenetrationBlunt>5.75</armorPenetrationBlunt>
+          <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+        </li>
+        <li Class="CombatExtended.ToolCE">
+          <label>bow point</label>
+          <capacities>
+            <li>Poke</li>
+          </capacities>
+          <power>10</power>
+          <cooldownTime>1.2</cooldownTime>
+          <armorPenetrationSharp>0</armorPenetrationSharp>
+		  <armorPenetrationBlunt>2.75</armorPenetrationBlunt>
+          <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+        </li>
+        <li Class="CombatExtended.ToolCE">
+          <label>T-cross assembly</label>
+          <capacities>
+            <li>Poke</li>
+          </capacities>
+          <power>12</power>
+          <cooldownTime>1.9</cooldownTime>
+          <armorPenetrationSharp>0</armorPenetrationSharp>
+		  <armorPenetrationBlunt>2.75</armorPenetrationBlunt>
+          <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+        </li>
+      </tools>
+	<weaponTags>
+      <li>Grenadier</li>
+    </weaponTags>
+  </ThingDef>
+  <!-- ================== Caseless Rifle (Not Just A Tube With a Cap) ================== --> 
+  <ThingDef ParentName="BaseHumanMakeableGun_CE_B">
+    <defName>DA_40mmRifle</defName>
+    <label>40mm Caseless Rifle</label>
+    <description>A 40mm Caseless Rifle that is designed to take the special 40mm Caseless (HE) round.</description>
+    <graphicData>
+      <texPath>Things/Weapons/40mm_Caseless</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <statBases>
+      <WorkToMake>25000</WorkToMake>
+      <SightsEfficiency>0.5</SightsEfficiency>
+      <ShotSpread>0.7</ShotSpread>
+      <SwayFactor>3.31</SwayFactor>
+      <Bulk>24.25</Bulk>
+      <Mass>10.60</Mass>
+      <RangedWeapon_Cooldown>1.7</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>75</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+	  <WoodLog>25</WoodLog>
+    </costList>
+	<recipeMaker>
+      <researchPrerequisite>Smithing</researchPrerequisite>
+	  <skillRequirements>
+				<Crafting>5</Crafting>
+	  </skillRequirements>
+    </recipeMaker>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_40x158mm_LVHE</defaultProjectile>
+        <warmupTime>5.2</warmupTime>
+        <range>37</range>
+        <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+        <soundCast>ThrowGrenade</soundCast>
+		<targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <onlyManualCast>true</onlyManualCast>
+        <ignorePartialLoSBlocker>true</ignorePartialLoSBlocker>
+        <muzzleFlashScale>0</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>1</magazineSize>
+        <reloadTime>3.5</reloadTime>
+        <ammoSet>AmmoSet_40x158mm_Caseless</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+        <aiAimMode>AimedShot</aiAimMode>
+      </li>
+    </comps>
+	<tools>
+        <li Class="CombatExtended.ToolCE">
+          <label>Stock</label>
+          <capacities>
+            <li>Blunt</li>
+          </capacities>
+          <power>13</power>
+          <cooldownTime>2.1</cooldownTime>
+          <chanceFactor>1.5</chanceFactor>
+          <armorPenetrationSharp>0</armorPenetrationSharp>
+		  <armorPenetrationBlunt>5.75</armorPenetrationBlunt>
+          <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+        </li>
+        <li Class="CombatExtended.ToolCE">
+          <label>pistol grip</label>
+          <capacities>
+            <li>Blunt</li>
+          </capacities>
+          <power>10</power>
+          <cooldownTime>1.2</cooldownTime>
+          <armorPenetrationSharp>0</armorPenetrationSharp>
+		  <armorPenetrationBlunt>2.75</armorPenetrationBlunt>
+          <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+        </li>
+        <li Class="CombatExtended.ToolCE">
+          <label>muzzle</label>
+          <capacities>
+            <li>Poke</li>
+          </capacities>
+          <power>12</power>
+          <cooldownTime>1.9</cooldownTime>
+          <armorPenetrationSharp>0</armorPenetrationSharp>
+		  <armorPenetrationBlunt>2.75</armorPenetrationBlunt>
+          <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+        </li>
+      </tools>
+	<weaponTags>
+	  <li>GunHeavy</li>
+      <li>H_Grenadier</li>
+    </weaponTags>
+  </ThingDef>
 </Defs>
