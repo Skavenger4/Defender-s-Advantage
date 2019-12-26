@@ -440,12 +440,12 @@
     </statBases>
     <description>A Dual 25mm Autocannon that has a very poor ammo Capacity.</description>
     <costList>
-      <Steel>425</Steel>
+      <Steel>465</Steel>
       <ComponentIndustrial>16</ComponentIndustrial>
 	  <WoodLog>50</WoodLog>
     </costList>
     <building>
-      <turretGunDef>DAT_2_25mm</turretGunDef>
+      <turretGunDef>DAT_2_25mmS</turretGunDef>
       <turretTopGraphicPath>Things/Building/Turrets/25mm_2_top</turretTopGraphicPath>
 	  <turretTopDrawSize>4</turretTopDrawSize>
     </building>
@@ -498,12 +498,12 @@
     </statBases>
     <description>A Dual 25mm Autocannon that has a very poor ammo Capacity.</description>
     <costList>
-      <Steel>535</Steel>
+      <Steel>575</Steel>
       <ComponentIndustrial>24</ComponentIndustrial>
 	  <WoodLog>50</WoodLog>
     </costList>
     <building>
-      <turretGunDef>DAT_3_25mm</turretGunDef>
+      <turretGunDef>DAT_3_25mmS</turretGunDef>
       <turretTopGraphicPath>Things/Building/Turrets/25mm_3_top</turretTopGraphicPath>
 	  <turretTopDrawSize>4</turretTopDrawSize>
     </building>

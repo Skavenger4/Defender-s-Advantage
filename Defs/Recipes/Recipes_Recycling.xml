@@ -82,6 +82,7 @@
       </recipeUsers>
 	  <researchPrerequisite>Landmines</researchPrerequisite>
 	</RecipeDef>
+	<!--=====================Other===================-->
 	<RecipeDef>
       <defName>Make_TrapFrag_Mine</defName>
       <label>Make 5 Landmine Components</label>

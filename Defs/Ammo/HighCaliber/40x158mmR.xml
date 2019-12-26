@@ -60,7 +60,7 @@
   
   <CombatExtended.AmmoSetDef>
     <defName>AmmoSet_40x158mm_Caseless</defName>
-    <label>Caseless and Recoilless 40x158mm</label>
+    <label>Caseless 40x158mm</label>
     <ammoTypes>
 	  <Ammo_40x158mm_LVHE>Bullet_40x158mm_LVHE</Ammo_40x158mm_LVHE>
     </ammoTypes>

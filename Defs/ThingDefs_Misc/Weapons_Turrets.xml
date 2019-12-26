@@ -483,6 +483,54 @@
       </li>
     </comps>
   </ThingDef>
+  <!-- ================== 25mm Dual Autocannon B ================== -->
+  <ThingDef ParentName="BaseTurretGun">
+    <defName>DAT_2_25mmS</defName>
+    <label>25mm Dual Seige Autocannon</label>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/ChargeRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <description>A Dual 25mm Autocannon</description>
+    <statBases>
+      <MarketValue>1500</MarketValue>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.04</ShotSpread>
+      <SwayFactor>3.76</SwayFactor>
+      <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>1.65</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_25x163mm_FMJ</defaultProjectile>
+        <warmupTime>0.8</warmupTime>
+        <range>250</range>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+        <burstShotCount>5</burstShotCount>
+        <soundCast>HeavyMG</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>5</muzzleFlashScale>
+        <recoilPattern>Mounted</recoilPattern>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>30</magazineSize>
+        <reloadTime>10.2</reloadTime>
+        <spawnUnloaded>false</spawnUnloaded>
+        <ammoSet>AmmoSet_25x163mm</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+        <aimedBurstShotCount>3</aimedBurstShotCount>
+        <aiAimMode>SuppressFire</aiAimMode>
+      </li>
+    </comps>
+  </ThingDef>
   <!-- ================== 25mm Triple Autocannon ================== -->
   <ThingDef ParentName="BaseTurretGun">
     <defName>DAT_3_25mm</defName>
@@ -508,6 +556,54 @@
         <warmupTime>1.2</warmupTime>
         <range>250</range>
 		<minRange>10</minRange>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+        <burstShotCount>5</burstShotCount>
+        <soundCast>HeavyMG</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>5</muzzleFlashScale>
+        <recoilPattern>Mounted</recoilPattern>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>45</magazineSize>
+        <reloadTime>15.3</reloadTime>
+        <spawnUnloaded>false</spawnUnloaded>
+        <ammoSet>AmmoSet_25x163mm</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+        <aimedBurstShotCount>3</aimedBurstShotCount>
+        <aiAimMode>SuppressFire</aiAimMode>
+      </li>
+    </comps>
+  </ThingDef>
+  <!-- ================== 25mm Triple Autocannon B ================== -->
+  <ThingDef ParentName="BaseTurretGun">
+    <defName>DAT_3_25mmS</defName>
+    <label>25mm Triple Seige Autocannon</label>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/ChargeRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <description>A Triple 25mm Autocannon</description>
+    <statBases>
+      <MarketValue>2000</MarketValue>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.04</ShotSpread>
+      <SwayFactor>3.96</SwayFactor>
+      <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>2.05</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_25x163mm_FMJ</defaultProjectile>
+        <warmupTime>0.8</warmupTime>
+        <range>250</range>
         <targetParams>
           <canTargetLocations>true</canTargetLocations>
         </targetParams>
@@ -772,6 +868,7 @@
   </ThingDef>
   -->
   <!--=============== QF Single [Secret Project 007] ===============-->
+  <!--=============== QF Single Seige [Secret Project 007] ===============-->
   <!--=============== 56 Round Belt ===============-->
   <!--=============== QF Dual [Secret Project 007] ===============-->
   <!--=============== 168 Round Belt ===============-->

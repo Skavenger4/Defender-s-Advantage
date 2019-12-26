@@ -295,4 +295,19 @@ Version 1.6.0 (Extremely Late + What's the AP of .22LR + Grenadiers++ Edition)
 		- Reload Time 7.5 -> 6.5 Seconds 
 	Prepeared Files For (If you look it's not) Secret Project 007  
 	
+Version 1.6.1 (Seige Auto-Cannons Update + I think I need glasses + Does anybody read these? Edition)
+	All 25mm Seige guns
+		- Removed Minimum Range (Be careful)
+		- Reduced Acuaracy
+		- Slight Recipe Change
+	Possiblility of changing all 25mm auto cannons to belt / hopper fed (Higher Ammo Cap)
+	as before WWII one of the Major issues was Poor Ammo Capacity
+	Project 007 may take a while. . .
+	40x158mm (LV-HE)
+		- Removed misleading description of 'recoilless' as it is only caseless 
+	
+	
+	
+	
+	
 	
