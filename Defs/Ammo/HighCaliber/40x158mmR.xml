@@ -23,7 +23,7 @@
   </CombatExtended.AmmoSetDef>
   
   <CombatExtended.AmmoSetDef>
-    <defName>AmmoSet_40x158mm2</defName>
+    <defName>AmmoSet_40x158mm2L</defName>
     <label>Dual Linked 40x158mm</label>
     <ammoTypes>
 	  <Ammo_40x158mm_2FMJ>Bullet_40x158mm_2FMJ</Ammo_40x158mm_2FMJ>
@@ -35,7 +35,7 @@
   </CombatExtended.AmmoSetDef>
   
   <CombatExtended.AmmoSetDef>
-    <defName>AmmoSet_40x158mm4</defName>
+    <defName>AmmoSet_40x158mm4L</defName>
     <label>Quad Linked 40x158mm</label>
     <ammoTypes>
 	  <Ammo_40x158mm_4FMJ>Bullet_40x158mm_4FMJ</Ammo_40x158mm_4FMJ>
@@ -47,7 +47,7 @@
   </CombatExtended.AmmoSetDef>
   
   <CombatExtended.AmmoSetDef>
-    <defName>AmmoSet_40x158mm8</defName>
+    <defName>AmmoSet_40x158mm8L</defName>
     <label>Oct. Linked 40x158mm</label>
     <ammoTypes>
 	  <Ammo_40x158mm_8FMJ>Bullet_40x158mm_8FMJ</Ammo_40x158mm_8FMJ>
@@ -69,7 +69,7 @@
   <!-- ==================== Ammo ========================== -->
 
   <ThingDef Class="CombatExtended.AmmoDef" Name="Ammo40x158mmBase" ParentName="SmallAmmoBase" Abstract="True">
-    <description>Old-school anti-air cartridge originally designed for [Secret Proj 007].</description>
+    <description>Old-school anti-air cartridge originally designed for Pom - poms.</description>
     <statBases>
     <Mass>1.34</Mass>
     <Bulk>0.77</Bulk>
@@ -87,13 +87,14 @@
   </ThingDef>
   
   <ThingDef Class="CombatExtended.AmmoDef" Name="Ammo40x158mmBase2" ParentName="SmallAmmoBase" Abstract="True">
-    <description>Dual Linked Old-school anti-air cartridge originally designed for [Secret Proj 007].</description>
+    <description>Dual Linked Old-school anti-air cartridge originally designed for Dual Pom - poms.</description>
     <statBases>
     <Mass>2.68</Mass>
     <Bulk>1.54</Bulk>
     </statBases>
   <tradeTags>
     <li>CE_AutoEnableTrade</li>
+	<li>CE_AutoEnableCrafting</li>
   </tradeTags>
     <thingCategories>
       <li>Ammo40x158mm</li>
@@ -104,7 +105,7 @@
   </ThingDef>
   
   <ThingDef Class="CombatExtended.AmmoDef" Name="Ammo40x158mmBase4" ParentName="Ammo40x158mmBase2" Abstract="True">
-    <description>Quad Linked Old-school anti-air cartridge originally designed for [Secret Proj 007].</description>
+    <description>Quad Linked Old-school anti-air cartridge originally designed for Quad Pom - poms.</description>
     <statBases>
     <Mass>5.36</Mass>
     <Bulk>3.08</Bulk>
@@ -112,7 +113,7 @@
   </ThingDef>
   
   <ThingDef Class="CombatExtended.AmmoDef" Name="Ammo40x158mmBase8" ParentName="Ammo40x158mmBase2" Abstract="True">
-    <description>Oct. Linked Old-school anti-air cartridge originally designed for [Secret Proj 007].</description>
+    <description>Oct. Linked Old-school anti-air cartridge originally designed for Octuple Pom - poms.</description>
     <statBases>
     <Mass>10.72</Mass>
     <Bulk>6.16</Bulk>
@@ -152,7 +153,7 @@
         <fragments>
           <Fragment_Large>20</Fragment_Large>
 		  <Fragment_Small>80</Fragment_Small>
-		  <Fragment_Tiny>175</Fragment_Tiny>
+		  <Fragment_Tiny>100</Fragment_Tiny>
         </fragments>
         <fragRange>5</fragRange>
         <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
@@ -163,7 +164,7 @@
   <ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo40x158mmBase">
     <defName>Ammo_40x158mm_LVHE</defName>
     <label>Caseless 40x158mm cartridge (LV-HE)</label>
-	<description>Low Velocity Caseless cartridge originally designed for [Secret Proj 007].</description>
+	<description>Low Velocity Caseless cartridge originally designed for Pom - poms.</description>
     <graphicData>
       <texPath>Things/Ammo/HighCaliber/HE</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -180,7 +181,7 @@
         <fragments>
           <Fragment_Large>35</Fragment_Large>
 		  <Fragment_Small>90</Fragment_Small>
-		  <Fragment_Tiny>150</Fragment_Tiny>
+		  <Fragment_Tiny>100</Fragment_Tiny>
         </fragments>
         <fragRange>6</fragRange>
         <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
@@ -249,7 +250,7 @@
         <fragments>
           <Fragment_Large>20</Fragment_Large>
 		  <Fragment_Small>80</Fragment_Small>
-		  <Fragment_Tiny>175</Fragment_Tiny>
+		  <Fragment_Tiny>100</Fragment_Tiny>
         </fragments>
         <fragRange>5</fragRange>
         <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
@@ -260,7 +261,7 @@
   <ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo40x158mmBase2">
     <defName>Ammo_40x158mm_2LVHE</defName>
     <label>Dual Linked Caseless 40x158mm cartridge (LV-HE)</label>
-	<description>Low Velocity Caseless cartridge originally designed for [Secret Proj 007].</description>
+	<description>Low Velocity Caseless cartridge originally designed for Dual Pom - poms.</description>
     <graphicData>
       <texPath>Things/Ammo/HighCaliber/HE</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -277,7 +278,7 @@
         <fragments>
           <Fragment_Large>35</Fragment_Large>
 		  <Fragment_Small>90</Fragment_Small>
-		  <Fragment_Tiny>150</Fragment_Tiny>
+		  <Fragment_Tiny>100</Fragment_Tiny>
         </fragments>
         <fragRange>6</fragRange>
         <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
@@ -346,7 +347,7 @@
         <fragments>
           <Fragment_Large>20</Fragment_Large>
 		  <Fragment_Small>80</Fragment_Small>
-		  <Fragment_Tiny>175</Fragment_Tiny>
+		  <Fragment_Tiny>100</Fragment_Tiny>
         </fragments>
         <fragRange>5</fragRange>
         <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
@@ -357,7 +358,7 @@
   <ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo40x158mmBase4">
     <defName>Ammo_40x158mm_4LVHE</defName>
     <label>Quad Linked Caseless 40x158mm cartridge (LV-HE)</label>
-	<description>Low Velocity Caseless cartridge originally designed for [Secret Proj 007].</description>
+	<description>Low Velocity Caseless cartridge originally designed for Quad Pom - poms.</description>
     <graphicData>
       <texPath>Things/Ammo/HighCaliber/HE</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -374,7 +375,7 @@
         <fragments>
           <Fragment_Large>35</Fragment_Large>
 		  <Fragment_Small>90</Fragment_Small>
-		  <Fragment_Tiny>150</Fragment_Tiny>
+		  <Fragment_Tiny>100</Fragment_Tiny>
         </fragments>
         <fragRange>6</fragRange>
         <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
@@ -443,7 +444,7 @@
         <fragments>
           <Fragment_Large>20</Fragment_Large>
 		  <Fragment_Small>80</Fragment_Small>
-		  <Fragment_Tiny>175</Fragment_Tiny>
+		  <Fragment_Tiny>100</Fragment_Tiny>
         </fragments>
         <fragRange>5</fragRange>
         <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
@@ -454,7 +455,7 @@
   <ThingDef Class="CombatExtended.AmmoDef" ParentName="Ammo40x158mmBase8">
     <defName>Ammo_40x158mm_8LVHE</defName>
     <label>Oct. Linked Caseless 40x158mm cartridge (LV-HE)</label>
-	<description>Low Velocity Caseless cartridge originally designed for [Secret Proj 007].</description>
+	<description>Low Velocity Caseless cartridge originally designed for Octuple Pom - poms.</description>
     <graphicData>
       <texPath>Things/Ammo/HighCaliber/HE</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -471,7 +472,7 @@
         <fragments>
           <Fragment_Large>35</Fragment_Large>
 		  <Fragment_Small>90</Fragment_Small>
-		  <Fragment_Tiny>150</Fragment_Tiny>
+		  <Fragment_Tiny>100</Fragment_Tiny>
         </fragments>
         <fragRange>6</fragRange>
         <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
@@ -551,7 +552,7 @@
 		<fragments>
 		  <Fragment_Large>20</Fragment_Large>
 		  <Fragment_Small>80</Fragment_Small>
-		  <Fragment_Tiny>175</Fragment_Tiny>
+		  <Fragment_Tiny>100</Fragment_Tiny>
 	    </fragments>
 	  </li>
 	</comps>
@@ -578,7 +579,7 @@
 		<fragments>
 		  <Fragment_Large>35</Fragment_Large>
 		  <Fragment_Small>90</Fragment_Small>
-		  <Fragment_Tiny>150</Fragment_Tiny>
+		  <Fragment_Tiny>100</Fragment_Tiny>
 	    </fragments>
 	  </li>
 	</comps>
@@ -587,7 +588,6 @@
   <ThingDef Class="CombatExtended.AmmoDef" ParentName="Base40x158mmBullet">
     <defName>Bullet_40x158mm_HEAT</defName>
     <label>40x158mm bullet (HEAT)</label>
-	<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
     <projectile Class="CombatExtended.ProjectilePropertiesCE">
       <damageAmountBase>210</damageAmountBase>
       <armorPenetrationSharp>62</armorPenetrationSharp>
@@ -615,13 +615,13 @@
 	  </secondaryDamage>
 	</projectile>
   </ThingDef>
-  
+  <!-- ==================== 2 Linked ========================== -->
   <ThingDef Class="CombatExtended.AmmoDef" ParentName="Base40x158mmBullet">
 		<defName>Bullet_40x158mm_2FMJ</defName>
 		<label>40x158mm bullet (AP)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<pelletCount>2</pelletCount>
-			<spreadMult>0</spreadMult>
+			<spreadMult>1</spreadMult>
 			<damageAmountBase>210</damageAmountBase>
 			<armorPenetrationSharp>52</armorPenetrationSharp>
 			<armorPenetrationBlunt>325.540</armorPenetrationBlunt>
@@ -634,7 +634,7 @@
 	<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
     <projectile Class="CombatExtended.ProjectilePropertiesCE">
 	  <pelletCount>2</pelletCount>
-	  <spreadMult>0</spreadMult>
+	  <spreadMult>1</spreadMult>
       <damageDef>Bomb</damageDef>
       <damageAmountBase>75</damageAmountBase>
 	  <armorPenetrationSharp>0</armorPenetrationSharp>
@@ -648,7 +648,7 @@
 		<fragments>
 		  <Fragment_Large>20</Fragment_Large>
 		  <Fragment_Small>80</Fragment_Small>
-		  <Fragment_Tiny>175</Fragment_Tiny>
+		  <Fragment_Tiny>100</Fragment_Tiny>
 	    </fragments>
 	  </li>
 	</comps>
@@ -660,7 +660,7 @@
 	<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
     <projectile Class="CombatExtended.ProjectilePropertiesCE">
 	  <pelletCount>2</pelletCount>
-	  <spreadMult>0</spreadMult>
+	  <spreadMult>1.5</spreadMult>
 	  <speed>75</speed>
       <damageDef>Bomb</damageDef>
       <damageAmountBase>100</damageAmountBase>
@@ -669,7 +669,7 @@
       <explosionRadius>2</explosionRadius>
 		  <soundExplode>MortarBomb_Explode</soundExplode>
       <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
-	  <flyOverhead>true</flyOverhead>
+	  <flyOverhead>false</flyOverhead>
       <dropsCasings>false</dropsCasings>
     </projectile>
 	<comps>
@@ -677,7 +677,7 @@
 		<fragments>
 		  <Fragment_Large>35</Fragment_Large>
 		  <Fragment_Small>90</Fragment_Small>
-		  <Fragment_Tiny>150</Fragment_Tiny>
+		  <Fragment_Tiny>100</Fragment_Tiny>
 	    </fragments>
 	  </li>
 	</comps>
@@ -686,10 +686,9 @@
   <ThingDef Class="CombatExtended.AmmoDef" ParentName="Base40x158mmBullet">
     <defName>Bullet_40x158mm_2HEAT</defName>
     <label>40x158mm bullet (HEAT)</label>
-	<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
     <projectile Class="CombatExtended.ProjectilePropertiesCE">
 	  <pelletCount>2</pelletCount>
-	  <spreadMult>0</spreadMult>
+	  <spreadMult>1</spreadMult>
       <damageAmountBase>210</damageAmountBase>
       <armorPenetrationSharp>62</armorPenetrationSharp>
 	  <armorPenetrationBlunt>325.540</armorPenetrationBlunt>
@@ -707,7 +706,7 @@
 	<label>40x158mm bullet (EMP)</label>
 	<projectile Class="CombatExtended.ProjectilePropertiesCE">
 	  <pelletCount>2</pelletCount>
-	  <spreadMult>0</spreadMult>
+	  <spreadMult>1</spreadMult>
 	  <damageAmountBase>150</damageAmountBase>
 	  <speed>145</speed>
 	  <secondaryDamage>
@@ -718,13 +717,13 @@
 	  </secondaryDamage>
 	</projectile>
   </ThingDef>
-  
+  <!-- ==================== 4 Linked ========================== -->
   <ThingDef Class="CombatExtended.AmmoDef" ParentName="Base40x158mmBullet">
 		<defName>Bullet_40x158mm_4FMJ</defName>
 		<label>40x158mm bullet (AP)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<pelletCount>4</pelletCount>
-			<spreadMult>0</spreadMult>
+			<spreadMult>1</spreadMult>
 			<damageAmountBase>210</damageAmountBase>
 			<armorPenetrationSharp>52</armorPenetrationSharp>
 			<armorPenetrationBlunt>325.540</armorPenetrationBlunt>
@@ -737,7 +736,7 @@
 	<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
     <projectile Class="CombatExtended.ProjectilePropertiesCE">
 	  <pelletCount>4</pelletCount>
-	  <spreadMult>0</spreadMult>
+	  <spreadMult>1</spreadMult>
       <damageDef>Bomb</damageDef>
       <damageAmountBase>75</damageAmountBase>
 	  <armorPenetrationSharp>0</armorPenetrationSharp>
@@ -751,7 +750,7 @@
 		<fragments>
 		  <Fragment_Large>20</Fragment_Large>
 		  <Fragment_Small>80</Fragment_Small>
-		  <Fragment_Tiny>175</Fragment_Tiny>
+		  <Fragment_Tiny>100</Fragment_Tiny>
 	    </fragments>
 	  </li>
 	</comps>
@@ -763,7 +762,7 @@
 	<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
     <projectile Class="CombatExtended.ProjectilePropertiesCE">
 	  <pelletCount>4</pelletCount>
-	  <spreadMult>0</spreadMult>
+	  <spreadMult>1.5</spreadMult>
 	  <speed>75</speed>
       <damageDef>Bomb</damageDef>
       <damageAmountBase>100</damageAmountBase>
@@ -772,7 +771,7 @@
       <explosionRadius>2</explosionRadius>
 		  <soundExplode>MortarBomb_Explode</soundExplode>
       <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
-	  <flyOverhead>true</flyOverhead>
+	  <flyOverhead>false</flyOverhead>
       <dropsCasings>false</dropsCasings>
     </projectile>
 	<comps>
@@ -780,7 +779,7 @@
 		<fragments>
 		  <Fragment_Large>35</Fragment_Large>
 		  <Fragment_Small>90</Fragment_Small>
-		  <Fragment_Tiny>150</Fragment_Tiny>
+		  <Fragment_Tiny>100</Fragment_Tiny>
 	    </fragments>
 	  </li>
 	</comps>
@@ -789,10 +788,9 @@
   <ThingDef Class="CombatExtended.AmmoDef" ParentName="Base40x158mmBullet">
     <defName>Bullet_40x158mm_4HEAT</defName>
     <label>40x158mm bullet (HEAT)</label>
-	<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
     <projectile Class="CombatExtended.ProjectilePropertiesCE">
 	  <pelletCount>4</pelletCount>
-	  <spreadMult>0</spreadMult>
+	  <spreadMult>1</spreadMult>
       <damageAmountBase>210</damageAmountBase>
       <armorPenetrationSharp>62</armorPenetrationSharp>
 	  <armorPenetrationBlunt>325.540</armorPenetrationBlunt>
@@ -810,7 +808,7 @@
 	<label>40x158mm bullet (EMP)</label>
 	<projectile Class="CombatExtended.ProjectilePropertiesCE">
 	  <pelletCount>4</pelletCount>
-	  <spreadMult>0</spreadMult>
+	  <spreadMult>1</spreadMult>
 	  <damageAmountBase>150</damageAmountBase>
 	  <speed>145</speed>
 	  <secondaryDamage>
@@ -821,13 +819,13 @@
 	  </secondaryDamage>
 	</projectile>
   </ThingDef>
-  
+  <!-- ==================== 8 Linked ========================== -->
   <ThingDef Class="CombatExtended.AmmoDef" ParentName="Base40x158mmBullet">
 		<defName>Bullet_40x158mm_8FMJ</defName>
 		<label>40x158mm bullet (AP)</label>
 		<projectile Class="CombatExtended.ProjectilePropertiesCE">
 			<pelletCount>8</pelletCount>
-			<spreadMult>0</spreadMult>
+			<spreadMult>1</spreadMult>
 			<damageAmountBase>210</damageAmountBase>
 			<armorPenetrationSharp>52</armorPenetrationSharp>
 			<armorPenetrationBlunt>325.540</armorPenetrationBlunt>
@@ -840,7 +838,7 @@
 	<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
     <projectile Class="CombatExtended.ProjectilePropertiesCE">
 	  <pelletCount>8</pelletCount>
-	  <spreadMult>0</spreadMult>
+	  <spreadMult>1</spreadMult>
       <damageDef>Bomb</damageDef>
       <damageAmountBase>75</damageAmountBase>
 	  <armorPenetrationSharp>0</armorPenetrationSharp>
@@ -854,7 +852,7 @@
 		<fragments>
 		  <Fragment_Large>20</Fragment_Large>
 		  <Fragment_Small>80</Fragment_Small>
-		  <Fragment_Tiny>175</Fragment_Tiny>
+		  <Fragment_Tiny>100</Fragment_Tiny>
 	    </fragments>
 	  </li>
 	</comps>
@@ -866,7 +864,7 @@
 	<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
     <projectile Class="CombatExtended.ProjectilePropertiesCE">
 	  <pelletCount>8</pelletCount>
-	  <spreadMult>0</spreadMult>
+	  <spreadMult>1.5</spreadMult>
 	  <speed>75</speed>
       <damageDef>Bomb</damageDef>
       <damageAmountBase>100</damageAmountBase>
@@ -875,7 +873,7 @@
       <explosionRadius>2</explosionRadius>
 		  <soundExplode>MortarBomb_Explode</soundExplode>
       <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
-	  <flyOverhead>true</flyOverhead>
+	  <flyOverhead>false</flyOverhead>
       <dropsCasings>false</dropsCasings>
     </projectile>
 	<comps>
@@ -883,7 +881,7 @@
 		<fragments>
 		  <Fragment_Large>35</Fragment_Large>
 		  <Fragment_Small>90</Fragment_Small>
-		  <Fragment_Tiny>150</Fragment_Tiny>
+		  <Fragment_Tiny>100</Fragment_Tiny>
 	    </fragments>
 	  </li>
 	</comps>
@@ -892,10 +890,9 @@
   <ThingDef Class="CombatExtended.AmmoDef" ParentName="Base40x158mmBullet">
     <defName>Bullet_40x158mm_8HEAT</defName>
     <label>40x158mm bullet (HEAT)</label>
-	<thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
     <projectile Class="CombatExtended.ProjectilePropertiesCE">
 	  <pelletCount>8</pelletCount>
-	  <spreadMult>0</spreadMult>
+	  <spreadMult>1</spreadMult>
       <damageAmountBase>210</damageAmountBase>
       <armorPenetrationSharp>62</armorPenetrationSharp>
 	  <armorPenetrationBlunt>325.540</armorPenetrationBlunt>
@@ -913,7 +910,7 @@
 	<label>40x158mm bullet (EMP)</label>
 	<projectile Class="CombatExtended.ProjectilePropertiesCE">
 	  <pelletCount>8</pelletCount>
-	  <spreadMult>0</spreadMult>
+	  <spreadMult>1</spreadMult>
 	  <damageAmountBase>150</damageAmountBase>
 	  <speed>145</speed>
 	  <secondaryDamage>
@@ -1092,5 +1089,502 @@
     </products>
     <workAmount>12500</workAmount>
   </RecipeDef>
-
+<!-- ==================== 2 Linked ========================== -->
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_40x158mm_2FMJ</defName>
+    <label>make dual linked 40x158mm (FMJ) cartridge x25</label>
+    <description>Craft 25 dual linked 40x158mm (FMJ) cartridges.</description>
+    <jobString>Making dual linked 40x158mm (FMJ) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>100</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_40x158mm_2FMJ>25</Ammo_40x158mm_2FMJ>
+    </products>
+    <workAmount>25000</workAmount>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_40x158mm_2HE</defName>
+    <label>make dual linked 40x158mm (HE) cartridge x25</label>
+    <description>Craft 25 dual linked 40x158mm (HE) cartridges.</description>
+    <jobString>Making dual linked 40x158mm (HE) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>94</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSX</li>
+          </thingDefs>
+        </filter>
+        <count>8</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+        <li>FSX</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_40x158mm_2HE>25</Ammo_40x158mm_2HE>
+    </products>
+    <workAmount>25000</workAmount>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_40x158mm_2LVHE</defName>
+    <label>make dual linked 40x158mm (LV-HE) cartridge x25</label>
+    <description>Craft 25 dual linked 40x158mm (LV-HE) cartridges.</description>
+    <jobString>Making dual linked 40x158mm (LV-HE) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>94</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSX</li>
+          </thingDefs>
+        </filter>
+        <count>8</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+        <li>FSX</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_40x158mm_2LVHE>25</Ammo_40x158mm_2LVHE>
+    </products>
+    <workAmount>25000</workAmount>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_40x158mm_2HEAT</defName>
+    <label>make dual linked 40x158mm (HEAT) cartridge x25</label>
+    <description>Craft 25 dual linked 40x158mm (HEAT) cartridges.</description>
+    <jobString>Making dual linked 40x158mm (HEAT) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>94</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSX</li>
+          </thingDefs>
+        </filter>
+        <count>8</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+        <li>FSX</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_40x158mm_2HEAT>25</Ammo_40x158mm_2HEAT>
+    </products>
+    <workAmount>25000</workAmount>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_40x158mm_2EMP</defName>
+    <label>make dual linked 40x158mm (EMP) cartridge x25</label>
+    <description>Craft 25 dual linked 40x158mm (EMP) cartridges.</description>
+    <jobString>Making dual linked 40x158mm (EMP) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>94</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+        <li>ComponentIndustrial</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_40x158mm_2EMP>25</Ammo_40x158mm_2EMP>
+    </products>
+    <workAmount>25000</workAmount>
+  </RecipeDef>
+<!-- ==================== 4 Linked ========================== -->  
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_40x158mm_4FMJ</defName>
+    <label>make quad linked 40x158mm (FMJ) cartridge x25</label>
+    <description>Craft 25 quad linked 40x158mm (FMJ) cartridges.</description>
+    <jobString>Making quad linked 40x158mm (FMJ) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>200</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_40x158mm_4FMJ>25</Ammo_40x158mm_4FMJ>
+    </products>
+    <workAmount>50000</workAmount>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_40x158mm_4HE</defName>
+    <label>make quad linked 40x158mm (HE) cartridge x25</label>
+    <description>Craft 25 quad linked 40x158mm (HE) cartridges.</description>
+    <jobString>Making quad linked 40x158mm (HE) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>188</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSX</li>
+          </thingDefs>
+        </filter>
+        <count>16</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+        <li>FSX</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_40x158mm_4HE>25</Ammo_40x158mm_4HE>
+    </products>
+    <workAmount>50000</workAmount>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_40x158mm_4LVHE</defName>
+    <label>make quad linked 40x158mm (LV-HE) cartridge x25</label>
+    <description>Craft 25 quad linked 40x158mm (LV-HE) cartridges.</description>
+    <jobString>Making quad linked 40x158mm (LV-HE) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>188</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSX</li>
+          </thingDefs>
+        </filter>
+        <count>16</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+        <li>FSX</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_40x158mm_4LVHE>25</Ammo_40x158mm_4LVHE>
+    </products>
+    <workAmount>50000</workAmount>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_40x158mm_4HEAT</defName>
+    <label>make quad linked 40x158mm (HEAT) cartridge x25</label>
+    <description>Craft 25 quad linked 40x158mm (HEAT) cartridges.</description>
+    <jobString>Making quad linked 40x158mm (HEAT) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>188</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSX</li>
+          </thingDefs>
+        </filter>
+        <count>16</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+        <li>FSX</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_40x158mm_4HEAT>25</Ammo_40x158mm_4HEAT>
+    </products>
+    <workAmount>50000</workAmount>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_40x158mm_4EMP</defName>
+    <label>make quad linked 40x158mm (EMP) cartridge x25</label>
+    <description>Craft 25 quad linked 40x158mm (EMP) cartridges.</description>
+    <jobString>Making quad linked 40x158mm (EMP) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>188</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+        <li>ComponentIndustrial</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_40x158mm_4EMP>25</Ammo_40x158mm_4EMP>
+    </products>
+    <workAmount>50000</workAmount>
+  </RecipeDef>
+<!-- ==================== 8 Linked ========================== -->  
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_40x158mm_8FMJ</defName>
+    <label>make oct. linked 40x158mm (FMJ) cartridge x25</label>
+    <description>Craft 25 oct. linked 40x158mm (FMJ) cartridges.</description>
+    <jobString>Making oct. linked 40x158mm (FMJ) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>400</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_40x158mm_8FMJ>25</Ammo_40x158mm_8FMJ>
+    </products>
+    <workAmount>100000</workAmount>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_40x158mm_8HE</defName>
+    <label>make oct. linked 40x158mm (HE) cartridge x25</label>
+    <description>Craft 25 oct. linked 40x158mm (HE) cartridges.</description>
+    <jobString>Making oct. linked 40x158mm (HE) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>376</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSX</li>
+          </thingDefs>
+        </filter>
+        <count>32</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+        <li>FSX</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_40x158mm_8HE>25</Ammo_40x158mm_8HE>
+    </products>
+    <workAmount>100000</workAmount>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_40x158mm_8LVHE</defName>
+    <label>make oct. linked 40x158mm (LV-HE) cartridge x25</label>
+    <description>Craft 25 oct. linked 40x158mm (LV-HE) cartridges.</description>
+    <jobString>Making oct. linked 40x158mm (LV-HE) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>376</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSX</li>
+          </thingDefs>
+        </filter>
+        <count>32</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+        <li>FSX</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_40x158mm_8LVHE>25</Ammo_40x158mm_8LVHE>
+    </products>
+    <workAmount>100000</workAmount>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_40x158mm_8HEAT</defName>
+    <label>make oct. linked 40x158mm (HEAT) cartridge x25</label>
+    <description>Craft 25 oct. linked 40x158mm (HEAT) cartridges.</description>
+    <jobString>Making oct. linked 40x158mm (HEAT) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>376</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSX</li>
+          </thingDefs>
+        </filter>
+        <count>32</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+        <li>FSX</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_40x158mm_8HEAT>25</Ammo_40x158mm_8HEAT>
+    </products>
+    <workAmount>100000</workAmount>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_40x158mm_8EMP</defName>
+    <label>make oct. linked 40x158mm (EMP) cartridge x25</label>
+    <description>Craft 25 oct. linked 40x158mm (EMP) cartridges.</description>
+    <jobString>Making oct. linked 40x158mm (EMP) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>376</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ComponentIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>40</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+        <li>ComponentIndustrial</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_40x158mm_8EMP>25</Ammo_40x158mm_8EMP>
+    </products>
+    <workAmount>100000</workAmount>
+  </RecipeDef>
 </Defs>

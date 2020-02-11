@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ScenarioDef>
+		<defName>RecentlyLiberated</defName>
+		<label>Recently Liberated and Very Lost</label>
+		<description>The four of you hear incoming drop pods and find out that it is a supply cache. With the realizastion of the contents you decide to run off to set up your own colony. After staving off Infection, looters and spies you gain a Muffalo, Rifle and a Submachine gun and run dangerously low on supplies</description>
+		<scenario>
+		<summary>Four liberated Individuals</summary>
+		<playerFaction>
+			<def>PlayerFaction</def>
+			<factionDef>PlayerColony</factionDef>
+		</playerFaction>
+		<parts>
+			<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+				<def>ConfigPage_ConfigureStartingPawns</def>
+				<pawnCount>4</pawnCount>
+				<pawnChoiceCount>4</pawnChoiceCount>
+			</li>
+			<li Class="ScenPart_PlayerPawnsArriveMethod">
+				<def>PlayerPawnsArriveMethod</def>
+			</li>
+			<li Class="ScenPart_ForcedHediff">
+				<def>ForcedHediff</def>
+				<chance>0.75</chance>
+				<context>PlayerStarter</context>
+				<hideOffMap>True</hideOffMap>
+				<hediff>Infectious</hediff>
+				<severityRange>0.1~0.4</severityRange>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>Silver</thingDef>
+				<count>10</count>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>MealSurvivalPack</thingDef>
+				<count>40</count>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>MedicineIndustrial</thingDef>
+				<count>10</count>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>ComponentIndustrial</thingDef>
+				<count>20</count>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>DA_GNE</thingDef>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>DA_AM_180Z</thingDef>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>DA_Liberator</thingDef>
+				<count>20</count>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>MeleeWeapon_Knife</thingDef>
+				<stuff>Steel</stuff>
+				<count>2</count>
+			</li>
+			<li Class="ScenPart_StartingAnimal">
+				<def>StartingAnimal</def>
+				<animalKind>Muffalo</animalKind>
+				<count>1</count>
+				<bondToRandomPlayerPawnChance>1</bondToRandomPlayerPawnChance>
+			</li>
+			<li Class="ScenPart_ScatterThingsNearPlayerStart">
+				<def>ScatterThingsNearPlayerStart</def>
+				<thingDef>Steel</thingDef>
+				<count>450</count>
+			</li>
+			<li Class="ScenPart_ScatterThingsNearPlayerStart">
+				<def>ScatterThingsNearPlayerStart</def>
+				<thingDef>WoodLog</thingDef>
+				<count>300</count>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>Ammo_22LR_FMJ</thingDef>
+				<count>550</count>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>Ammo_45ACP_FMJ</thingDef>
+				<count>150</count>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>Ammo_792x51mmMauser_FMJ</thingDef>
+				<count>75</count>
+			</li>
+		</parts>
+	</scenario>
+	</ScenarioDef>
+</Defs>

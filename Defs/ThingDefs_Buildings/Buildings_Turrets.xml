@@ -701,9 +701,187 @@
     <minifiedDef>MinifiedThing</minifiedDef>
   </ThingDef>
   -->
-  <!--=============== QF Single [Secret Project 007] ===============-->
+  <!--=============== QF Single [Pom - Pom] ===============-->
+  <ThingDef ParentName="TurretMannedCraftableBase">
+    <defName>Turret_1QF_2_Pounder</defName>
+    <label>QF 2-pounder</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets/MachineGunBase</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>450</MaxHitPoints>
+      <WorkToMake>80000</WorkToMake>
+      <Mass>1000.0</Mass>
+      <Bulk>500</Bulk>
+    </statBases>
+    <description>A single QF 2-pounder.</description>
+    <costList>
+      <ComponentIndustrial>10</ComponentIndustrial>
+	  <Steel>500</Steel>
+    </costList>
+    <building>
+      <turretGunDef>DAT_QF1_40mm</turretGunDef>
+      <turretTopGraphicPath>Things/Building/Turrets/40mm_Single</turretTopGraphicPath>
+	  <turretTopDrawSize>3</turretTopDrawSize>
+    </building>
+	<specialDisplayRadius>12</specialDisplayRadius>
+    <minifiedDef>MinifiedThing</minifiedDef>
+	<recipeMaker>
+      <researchPrerequisite>QF_HeavyAutoCannons</researchPrerequisite>
+	  <skillRequirements>
+		<Crafting>8</Crafting>
+	  </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
   <!--=============== + Seige (Because History) ===============-->
-  <!--=============== QF Dual [Secret Project 007] ===============-->
-  <!--=============== QF Quad [Secret Project 007] ===============-->
+  <ThingDef ParentName="TurretMannedCraftableBase">
+    <defName>Turret_1QF_2_PounderB</defName>
+    <label>Seige QF 2-pounder</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets/25mm_Base_Seige</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>450</MaxHitPoints>
+      <WorkToMake>80000</WorkToMake>
+      <Mass>120.0</Mass>
+      <Bulk>110</Bulk>
+    </statBases>
+    <description>A single Seige QF 2-pounder.</description>
+    <costList>
+      <ComponentIndustrial>10</ComponentIndustrial>
+	  <Steel>500</Steel>
+	  <WoodLog>50</WoodLog>
+    </costList>
+    <building>
+      <turretGunDef>DAT_QF1_40mmB</turretGunDef>
+      <turretTopGraphicPath>Things/Building/Turrets/40mm_Single</turretTopGraphicPath>
+	  <turretTopDrawSize>3</turretTopDrawSize>
+    </building>
+	<specialDisplayRadius>12</specialDisplayRadius>
+    <minifiedDef>MinifiedThing</minifiedDef>
+	<recipeMaker>
+      <researchPrerequisite>QF_HeavyAutoCannons</researchPrerequisite>
+	  <skillRequirements>
+		<Crafting>8</Crafting>
+	  </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <!--=============== QF Dual [Pom - Pom] ===============-->
+  <ThingDef ParentName="TurretMannedCraftableBase">
+    <defName>Turret_2QF_2_Pounder</defName>
+    <label>Dual QF 2-pounder</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets/25mm_Base_Static</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>1000</MaxHitPoints>
+      <WorkToMake>180000</WorkToMake>
+      <Mass>2000.0</Mass>
+      <Bulk>1000</Bulk>
+    </statBases>
+    <description>A Dual QF 2-pounder.</description>
+    <costList>
+      <ComponentIndustrial>22</ComponentIndustrial>
+	  <Steel>850</Steel>
+    </costList>
+    <building>
+      <turretGunDef>DAT_QF2_40mm</turretGunDef>
+      <turretTopGraphicPath>Things/Building/Turrets/40mm_Single</turretTopGraphicPath>
+	  <turretTopDrawSize>3</turretTopDrawSize>
+    </building>
+	<size>(2,2)</size>
+	<specialDisplayRadius>12</specialDisplayRadius>
+    <minifiedDef>MinifiedThing</minifiedDef>
+	<recipeMaker>
+      <researchPrerequisite>QF_HeavyAutoCannons</researchPrerequisite>
+	  <skillRequirements>
+		<Crafting>8</Crafting>
+	  </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <!--=============== QF Quad [Pom - Pom] ===============-->
+  <ThingDef ParentName="TurretMannedCraftableBase">
+    <defName>Turret_4QF_2_Pounder</defName>
+    <label>Quad QF 2-pounder</label>
+	<fillPercent>0.95</fillPercent>
+    <graphicData>
+      <texPath>Things/Building/Turrets/25mm_Base_Static</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>2500</MaxHitPoints>
+      <WorkToMake>400000</WorkToMake>
+      <Mass>10000.0</Mass>
+      <Bulk>2000</Bulk>
+    </statBases>
+	<comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>1500</basePowerConsumption>
+      </li>
+	  <li Class="CompProperties_Flickable"/>
+	  <li Class="CompProperties_Breakdownable"/>
+    </comps>
+    <description>A Quad QF 2-pounder.</description>
+    <costList>
+      <ComponentIndustrial>45</ComponentIndustrial>
+	  <Steel>1750</Steel>
+    </costList>
+    <building>
+      <turretGunDef>DAT_QF4_40mm</turretGunDef>
+      <turretTopGraphicPath>Things/Building/Turrets/40mm_Quad</turretTopGraphicPath>
+	  <turretTopDrawSize>3</turretTopDrawSize>
+    </building>
+	<size>(2,2)</size>
+	<specialDisplayRadius>12</specialDisplayRadius>
+    <minifiedDef>MinifiedThing</minifiedDef>
+	<recipeMaker>
+      <researchPrerequisite>QF_OversizedAutoCannons</researchPrerequisite>
+	  <skillRequirements>
+		<Crafting>8</Crafting>
+	  </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
   <!--=============== Oct. will require a stack size of 1120 ===============-->
+  <ThingDef ParentName="TurretMannedCraftableBase">
+    <defName>Turret_8QF_2_Pounder</defName>
+    <label>Oct. QF 2-pounder</label>
+	<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+	<fillPercent>0.99</fillPercent>
+    <graphicData>
+      <texPath>Things/Building/Turrets/L_Static</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>4500</MaxHitPoints>
+      <WorkToMake>800000</WorkToMake>
+      <Mass>15700.0</Mass>
+      <Bulk>4000</Bulk>
+    </statBases>
+	<comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>3000</basePowerConsumption>
+      </li>
+	  <li Class="CompProperties_Flickable"/>
+	  <li Class="CompProperties_Breakdownable"/>
+    </comps>
+    <description>An Octuple QF 2-pounder.</description>
+    <costList>
+      <ComponentIndustrial>85</ComponentIndustrial>
+	  <Steel>3250</Steel>
+    </costList>
+    <building>
+      <turretGunDef>DAT_QF8_40mm</turretGunDef>
+      <turretTopGraphicPath>Things/Building/Turrets/40mm_Octuple</turretTopGraphicPath>
+	  <turretTopDrawSize>4.5</turretTopDrawSize>
+    </building>
+	<size>(3,2)</size>
+	<specialDisplayRadius>12</specialDisplayRadius>
+    <minifiedDef>MinifiedThing</minifiedDef>
+	<recipeMaker>
+      <researchPrerequisite>QF_OversizedAutoCannons</researchPrerequisite>
+	  <skillRequirements>
+		<Crafting>8</Crafting>
+	  </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
 </Defs>

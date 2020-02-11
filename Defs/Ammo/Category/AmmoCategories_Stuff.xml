@@ -102,6 +102,6 @@
 		<defName>LV-HE</defName>
 		<label>Low velocity High Explosive</label>
 		<labelShort>Low velocity High Explosive</labelShort>
-		<description>These Low Velocity High Explosive Shells are usually used in seiges or for lobbing shells over walls and structures</description>
+		<description>These Low Velocity High Explosive Shells are filled with more filling and are caseless with lowered accuarccy</description>
 	</CombatExtended.AmmoCategoryDef>
 </Defs>

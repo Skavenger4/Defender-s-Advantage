@@ -30,7 +30,7 @@
   <ThingDef ParentName="ResourceBase">
     <defName>CFoam</defName>
     <label>Construction Foam</label>
-    <description>This Ultra Light foam is perfect for quick builds of temporary structures, It is almost fireproof but ugly, when buildings/furniture are built it is not very durable.</description>
+    <description>This Ultralight foam is perfect for quick builds of temporary structures, It is almost fireproof but ugly, when buildings/furniture are built it is not very durable.</description>
     <graphicData>
       <texPath>Things/Item/Resource/StoneBlocks</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -333,7 +333,7 @@
 <ThingDef ParentName="ResourceBase">
     <defName>Ballistic_Cloth_Black_B</defName>
     <label>Type 1-B</label>
-    <description>Cheap Ballistic Fabric that reduces Protection but greatly improves fire resistance and makes it warmer.</description>
+    <description>Cheap Ballistic Fabric that has reduced protection but greatly improves fire resistance and makes it warmer.</description>
     <graphicData>
       <texPath>Things/Item/Resource/Cloth</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -414,8 +414,8 @@
 <!-- ==================== Ballistic Fabric III ========================== -->
   <ThingDef ParentName="ResourceBase">
     <defName>Ballistic_Cloth_Black_II_Kai</defName>
-    <label>Type 2.5</label>
-    <description>Top quality Ballistic Fabric that greatly improves insulation Moderate improvements in blunt resist, but greatly increases weight, worn bulk and fire resistance. also takes much longer to make anything out of it.</description>
+    <label>Type 2-B</label>
+    <description>Top quality Ballistic Fabric that greatly improves insulation, There is moderate improvements in blunt resist, but greatly increases weight, worn bulk and fire resistance. also takes much longer to make anything out of it.</description>
     <graphicData>
       <texPath>Things/Item/Resource/Cloth</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -460,7 +460,7 @@
   <ThingDef ParentName="ResourceBase">
     <defName>LW_Insualtor</defName>
     <label>Model 451-66</label>
-    <description>Somewhat High-tech and (not very) synthetic fabric designed for very hellish envroments. It is very light but not at all strong. It's durability is also much lower. Almost (TM) impervious to fire.</description>
+    <description>Somewhat High-tech and (not very) synthetic fabric designed for hellish envroments. It is very light but not durable. It's durability is also much lower. Almost (TM) impervious to fire.</description>
     <graphicData>
       <texPath>Things/Item/Resource/Cloth</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>
@@ -504,8 +504,8 @@
 <!-- ==================== Wool ========================== -->
   <ThingDef ParentName="WoolBase">
     <defName>WoolSheep</defName>
-    <label>Sheep Wool</label>
-    <description>Soft, light, very cheap and provides good insulation. Sheep wool can keep the body warm in cool conditions.</description>
+    <label>Reclaimed Wool</label>
+    <description>Soft, light, very cheap and provides good insulation. Reclaimed wool can keep the body warm in all conditions.</description>
     <graphicData>
       <color>(200,200,200)</color>
     </graphicData>
@@ -520,7 +520,7 @@
 		<Mass>0.8</Mass>
       </statFactors>
       <color>(200,200,200)</color>
-	   <commonality>.75</commonality>
+	   <commonality>.5</commonality>
     </stuffProps>
   </ThingDef>
 <!-- ==================== Recipes ========================== -->
@@ -667,9 +667,9 @@
 	</RecipeDef>
     <RecipeDef>
       <defName>M_Ballistic_Cloth_III</defName>
-      <label>Make Type 2.5 Fabric</label>
-      <description>Create x50 Type 2.5 Fabric.</description>
-      <jobString>Making x50 Type 2.5 Fabric</jobString>  
+      <label>Make Type 2-B Fabric</label>
+      <description>Create x50 Type 2-B Fabric.</description>
+      <jobString>Making x50 Type 2-B Fabric</jobString>  
       <allowMixingIngredients>false</allowMixingIngredients>
       <ingredients>
          <li>

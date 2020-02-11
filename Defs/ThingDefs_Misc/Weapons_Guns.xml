@@ -171,7 +171,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun_CE_B">
     <defName>DA_Liberator</defName>
     <label>Liberator</label>
-    <description>Ancient and Extremely cheap pistol with no rifling and a terrible range,it's very low weight and cost permits carrying several, it is better than bare hands though.</description>
+    <description>Ancient and Extremely cheap pistol with no rifling and a terrible range, It's very low weight and cost permits carrying several, it should be better than bare hands though.</description>
     <graphicData>
       <texPath>Things/Weapons/Libe</texPath>
       <graphicClass>Graphic_Single</graphicClass>

@@ -684,7 +684,7 @@
       <texPath>Things/Item/Equipment/WeaponRanged/ChargeRifle</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <description>120mm Shotgunon a static mount.</description>
+    <description>120mm Shotgun on a static mount.</description>
     <soundInteract>Artillery_ShellLoaded</soundInteract>
     <statBases>
       <MarketValue>2000</MarketValue>
@@ -868,11 +868,250 @@
   </ThingDef>
   -->
   <!--=============== QF Single [Secret Project 007] ===============-->
+  <ThingDef ParentName="BaseTurretGun">
+    <defName>DAT_QF1_40mm</defName>
+    <label>Single QF 2-pounder</label>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/ChargeRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <description>A Single QF 2-Pounder</description>
+    <statBases>
+      <MarketValue>1000</MarketValue>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.02</ShotSpread>
+      <SwayFactor>3.26</SwayFactor>
+      <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>1.45</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_40x158mm_FMJ</defaultProjectile>
+        <warmupTime>0.8</warmupTime>
+        <range>200</range>
+		<minRange>12</minRange>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <ticksBetweenBurstShots>30</ticksBetweenBurstShots>
+        <burstShotCount>7</burstShotCount>
+        <soundCast>HeavyMG</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>5</muzzleFlashScale>
+        <recoilPattern>Mounted</recoilPattern>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>56</magazineSize>
+        <reloadTime>5.1</reloadTime>
+        <spawnUnloaded>false</spawnUnloaded>
+        <ammoSet>AmmoSet_40x158mm</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+        <aimedBurstShotCount>3</aimedBurstShotCount>
+        <aiAimMode>SuppressFire</aiAimMode>
+      </li>
+    </comps>
+  </ThingDef>
   <!--=============== QF Single Seige [Secret Project 007] ===============-->
   <!--=============== 56 Round Belt ===============-->
+  <ThingDef ParentName="BaseTurretGun">
+    <defName>DAT_QF1_40mmB</defName>
+    <label>Single Seige QF 2-pounder</label>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/ChargeRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <description>A Single QF 2-Pounder</description>
+    <statBases>
+      <MarketValue>2000</MarketValue>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.04</ShotSpread>
+      <SwayFactor>3.26</SwayFactor>
+      <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>2.45</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_40x158mm_FMJ</defaultProjectile>
+        <warmupTime>0.8</warmupTime>
+        <range>150</range>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <ticksBetweenBurstShots>30</ticksBetweenBurstShots>
+        <burstShotCount>7</burstShotCount>
+        <soundCast>HeavyMG</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>5</muzzleFlashScale>
+        <recoilPattern>Mounted</recoilPattern>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>56</magazineSize>
+        <reloadTime>5.1</reloadTime>
+        <spawnUnloaded>false</spawnUnloaded>
+        <ammoSet>AmmoSet_40x158mm</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+        <aimedBurstShotCount>3</aimedBurstShotCount>
+        <aiAimMode>SuppressFire</aiAimMode>
+      </li>
+    </comps>
+  </ThingDef>
   <!--=============== QF Dual [Secret Project 007] ===============-->
   <!--=============== 168 Round Belt ===============-->
+  <ThingDef ParentName="BaseTurretGun">
+    <defName>DAT_QF2_40mm</defName>
+    <label>Dual QF 2-pounder</label>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/ChargeRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <description>A Dual QF 2-Pounder</description>
+    <statBases>
+      <MarketValue>2000</MarketValue>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>1.00</ShotSpread>
+      <SwayFactor>3.26</SwayFactor>
+      <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>1.45</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_40x158mm_2FMJ</defaultProjectile>
+        <warmupTime>0.8</warmupTime>
+        <range>200</range>
+		<minRange>12</minRange>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <ticksBetweenBurstShots>30</ticksBetweenBurstShots>
+        <burstShotCount>7</burstShotCount>
+        <soundCast>HeavyMG</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>5</muzzleFlashScale>
+        <recoilPattern>Mounted</recoilPattern>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>84</magazineSize>
+        <reloadTime>10</reloadTime>
+        <spawnUnloaded>false</spawnUnloaded>
+        <ammoSet>AmmoSet_40x158mm2L</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+        <aimedBurstShotCount>3</aimedBurstShotCount>
+        <aiAimMode>SuppressFire</aiAimMode>
+      </li>
+    </comps>
+  </ThingDef>
   <!--=============== QF Quad [Secret Project 007] ===============-->
   <!--=============== 448 Round Belt ===============-->
+  <ThingDef ParentName="BaseTurretGun">
+    <defName>DAT_QF4_40mm</defName>
+    <label>Quad QF 2-pounder</label>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/ChargeRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <description>A Quad QF 2-Pounder</description>
+    <statBases>
+      <MarketValue>3500</MarketValue>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>2.50</ShotSpread>
+      <SwayFactor>4.26</SwayFactor>
+      <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>1.45</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_40x158mm_4FMJ</defaultProjectile>
+        <warmupTime>0.8</warmupTime>
+        <range>200</range>
+		<minRange>12</minRange>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <ticksBetweenBurstShots>30</ticksBetweenBurstShots>
+        <burstShotCount>14</burstShotCount>
+        <soundCast>HeavyMG</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>5</muzzleFlashScale>
+        <recoilPattern>Mounted</recoilPattern>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>112</magazineSize>
+        <reloadTime>15.1</reloadTime>
+        <spawnUnloaded>false</spawnUnloaded>
+        <ammoSet>AmmoSet_40x158mm4L</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+        <aimedBurstShotCount>7</aimedBurstShotCount>
+        <aiAimMode>SuppressFire</aiAimMode>
+      </li>
+    </comps>
+  </ThingDef>
   <!--=============== Oct. will require a stack size of 1120 ===============-->
+  <ThingDef ParentName="BaseTurretGun">
+    <defName>DAT_QF8_40mm</defName>
+    <label>Oct. QF 2-pounder</label>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/ChargeRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <description>A Oct. QF 2-Pounder</description>
+    <statBases>
+      <MarketValue>7000</MarketValue>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>4.00</ShotSpread>
+      <SwayFactor>5.26</SwayFactor>
+      <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>1.45</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_40x158mm_8FMJ</defaultProjectile>
+        <warmupTime>0.8</warmupTime>
+        <range>200</range>
+		<minRange>12</minRange>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <ticksBetweenBurstShots>30</ticksBetweenBurstShots>
+        <burstShotCount>14</burstShotCount>
+        <soundCast>HeavyMG</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>5</muzzleFlashScale>
+        <recoilPattern>Mounted</recoilPattern>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>140</magazineSize>
+        <reloadTime>20.1</reloadTime>
+        <spawnUnloaded>false</spawnUnloaded>
+        <ammoSet>AmmoSet_40x158mm8L</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+        <aimedBurstShotCount>7</aimedBurstShotCount>
+        <aiAimMode>SuppressFire</aiAimMode>
+      </li>
+    </comps>
+  </ThingDef>
 </Defs>

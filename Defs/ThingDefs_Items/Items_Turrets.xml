@@ -259,4 +259,69 @@
   </ThingDef>
   -->
   
+  <ThingDef ParentName="MinifiedBase">
+    <defName>MinifiedTurret_1QF_2_Pounder</defName>
+    <label>Single QF 2 Pounder</label>
+	<description>A Minified Single QF 2 Pounder</description>
+    <statBases>
+      <Mass>1000</Mass>
+      <Bulk>500</Bulk>
+    </statBases>
+  <thingCategories>
+      <li>WeaponsTurrets</li>
+  </thingCategories>
+  </ThingDef>
+  
+  <ThingDef ParentName="MinifiedBase">
+    <defName>MinifiedTurret_1QF_2_PounderB</defName>
+    <label>Seige QF 2 Pounder</label>
+	<description>A Minified Seige QF 2 Pounder</description>
+    <statBases>
+      <Mass>120</Mass>
+      <Bulk>110</Bulk>
+    </statBases>
+  <thingCategories>
+      <li>WeaponsTurrets</li>
+  </thingCategories>
+  </ThingDef>
+  
+  <ThingDef ParentName="MinifiedBase">
+    <defName>MinifiedTurret_2QF_2_Pounder</defName>
+    <label>Dual QF 2 Pounder</label>
+	<description>A Minified Dual QF 2 Pounder</description>
+    <statBases>
+      <Mass>2000</Mass>
+      <Bulk>1000</Bulk>
+    </statBases>
+  <thingCategories>
+      <li>WeaponsTurrets</li>
+  </thingCategories>
+  </ThingDef>
+  
+  <ThingDef ParentName="MinifiedBase">
+    <defName>MinifiedTurret_4QF_2_Pounder</defName>
+    <label>Quad QF 2 Pounder</label>
+	<description>A Minified Quad QF 2 Pounder</description>
+    <statBases>
+      <Mass>10000</Mass>
+      <Bulk>2000</Bulk>
+    </statBases>
+  <thingCategories>
+      <li>WeaponsTurrets</li>
+  </thingCategories>
+  </ThingDef>
+  
+  <ThingDef ParentName="MinifiedBase">
+    <defName>MinifiedTurret_8QF_2_Pounder</defName>
+    <label>Octuple QF 2 Pounder</label>
+	<description>A Minified Octuple QF 2 Pounder</description>
+    <statBases>
+      <Mass>15700</Mass>
+      <Bulk>4000</Bulk>
+    </statBases>
+  <thingCategories>
+      <li>WeaponsTurrets</li>
+  </thingCategories>
+  </ThingDef>
+  
 </Defs>

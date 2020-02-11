@@ -44,8 +44,8 @@
   </ThingDef>
   <ThingDef ParentName="ResourceBase">
     <defName>TrapFrag_MineB</defName>
-    <label>Dissasembled Landmine Components</label>
-    <description>These dissasembled landmine components could be easily assembled into landmines</description>
+    <label>Landmine Components</label>
+    <description>These landmine components could be easily assembled into landmines</description>
     <graphicData>
       <texPath>Things/Item/Unfinished/UnfinishedGun</texPath>
       <graphicClass>Graphic_Single</graphicClass>

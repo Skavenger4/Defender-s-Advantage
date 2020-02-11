@@ -31,8 +31,8 @@
   <!--===== Lightweight Insulator ====-->
   <ResearchProjectDef>
     <defName>FiberTThree</defName>
-    <label>Type 2.5 Fiber</label>
-    <description>Enables the mixing of Lightweight Insulator and Type 2 Fiber at Tailor Benches.</description>
+    <label>Insulated Variants</label>
+    <description>Enables the mixing of Lightweight Insulator and ballistic fibers to make insulated variants of ballistic fibers at Tailor Benches.</description>
     <baseCost>5000</baseCost>
     <techLevel>Industrial</techLevel>
     <prerequisites>
@@ -97,12 +97,11 @@
 	<tab>CE_Turrets</tab>
 	<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
   </ResearchProjectDef> 
-  <!--
   <ResearchProjectDef>
     <defName>QF_HeavyAutoCannons</defName>
     <label>Heavy Auto-Cannons</label>
-    <description>Enables the consruction of [REDACTED].</description>
-    <baseCost>2500</baseCost>
+    <description>Enables the consruction of Single and Dual Pom-Pom's.</description>
+    <baseCost>3500</baseCost>
     <techLevel>Industrial</techLevel>
     <prerequisites>
       <li>CE_HeavyTurret</li>
@@ -115,9 +114,9 @@
   </ResearchProjectDef> 
   <ResearchProjectDef>
     <defName>QF_OversizedAutoCannons</defName>
-    <label>Heavy Oversized Auto-Cannons</label>
-    <description>Enables the consruction of [REDACTED].</description>
-    <baseCost>2500</baseCost>
+    <label>Super Heavy Auto-Cannons</label>
+    <description>Enables the consruction of Quad and Octuple Pom-Pom's.</description>
+    <baseCost>5000</baseCost>
     <techLevel>Industrial</techLevel>
     <prerequisites>
       <li>QF_HeavyAutoCannons</li>	  
@@ -127,5 +126,4 @@
 	<tab>CE_Turrets</tab>
 	<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
   </ResearchProjectDef> 
-  -->
 </Defs>
