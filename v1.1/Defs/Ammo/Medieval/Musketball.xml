@@ -1,0 +1,694 @@
+﻿<Defs>
+
+	<ThingCategoryDef>
+		<defName>AmmoMusketBall</defName>
+		<label>Musket Balls</label>
+		<parent>AmmoRifles</parent>
+    <iconPath>UI/Icons/ThingCategories/CaliberRifle</iconPath>
+	</ThingCategoryDef>
+	
+	<!-- ==================== AmmoSet ========================== -->
+
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_MusketBall</defName>
+		<label>Musket Balls</label>
+		<ammoTypes>
+			<Ammo_MusketBall_Wood>Bullet_MusketBall_Wood</Ammo_MusketBall_Wood>
+			<Ammo_MusketBall_Stone>Bullet_MusketBall_Stone</Ammo_MusketBall_Stone>
+			<Ammo_MusketBall_Steel>Bullet_MusketBall_Steel</Ammo_MusketBall_Steel>
+			<Ammo_MusketBall_Plasteel>Bullet_MusketBall_Plasteel</Ammo_MusketBall_Plasteel>
+			<Ammo_MusketBall_Silver>Bullet_MusketBall_Silver</Ammo_MusketBall_Silver>
+			<Ammo_MusketBall_Gold>Bullet_MusketBall_Gold</Ammo_MusketBall_Gold>
+			<Ammo_MusketBall_Uranium>Bullet_MusketBall_Uranium</Ammo_MusketBall_Uranium>
+			<Ammo_MusketBall_Infected>Bullet_MusketBall_Infected</Ammo_MusketBall_Infected>
+			<Ammo_MusketBall_HE>Bullet_MusketBall_HE</Ammo_MusketBall_HE>
+			<Ammo_MusketBall_Incendiary>Bullet_MusketBall_Incendiary</Ammo_MusketBall_Incendiary>
+			<Ammo_MusketBall_Square>Bullet_MusketBall_Square</Ammo_MusketBall_Square>
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+
+	<!-- ==================== Ammo ========================== -->
+	
+	<ThingDef Class="CombatExtended.AmmoDef" Name="MusketBallBase" ParentName="SmallAmmoBase" Abstract="True">
+		<description>Large caliber musket rounds that could pack a decent punch even against armored targets.</description>
+		<statBases>
+		<Mass>0.010</Mass>
+		<Bulk>0.014</Bulk>
+		</statBases>
+	<tradeTags>
+		<li>CE_AutoEnableTrade</li>
+		<li>CE_AutoEnableCrafting</li>
+		<li>CE_AutoEnableCrafting_FueledSmithy</li>
+        <li>CE_AutoEnableCrafting_ElectricSmithy</li>
+	</tradeTags>
+		<thingCategories>
+			<li>AmmoMusketBall</li>
+		</thingCategories>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="MusketBallBase">
+		<defName>Ammo_MusketBall_Wood</defName>
+		<label>Musket Ball (Wood)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/FMJ</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.03</MarketValue>
+			<Mass>0.006</Mass>
+		</statBases>
+		<ammoClass>WoodMB</ammoClass>
+		<cookOffProjectile>Bullet_MusketBall_Wood</cookOffProjectile>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="MusketBallBase">
+		<defName>Ammo_MusketBall_Stone</defName>
+		<label>Musket Ball (Stone)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/FMJ</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.03</MarketValue>
+		</statBases>
+		<ammoClass>StoneMB</ammoClass>
+		<cookOffProjectile>Bullet_MusketBall_Stone</cookOffProjectile>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="MusketBallBase">
+		<defName>Ammo_MusketBall_Steel</defName>
+		<label>Musket Ball (Steel)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/FMJ</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.09</MarketValue>
+		</statBases>
+		<ammoClass>SteelMB</ammoClass>
+		<cookOffProjectile>Bullet_MusketBall_Steel</cookOffProjectile>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="MusketBallBase">
+		<defName>Ammo_MusketBall_Plasteel</defName>
+		<label>Musket Ball (Plasteel)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/FMJ</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.95</MarketValue>
+			<Mass>0.011</Mass>
+		</statBases>
+		<ammoClass>PlasteelMB</ammoClass>
+		<cookOffProjectile>Bullet_MusketBall_Plasteel</cookOffProjectile>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="MusketBallBase">
+		<defName>Ammo_MusketBall_Silver</defName>
+		<label>Musket Ball (Silver)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/FMJ</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.46</MarketValue>
+			<Mass>0.013</Mass>
+		</statBases>
+		<ammoClass>SilverMB</ammoClass>
+		<cookOffProjectile>Bullet_MusketBall_Silver</cookOffProjectile>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="MusketBallBase">
+		<defName>Ammo_MusketBall_Gold</defName>
+		<label>Musket Ball (Gold)</label>
+		<generateAllowChance>0</generateAllowChance>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/FMJ</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>4.72</MarketValue>
+			<Mass>0.015</Mass>
+		</statBases>
+		<ammoClass>GoldMB</ammoClass>
+		<cookOffProjectile>Bullet_MusketBall_Gold</cookOffProjectile>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="MusketBallBase">
+		<defName>Ammo_MusketBall_Uranium</defName>
+		<label>Musket Ball (Uranium)</label>
+		<generateAllowChance>5</generateAllowChance>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/FMJ</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.15</MarketValue>
+			<Mass>0.020</Mass>
+		</statBases>
+		<ammoClass>UraniumMB</ammoClass>
+		<cookOffProjectile>Bullet_MusketBall_Uranium</cookOffProjectile>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="MusketBallBase">
+		<defName>Ammo_MusketBall_Infected</defName>
+		<label>Musket Ball (Infected)</label>
+		<generateAllowChance>9</generateAllowChance>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/FMJ</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.01</MarketValue>
+		</statBases>
+		<ammoClass>InfMB</ammoClass>
+		<cookOffProjectile>Bullet_MusketBall_Infected</cookOffProjectile>
+	</ThingDef>
+	
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="MusketBallBase">
+	<defName>Ammo_MusketBall_HE</defName>
+	<label>Musket Ball (HE)</label>
+	<generateAllowChance>2</generateAllowChance>
+	<graphicData>
+	  <texPath>Things/Ammo/Rifle/FMJ</texPath>
+	  <graphicClass>Graphic_StackCount</graphicClass>
+	</graphicData>
+	<statBases>
+	  <MarketValue>0.16</MarketValue>
+	  <Mass>0.017</Mass>
+	</statBases>
+	<ammoClass>HEMB</ammoClass>
+	<detonateProjectile>Bullet_MusketBall_HE</detonateProjectile>
+	<comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>2</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <startWickHitPointsPercent>0.7</startWickHitPointsPercent>
+		<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+		<explodeOnKilled>True</explodeOnKilled>
+        <wickTicks>50~150</wickTicks>
+      </li>
+    </comps>
+  </ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="MusketBallBase">
+		<defName>Ammo_MusketBall_Incendiary</defName>
+		<label>Musket Ball (Incendiary)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/FMJ</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.15</MarketValue>
+			<Mass>0.017</Mass>
+		</statBases>
+		<ammoClass>IncendiaryMB</ammoClass>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="MusketBallBase">
+		<defName>Ammo_MusketBall_Square</defName>
+		<label>Musket Ball (Square)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/FMJ</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.09</MarketValue>
+		</statBases>
+		<ammoClass>SquareMB</ammoClass>
+		<cookOffProjectile>Bullet_MusketBall_Square</cookOffProjectile>
+	</ThingDef>
+	
+	<!-- ================== Bullets ================== -->
+	<ThingDef Class="CombatExtended.AmmoDef" Name="BaseMusketBallBullet" ParentName="BaseBullet" Abstract="true">
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>Bullet</damageDef>
+			<speed>125</speed>
+			<soundExplode>MortarBomb_Explode</soundExplode>
+			<dropsCasings>false</dropsCasings>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseMusketBallBullet">
+		<defName>Bullet_MusketBall_Wood</defName>
+		<label>Musket Ball (Wood)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>1</damageAmountBase>
+			<pelletCount>32</pelletCount>
+			<spreadMult>20</spreadMult>
+			<armorPenetrationSharp>0.0</armorPenetrationSharp>
+			<armorPenetrationBlunt>2.5</armorPenetrationBlunt>
+			<speed>75</speed>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseMusketBallBullet">
+		<defName>Bullet_MusketBall_Stone</defName>
+		<label>Musket Ball (Stone)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>8</damageAmountBase>
+			<pelletCount>5</pelletCount>
+			<spreadMult>5</spreadMult>
+			<armorPenetrationSharp>0.55</armorPenetrationSharp>
+			<armorPenetrationBlunt>15.5</armorPenetrationBlunt>
+			<speed>95</speed>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseMusketBallBullet">
+		<defName>Bullet_MusketBall_Steel</defName>
+		<label>Musket Ball (Steel)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>18</damageAmountBase>
+			<armorPenetrationSharp>2.25</armorPenetrationSharp>
+			<armorPenetrationBlunt>25.5</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseMusketBallBullet">
+		<defName>Bullet_MusketBall_Plasteel</defName>
+		<label>Musket Ball (Plasteel)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>19</damageAmountBase>
+			<armorPenetrationSharp>4.25</armorPenetrationSharp>
+			<armorPenetrationBlunt>25.5</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseMusketBallBullet">
+		<defName>Bullet_MusketBall_Silver</defName>
+		<label>Musket Ball (Silver)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>21</damageAmountBase>
+			<armorPenetrationSharp>0.35</armorPenetrationSharp>
+			<armorPenetrationBlunt>25.5</armorPenetrationBlunt>
+			<preExplosionSpawnChance>0.45</preExplosionSpawnChance>	
+			<preExplosionSpawnThingDef>Silver</preExplosionSpawnThingDef>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseMusketBallBullet">
+		<defName>Bullet_MusketBall_Gold</defName>
+		<label>Musket Ball (Gold)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>25</damageAmountBase>
+			<armorPenetrationSharp>0.25</armorPenetrationSharp>
+			<armorPenetrationBlunt>25.5</armorPenetrationBlunt>
+			<preExplosionSpawnChance>0.45</preExplosionSpawnChance>	
+			<preExplosionSpawnThingDef>Gold</preExplosionSpawnThingDef>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseMusketBallBullet">
+		<defName>Bullet_MusketBall_Uranium</defName>
+		<label>Musket Ball (Uranium)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>RadBul</damageDef>
+			<damageAmountBase>10</damageAmountBase>
+			<armorPenetrationSharp>5.25</armorPenetrationSharp>
+			<armorPenetrationBlunt>25.5</armorPenetrationBlunt>
+			<speed>105</speed>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseMusketBallBullet">
+		<defName>Bullet_MusketBall_Infected</defName>
+		<label>Musket Ball (Infected)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>InfBul</damageDef>
+			<damageAmountBase>5</damageAmountBase>
+			<armorPenetrationSharp>2.25</armorPenetrationSharp>
+			<armorPenetrationBlunt>25.5</armorPenetrationBlunt>
+			<speed>105</speed>
+		</projectile>
+	</ThingDef>
+	
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseMusketBallBullet">
+	<defName>Bullet_MusketBall_HE</defName>
+	<label>Musket Ball (HE)</label>
+	<projectile Class="CombatExtended.ProjectilePropertiesCE">
+	  <damageDef>Bomb</damageDef>
+	  <speed>100</speed>
+	  <damageAmountBase>7</damageAmountBase>
+	  <explosionRadius>.5</explosionRadius>
+	  <armorPenetrationSharp>0</armorPenetrationSharp>
+	  <armorPenetrationBlunt>10.5</armorPenetrationBlunt>
+	  <soundExplode>MortarBomb_Explode</soundExplode>
+	  <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+	</projectile>
+	<comps>
+	  <li Class="CombatExtended.CompProperties_Fragments">
+		<fragments>
+		  <Fragment_Small>2</Fragment_Small>
+		  <Fragment_Tiny>15</Fragment_Tiny>
+		</fragments>
+	  </li>
+	</comps>
+  </ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseMusketBallBullet">
+		<defName>Bullet_MusketBall_Incendiary</defName>
+		<label>Musket Ball (Incendiary)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>PrometheumFlame</damageDef>
+			<speed>100</speed>
+			<damageAmountBase>0</damageAmountBase>
+			<explosionRadius>1</explosionRadius>
+			<preExplosionSpawnThingDef>FilthPrometheum</preExplosionSpawnThingDef>
+			<soundExplode>MortarIncendiary_Explode</soundExplode>
+			<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+		</projectile>
+	</ThingDef>
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseMusketBallBullet">
+		<defName>Bullet_MusketBall_Square</defName>
+		<label>Musket Ball (Square)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>22</damageAmountBase>
+			<spreadMult>4.5</spreadMult>
+			<armorPenetrationSharp>0.25</armorPenetrationSharp>
+			<armorPenetrationBlunt>35.5</armorPenetrationBlunt>
+			<speed>75</speed>
+		</projectile>
+	</ThingDef>
+  <!-- ==================== Recipes ========================== -->
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_MusketBall_Wood</defName>
+    <label>make Wooden Musket Balls x100</label>
+    <description>Craft 100 Wooden Musket Balls.</description>
+    <jobString>Making Wooden Musket Balls.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WoodLog</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>WoodLog</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_MusketBall_Wood>100</Ammo_MusketBall_Wood>
+    </products>
+    <workAmount>500</workAmount>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_MusketBall_Stone</defName>
+    <label>make Stone Musket Balls x100</label>
+    <description>Craft 100 Stone Musket Balls.</description>
+    <jobString>Making Stone Musket Balls.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+			<li>StoneBlocks</li>
+		  </categories>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+		<li>StoneBlocks</li>
+	  </categories>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_MusketBall_Stone>100</Ammo_MusketBall_Stone>
+    </products>
+    <workAmount>1000</workAmount>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_MusketBall_Steel</defName>
+    <label>make Steel Musket Balls x100</label>
+    <description>Craft 100 Steel Musket Balls.</description>
+    <jobString>Making Steel Musket Balls.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_MusketBall_Steel>100</Ammo_MusketBall_Steel>
+    </products>
+    <workAmount>750</workAmount>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_MusketBall_Plasteel</defName>
+    <label>make Plasteel Musket Balls x100</label>
+    <description>Craft 100 Plasteel Musket Balls.</description>
+    <jobString>Making Plasteel Musket Balls.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Plasteel</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Plasteel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_MusketBall_Plasteel>100</Ammo_MusketBall_Plasteel>
+    </products>
+    <workAmount>1750</workAmount>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_MusketBall_Silver</defName>
+    <label>make Silver Musket Balls x100</label>
+    <description>Craft 100 Silver Musket Balls.</description>
+    <jobString>Making Silver Musket Balls.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Silver</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Silver</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_MusketBall_Silver>100</Ammo_MusketBall_Silver>
+    </products>
+    <workAmount>1250</workAmount>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_MusketBall_Gold</defName>
+    <label>make Golden Musket Balls x100</label>
+    <description>Craft 100 Golden Musket Balls.</description>
+    <jobString>Making Golden Musket Balls.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Gold</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Gold</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_MusketBall_Gold>100</Ammo_MusketBall_Gold>
+    </products>
+    <workAmount>1500</workAmount>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_MusketBall_Uranium</defName>
+    <label>make Uranium Musket Balls x100</label>
+    <description>Craft 100 Uranium Musket Balls.</description>
+    <jobString>Making Uranium Musket Balls.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Uranium</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Uranium</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_MusketBall_Uranium>100</Ammo_MusketBall_Uranium>
+    </products>
+    <workAmount>2500</workAmount>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_MusketBall_Infected</defName>
+    <label>make Infected Musket Balls x100</label>
+    <description>Craft 100 Infected Musket Balls.</description>
+    <jobString>Making Infected Musket Balls.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+	  <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+          </categories>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+      </thingDefs>
+	  <categories>
+        <li>MeatRaw</li>
+      </categories>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_MusketBall_Infected>100</Ammo_MusketBall_Infected>
+    </products>
+    <workAmount>1500</workAmount>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_MusketBall_HE</defName>
+    <label>make High Explosive Musket Balls x100</label>
+    <description>Craft 100 High Explosive Musket Balls.</description>
+    <jobString>Making High Explosive Musket Balls.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>FSX</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+		<li>FSX</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_MusketBall_HE>100</Ammo_MusketBall_HE>
+    </products>
+    <workAmount>1500</workAmount>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_MusketBall_Incendiary</defName>
+    <label>make Incendiary Musket Balls x100</label>
+    <description>Craft 100 Incendiary Musket Balls.</description>
+    <jobString>Making Incendiary Musket Balls.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+	  <li>
+        <filter>
+          <thingDefs>
+            <li>Prometheum</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+		<li>Prometheum</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_MusketBall_Incendiary>100</Ammo_MusketBall_Incendiary>
+    </products>
+    <workAmount>1500</workAmount>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_MusketBall_Square</defName>
+    <label>make Square Musket Balls x100</label>
+    <description>Craft 100 Square Musket Balls.</description>
+    <jobString>Making Square Musket Balls.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_MusketBall_Square>100</Ammo_MusketBall_Square>
+    </products>
+    <workAmount>2000</workAmount>
+  </RecipeDef>
+</Defs>

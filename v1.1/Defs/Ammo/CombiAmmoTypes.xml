@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_CBProto</defName>
+		<label>Charge Blaster Prototype ammo set</label>
+		<ammoTypes>
+			<Ammo_12x64mmCharged>Bullet_12x64mmCharged</Ammo_12x64mmCharged>
+			<Ammo_5x35mmCharged>Bullet_5x35mmCharged</Ammo_5x35mmCharged>
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+	
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_HCBT</defName>
+		<label>Heavy Charge Blaster Turret ammo set</label>
+		<ammoTypes>
+			<Ammo_8x35mmCharged>Bullet_8x35mmCharged</Ammo_8x35mmCharged>
+			<Ammo_8x35mmCharged_AP>Bullet_8x35mmCharged_AP</Ammo_8x35mmCharged_AP>
+			<Ammo_8x35mmCharged_Ion>Bullet_8x35mmCharged_Ion</Ammo_8x35mmCharged_Ion>
+			<Ammo_12x64mmCharged>Bullet_12x64mmCharged</Ammo_12x64mmCharged>
+			<Ammo_5x35mmCharged>Bullet_5x35mmCharged</Ammo_5x35mmCharged>
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+</Defs>

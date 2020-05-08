@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	
+	<!-- ================== HE Musket Ball ================== -->
+	
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseFragment">
+		<defName>Fragment_Tiny</defName>
+		<label>Tiny fragments</label>
+		<graphicData>
+			<texPath>Things/Projectile/Fragments/Fragment_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>Fragment</damageDef>
+			<damageAmountBase>5</damageAmountBase>
+			<speed>20</speed>
+			<armorPenetrationSharp>0.5</armorPenetrationSharp>
+			<armorPenetrationBlunt>5</armorPenetrationBlunt>
+			<gravityFactor>15</gravityFactor>
+		</projectile>
+	</ThingDef>
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseFragment">
+		<defName>Fragment_Earth</defName>
+		<label>Clods of Dirt</label>
+		<graphicData>
+			<texPath>Things/Projectile/Fragments/Fragment_Large</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>Blunt</damageDef>
+			<damageAmountBase>35</damageAmountBase>
+			<speed>45</speed>
+			<armorPenetrationSharp>0</armorPenetrationSharp>
+			<armorPenetrationBlunt>150</armorPenetrationBlunt>
+			<gravityFactor>32</gravityFactor>
+		</projectile>
+	</ThingDef>
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseFragment">
+		<defName>Fragment_Earth_B</defName>
+		<label>Clods of Dirt</label>
+		<graphicData>
+			<texPath>Things/Projectile/Fragments/Fragment_Large</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>Blunt</damageDef>
+			<damageAmountBase>25</damageAmountBase>
+			<speed>30</speed>
+			<armorPenetrationSharp>0</armorPenetrationSharp>
+			<armorPenetrationBlunt>100</armorPenetrationBlunt>
+			<gravityFactor>16</gravityFactor>
+		</projectile>
+	</ThingDef>
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseFragment">
+		<defName>Fragment_Earth_C</defName>
+		<label>Clods of Dirt</label>
+		<graphicData>
+			<texPath>Things/Projectile/Fragments/Fragment_Large</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>Blunt</damageDef>
+			<damageAmountBase>15</damageAmountBase>
+			<speed>20</speed>
+			<armorPenetrationSharp>0</armorPenetrationSharp>
+			<armorPenetrationBlunt>50</armorPenetrationBlunt>
+			<gravityFactor>8</gravityFactor>
+		</projectile>
+	</ThingDef>
+
+</Defs>

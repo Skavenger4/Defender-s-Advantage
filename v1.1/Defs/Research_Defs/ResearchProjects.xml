@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--=============================== Textiles ===================================-->
+  <!--===== Ballistic Fabric ====-->
+  <ResearchProjectDef>
+    <defName>FiberTOne</defName>
+    <label>Type 1 Fiber</label>
+    <description>Enables the production of Type 1 Ballistic Fiber at Tailor benches.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>ComplexClothing</li>
+      <li>Devilstrand</li>	  
+    </prerequisites>
+    <researchViewX>1</researchViewX>
+    <researchViewY>4.5</researchViewY>
+  </ResearchProjectDef>
+  <ResearchProjectDef>
+    <defName>FiberTTwo</defName>
+    <label>Type 2 Fiber</label>
+    <description>Enables the production of Type 2 Ballistic Fiber at Tailor benches.</description>
+    <baseCost>2500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>FiberTOne</li>  
+    </prerequisites>
+    <researchViewX>2</researchViewX>
+    <researchViewY>4.5</researchViewY>
+  </ResearchProjectDef>
+  <!--===== Lightweight Insulator ====-->
+  <ResearchProjectDef>
+    <defName>FiberTThree</defName>
+    <label>Insulated Variants</label>
+    <description>Enables the mixing of Lightweight Insulator and ballistic fibers to make insulated variants of ballistic fibers at Tailor Benches.</description>
+    <baseCost>5000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>BiofuelRefining</li>
+      <li>FiberTTwo</li>	  
+    </prerequisites>
+    <researchViewX>6</researchViewX>
+    <researchViewY>4.5</researchViewY>
+  </ResearchProjectDef> 
+  <!--=============================== Armors ===================================-->
+   <ResearchProjectDef>
+    <defName>FullBodyUniforms</defName>
+    <label>Full Body Uniforms</label>
+    <description>Enables the production of Army Uniforms at the Tailor Bench.</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>FlakArmor</li>	  
+    </prerequisites>
+    <researchViewX>6</researchViewX>
+    <researchViewY>4.9</researchViewY>
+  </ResearchProjectDef> 
+  <ResearchProjectDef>
+    <defName>FireFighting</defName>
+    <label>Very Heat Resistant Fabric</label>
+    <description>Enables the production of Lightweight Insulator at the Refinery.</description>
+    <baseCost>1000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>FullBodyUniforms</li>	  
+	  <li>FiberTThree</li>
+    </prerequisites>
+    <researchViewX>7</researchViewX>
+    <researchViewY>4.4</researchViewY>
+  </ResearchProjectDef> 
+  <!--=============================== Landmine Production ===================================-->
+   <ResearchProjectDef>
+    <defName>Landmines</defName>
+    <label>Landmine Production</label>
+    <description>Enables the production of Landmines and FSX.</description>
+    <baseCost>1500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>IEDs</li>
+	  <li>DrugProduction</li>	  
+    </prerequisites>
+    <researchViewX>6</researchViewX>
+    <researchViewY>0.25</researchViewY>
+  </ResearchProjectDef> 
+  <!--=============================== QF AutoCannons ===================================-->
+  <ResearchProjectDef>
+    <defName>QF_AutoCannons</defName>
+    <label>Quick Firing Auto-Cannons</label>
+    <description>Enables the consruction of Quick Firing Auto-Cannons.</description>
+    <baseCost>2500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>CE_TurretHeavyWeapons</li>	  
+    </prerequisites>
+    <researchViewX>2</researchViewX>
+    <researchViewY>1.5</researchViewY>
+	<tab>CE_Turrets</tab>
+	<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+  </ResearchProjectDef> 
+  <ResearchProjectDef>
+    <defName>QF_HeavyAutoCannons</defName>
+    <label>Heavy Auto-Cannons</label>
+    <description>Enables the consruction of Single and Dual Pom-Pom's.</description>
+    <baseCost>3500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>CE_HeavyTurret</li>
+	  <li>CE_TurretHeavyWeapons</li>	  
+    </prerequisites>
+    <researchViewX>3</researchViewX>
+    <researchViewY>1</researchViewY>
+	<tab>CE_Turrets</tab>
+	<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+  </ResearchProjectDef> 
+  <ResearchProjectDef>
+    <defName>QF_OversizedAutoCannons</defName>
+    <label>Super Heavy Auto-Cannons</label>
+    <description>Enables the consruction of Quad and Octuple Pom-Pom's.</description>
+    <baseCost>5000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>QF_HeavyAutoCannons</li>	  
+    </prerequisites>
+    <researchViewX>4</researchViewX>
+    <researchViewY>1</researchViewY>
+	<tab>CE_Turrets</tab>
+	<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+  </ResearchProjectDef> 
+</Defs>

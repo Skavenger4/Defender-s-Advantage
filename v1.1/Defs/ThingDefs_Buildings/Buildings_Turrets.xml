@@ -1,0 +1,941 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef Name="TurretBase" ParentName="BuildingBase" Abstract="True">
+    <thingClass>CombatExtended.Building_TurretGunCE</thingClass>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <damageData>
+        <rect>(0.2,0.2,0.6,0.6)</rect>
+      </damageData>
+      <drawSize>(3,3)</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <tradeability>All</tradeability>
+    <techLevel>Industrial</techLevel>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>0.1</Flammability>
+      <WorkToMake>10000</WorkToMake>
+      <Beauty>-60</Beauty>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+    </comps>
+    <tickerType>Normal</tickerType>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <fillPercent>0.85</fillPercent>
+    <castEdgeShadows>true</castEdgeShadows>
+    <hasTooltip>true</hasTooltip>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <building>
+      <ai_combatDangerous>true</ai_combatDangerous>
+      <turretBurstCooldownTime>1</turretBurstCooldownTime>
+    </building>
+	<placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+    <tradeTags>
+      <li>CE_Turret</li>
+    </tradeTags>
+    <thingCategories>
+      <li>BuildingsSecurity</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef Name="TurretAutoBase" ParentName="TurretBase" Abstract="True">
+    <designationCategory>Security</designationCategory>
+    <comps>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Breakdownable"/>
+    </comps>
+  </ThingDef>
+
+  <ThingDef Name="TurretMannedBase" ParentName="TurretBase" Abstract="True">
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <comps>
+      <li Class="CompProperties_Mannable">
+        <manWorkType>Violent</manWorkType>
+      </li>
+    </comps>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedTurretGun</unfinishedThingDef>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef Name="TurretMannedCraftableBase" ParentName="TurretMannedBase" Abstract="True">
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedTurretGun</unfinishedThingDef>
+    </recipeMaker>
+  </ThingDef>
+  
+  <ThingDef Name="TurretMannedCraftableBaseB" ParentName="TurretMannedBase" Abstract="True">
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li>TableMachining</li>
+		<li>FueledSmithy</li>
+		<li>ElectricSmithy</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedTurretGun</unfinishedThingDef>
+    </recipeMaker>
+  </ThingDef>
+  <!--=============== Puckle Gun ===============-->
+  <ThingDef ParentName="TurretMannedCraftableBaseB">
+    <defName>Turret_TPG_25Z</defName>
+    <label>Puckle Gun</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets/MachineGunBase</texPath>
+    </graphicData>
+    <statBases>
+      <Flammability>1.0</Flammability>
+      <WorkToMake>11500</WorkToMake>
+      <Mass>50.0</Mass>
+      <Bulk>40</Bulk>
+    </statBases>
+    <description>A Puckle Gun, Rather cheap to and easy to build.</description>
+    <costList>
+      <Steel>95</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <building>
+      <turretGunDef>DAT_Puckle</turretGunDef>
+	  <ai_combatDangerous>true</ai_combatDangerous>
+    </building>
+	<placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+    <minifiedDef>MinifiedThing</minifiedDef>
+	<recipeMaker>
+	  <skillRequirements>
+		<Crafting>8</Crafting>
+	  </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <!--=============== Auto Rec.SMG ===============-->
+  <ThingDef ParentName="TurretAutoBase">
+    <defName>Turret_DAT_TGUN_22LR</defName>
+    <label>American 180</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets/MachineGunBase</texPath>
+    </graphicData>
+    <statBases>
+      <Flammability>1.0</Flammability>
+      <WorkToMake>21500</WorkToMake>
+      <Mass>16.0</Mass>
+      <Bulk>15</Bulk>
+      <AimingAccuracy>0.5</AimingAccuracy>
+      <ShootingAccuracyTurret>1</ShootingAccuracyTurret>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>150</basePowerConsumption>
+      </li>
+    </comps>
+    <description>An automated version of the American 180 with 500 rounds of ammo, it may go through it quickly though.</description>
+    <costList>
+      <Steel>115</Steel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+    </costList>
+    <building>
+      <turretGunDef>DAT_TGUN_22LR</turretGunDef>
+      <ai_combatDangerous>true</ai_combatDangerous>
+    </building>
+	<placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+    <minifiedDef>MinifiedThing</minifiedDef>
+	<researchPrerequisites>
+      <li>GunTurrets</li>
+    </researchPrerequisites>
+  </ThingDef>
+  <!--=============== MG_08 ===============-->
+  <ThingDef ParentName="TurretMannedCraftableBase">
+    <defName>Turret_MG_08Z</defName>
+    <label>Maschinengewehr 08</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets/MachineGunBase</texPath>
+    </graphicData>
+    <statBases>
+      <Flammability>1.0</Flammability>
+      <WorkToMake>21500</WorkToMake>
+      <Mass>69.0</Mass>
+      <Bulk>40</Bulk>
+    </statBases>
+    <description>German Great War machine gun used mostly against personnel Re-Chambered To the much more common 7.92x57mmMauser to be useable untill now.</description>
+    <costList>
+      <Steel>150</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <building>
+      <turretGunDef>DAT_MG_08Z</turretGunDef>
+      <ai_combatDangerous>true</ai_combatDangerous>
+    </building>
+	<placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+    <minifiedDef>MinifiedThing</minifiedDef>
+	<recipeMaker>
+      <researchPrerequisite>BlowbackOperation</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+  <!--=============== MG_08 Auto ===============-->
+  <ThingDef ParentName="TurretAutoBase">
+    <defName>Turret_TMG_08Z</defName>
+    <label>Auto MG 08</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets/MachineGunBase</texPath>
+    </graphicData>
+    <statBases>
+      <Flammability>1.0</Flammability>
+      <WorkToMake>21500</WorkToMake>
+      <Mass>69.0</Mass>
+      <Bulk>50</Bulk>
+      <AimingAccuracy>0.5</AimingAccuracy>
+      <ShootingAccuracyTurret>1</ShootingAccuracyTurret>
+    </statBases>
+    <techLevel>Spacer</techLevel>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>450</basePowerConsumption>
+      </li>
+    </comps>
+    <description>An automated version of the MG08.</description>
+    <costList>
+      <Steel>175</Steel>
+      <ComponentIndustrial>6</ComponentIndustrial>
+    </costList>
+    <building>
+      <turretGunDef>DAT_TMG_08Z</turretGunDef>
+      <ai_combatDangerous>true</ai_combatDangerous>
+    </building>
+	<placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+    <minifiedDef>MinifiedThing</minifiedDef>
+	<researchPrerequisites>
+      <li>GunTurrets</li>
+    </researchPrerequisites>
+  </ThingDef>
+  <!--=============== PM M1910 ===============-->
+  <ThingDef ParentName="TurretMannedCraftableBase">
+    <defName>Turret_PM_M1910Z</defName>
+    <label>PM M1910</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets/MachineGunBase</texPath>
+    </graphicData>
+    <statBases>
+      <Flammability>1.0</Flammability>
+      <WorkToMake>21500</WorkToMake>
+      <Mass>80.0</Mass>
+      <Bulk>50</Bulk>
+    </statBases>
+    <description>PM M1910 Russian Great war machine gun for use against personnel.</description>
+    <costList>
+      <Steel>150</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <building>
+      <turretGunDef>DAT_PM_M1910Z</turretGunDef>
+      <ai_combatDangerous>true</ai_combatDangerous>
+    </building>
+	<placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+    <minifiedDef>MinifiedThing</minifiedDef>
+	<recipeMaker>
+      <researchPrerequisite>BlowbackOperation</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+  <!--=============== PM M1910 Auto ===============-->
+  <ThingDef ParentName="TurretAutoBase">
+    <defName>Turret_TPM_M1910Z</defName>
+    <label>Auto PM M1910</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets/MachineGunBase</texPath>
+    </graphicData>
+    <statBases>
+      <Flammability>1.0</Flammability>
+      <WorkToMake>21500</WorkToMake>
+      <Mass>80.0</Mass>
+      <Bulk>50</Bulk>
+      <AimingAccuracy>0.5</AimingAccuracy>
+      <ShootingAccuracyTurret>1</ShootingAccuracyTurret>
+    </statBases>
+    <techLevel>Spacer</techLevel>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>450</basePowerConsumption>
+      </li>
+    </comps>
+    <description>An automated version of the PM M1910.</description>
+    <costList>
+      <Steel>175</Steel>
+      <ComponentIndustrial>6</ComponentIndustrial>
+    </costList>
+    <building>
+      <turretGunDef>DAT_TPM_M1910Z</turretGunDef>
+      <ai_combatDangerous>true</ai_combatDangerous>
+    </building>
+	<placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+    <minifiedDef>MinifiedThing</minifiedDef>
+	<researchPrerequisites>
+      <li>GunTurrets</li>
+    </researchPrerequisites>
+  </ThingDef>
+  <!--=============== Vickers ===============-->
+  <ThingDef ParentName="TurretMannedCraftableBase">
+    <defName>Turret_VMG</defName>
+    <label>Vickers Machine Gun</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets/MachineGunBase</texPath>
+    </graphicData>
+    <statBases>
+      <Flammability>1.0</Flammability>
+      <WorkToMake>21500</WorkToMake>
+      <Mass>23.0</Mass>
+      <Bulk>20</Bulk>
+    </statBases>
+    <description>Vickers Machine Gun from the Great War in Britian Using British Standard .303 rounds.</description>
+    <costList>
+      <Steel>150</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <building>
+      <turretGunDef>DAT_VMG</turretGunDef>
+      <ai_combatDangerous>true</ai_combatDangerous>
+    </building>
+	<placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+    <minifiedDef>MinifiedThing</minifiedDef>
+	<recipeMaker>
+      <researchPrerequisite>BlowbackOperation</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+  <!--=============== Vickers Auto ===============-->
+  <ThingDef ParentName="TurretAutoBase">
+    <defName>Turret_TVMG</defName>
+    <label>Auto VMG</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets/MachineGunBase</texPath>
+    </graphicData>
+    <statBases>
+      <Flammability>1.0</Flammability>
+      <WorkToMake>21500</WorkToMake>
+      <Mass>23.0</Mass>
+      <Bulk>20</Bulk>
+      <AimingAccuracy>0.5</AimingAccuracy>
+      <ShootingAccuracyTurret>1</ShootingAccuracyTurret>
+    </statBases>
+    <techLevel>Spacer</techLevel>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>450</basePowerConsumption>
+      </li>
+    </comps>
+    <description>An automated version of the VMG.</description>
+    <costList>
+      <Steel>175</Steel>
+      <ComponentIndustrial>6</ComponentIndustrial>
+    </costList>
+    <building>
+      <turretGunDef>DAT_TVMG</turretGunDef>
+      <ai_combatDangerous>true</ai_combatDangerous>
+    </building>
+	<placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+    <minifiedDef>MinifiedThing</minifiedDef>
+	<researchPrerequisites>
+      <li>GunTurrets</li>
+    </researchPrerequisites>
+  </ThingDef>
+  <!--=============== 25mm Cannon ===============-->
+  <ThingDef ParentName="TurretMannedCraftableBase">
+    <defName>Turret_25mm</defName>
+    <label>25mm Autocannon</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets/MachineGunBase</texPath>
+    </graphicData>
+    <statBases>
+	  <MaxHitPoints>350</MaxHitPoints>
+      <WorkToMake>53500</WorkToMake>
+      <Mass>785</Mass>
+      <Bulk>400</Bulk>
+    </statBases>
+    <description>A single 25mm Auto Cannon that has a very poor ammo Capacity.</description>
+    <costList>
+      <Steel>325</Steel>
+      <ComponentIndustrial>10</ComponentIndustrial>
+    </costList>
+    <building>
+      <turretGunDef>DAT_25mm</turretGunDef>
+      <ai_combatDangerous>true</ai_combatDangerous>
+	  <turretTopDrawSize>3</turretTopDrawSize>
+    </building>
+	<placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+    </placeWorkers>
+    <recipeMaker>
+      <researchPrerequisite>CE_TurretHeavyWeapons</researchPrerequisite>
+    </recipeMaker>
+    <minifiedDef>MinifiedThing</minifiedDef>
+  </ThingDef>
+  <!--=============== Dual Mounts -==============-->
+  <ThingDef ParentName="TurretMannedBase">
+    <defName>Turret_2_25mm</defName>
+    <label>25mm Dual Static Autocannon</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets/25mm_Base_Static</texPath>
+    </graphicData>
+    <statBases>
+	  <MaxHitPoints>450</MaxHitPoints>
+      <WorkToMake>74500</WorkToMake>
+      <Mass>1100</Mass>
+      <Bulk>600</Bulk>
+    </statBases>
+    <description>A Dual 25mm Autocannon that has a very poor ammo Capacity.</description>
+    <costList>
+      <Steel>465</Steel>
+      <ComponentIndustrial>16</ComponentIndustrial>
+    </costList>
+    <building>
+      <turretGunDef>DAT_2_25mm</turretGunDef>
+      <ai_combatDangerous>true</ai_combatDangerous>
+	  <turretTopDrawSize>3</turretTopDrawSize>
+    </building>
+	<size>(2,2)</size>
+    <recipeMaker>
+      <researchPrerequisite>CE_TurretHeavyWeapons</researchPrerequisite>
+    </recipeMaker>
+    <minifiedDef>MinifiedThing</minifiedDef>
+  </ThingDef>
+  <ThingDef ParentName="TurretMannedBase">
+    <defName>Turret_2_25mm_B</defName>
+    <label>25mm Dual Seige Autocannon</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets/25mm_Base_Seige</texPath>
+    </graphicData>
+    <statBases>
+	  <MaxHitPoints>450</MaxHitPoints>
+      <WorkToMake>75500</WorkToMake>
+      <Mass>145</Mass>
+      <Bulk>600</Bulk>
+    </statBases>
+    <description>A Dual 25mm Autocannon that has a very poor ammo Capacity.</description>
+    <costList>
+      <Steel>465</Steel>
+      <ComponentIndustrial>16</ComponentIndustrial>
+	  <WoodLog>50</WoodLog>
+    </costList>
+    <building>
+      <turretGunDef>DAT_2_25mmS</turretGunDef>
+      <ai_combatDangerous>true</ai_combatDangerous>
+	  <turretTopDrawSize>3</turretTopDrawSize>
+    </building>
+	<placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+    </placeWorkers>
+	<size>(2,2)</size>
+    <recipeMaker>
+      <researchPrerequisite>CE_TurretHeavyWeapons</researchPrerequisite>
+    </recipeMaker>
+    <minifiedDef>MinifiedThing</minifiedDef>
+  </ThingDef>
+  <!--=============== Triple Mounts =============-->
+  <ThingDef ParentName="TurretMannedBase">
+    <defName>Turret_3_25mm</defName>
+    <label>25mm Triple Static Autocannon</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets/25mm_Base_Static</texPath>
+    </graphicData>
+    <statBases>
+	  <MaxHitPoints>600</MaxHitPoints>
+      <WorkToMake>113500</WorkToMake>
+      <Mass>1500</Mass>
+      <Bulk>800</Bulk>
+    </statBases>
+    <description>A Dual 25mm Autocannon that has a very poor ammo Capacity.</description>
+    <costList>
+      <Steel>575</Steel>
+      <ComponentIndustrial>24</ComponentIndustrial>
+    </costList>
+    <building>
+      <turretGunDef>DAT_3_25mm</turretGunDef>
+      <ai_combatDangerous>true</ai_combatDangerous>
+	  <turretTopDrawSize>3</turretTopDrawSize>
+    </building>
+	<size>(2,2)</size>
+    <recipeMaker>
+      <researchPrerequisite>CE_TurretHeavyWeapons</researchPrerequisite>
+    </recipeMaker>
+    <minifiedDef>MinifiedThing</minifiedDef>
+  </ThingDef>
+  <ThingDef ParentName="TurretMannedBase">
+    <defName>Turret_3_25mmB</defName>
+    <label>25mm Triple Seige Autocannon</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets/25mm_Base_Seige</texPath>
+    </graphicData>
+    <statBases>
+	  <MaxHitPoints>600</MaxHitPoints>
+      <WorkToMake>123500</WorkToMake>
+      <Mass>200</Mass>
+      <Bulk>800</Bulk>
+    </statBases>
+    <description>A Dual 25mm Autocannon that has a very poor ammo Capacity.</description>
+    <costList>
+      <Steel>575</Steel>
+      <ComponentIndustrial>24</ComponentIndustrial>
+	  <WoodLog>50</WoodLog>
+    </costList>
+    <building>
+      <turretGunDef>DAT_3_25mmS</turretGunDef>
+      <ai_combatDangerous>true</ai_combatDangerous>
+	  <turretTopDrawSize>3</turretTopDrawSize>
+    </building>
+	<placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+    </placeWorkers>
+	<size>(2,2)</size>
+    <recipeMaker>
+      <researchPrerequisite>CE_TurretHeavyWeapons</researchPrerequisite>
+    </recipeMaker>
+    <minifiedDef>MinifiedThing</minifiedDef>
+  </ThingDef>
+  <!--=============== Special =============-->
+  <ThingDef ParentName="TurretMannedBase">
+    <defName>Turret_Flame</defName>
+    <label>Large Flame Thrower</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets/25mm_Base_Static</texPath>
+    </graphicData>
+    <statBases>
+	  <MaxHitPoints>750</MaxHitPoints>
+      <WorkToMake>123500</WorkToMake>
+      <Mass>2000</Mass>
+      <Bulk>8000</Bulk>
+    </statBases>
+	<comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>500</basePowerConsumption>
+      </li>
+	  <li Class="CompProperties_Flickable"/>
+	  <li Class="CompProperties_Breakdownable"/>
+    </comps>
+    <description>A Large Flamethrower that has a very Large ammo Capacity.</description>
+    <costList>
+      <Steel>575</Steel>
+      <ComponentIndustrial>24</ComponentIndustrial>
+    </costList>
+    <building>
+      <turretGunDef>DAT_FTT</turretGunDef>
+      <ai_combatDangerous>true</ai_combatDangerous>
+	  <turretTopDrawSize>3</turretTopDrawSize>
+    </building>
+	<placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+	<size>(2,2)</size>
+    <recipeMaker>
+      <researchPrerequisite>CE_TurretHeavyWeapons</researchPrerequisite>
+    </recipeMaker>
+    <minifiedDef>MinifiedThing</minifiedDef>
+  </ThingDef>
+  <ThingDef ParentName="TurretMannedBase">
+    <defName>Turret_SG</defName>
+    <label>Bus Blunderer</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets/25mm_Base_Static</texPath>
+    </graphicData>
+    <statBases>
+	  <MaxHitPoints>750</MaxHitPoints>
+      <WorkToMake>123500</WorkToMake>
+      <Mass>1500</Mass>
+      <Bulk>6000</Bulk>
+    </statBases>
+    <description>A Large Shotgun that's able to cull large groups of people.</description>
+    <costList>
+      <Steel>425</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <building>
+      <turretGunDef>DAT_120mmShotgun</turretGunDef>
+	  <ai_combatDangerous>true</ai_combatDangerous>
+	  <turretTopDrawSize>3</turretTopDrawSize>
+    </building>
+	<placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+	<size>(2,2)</size>
+    <recipeMaker>
+      <researchPrerequisite>CE_TurretHeavyWeapons</researchPrerequisite>
+    </recipeMaker>
+    <minifiedDef>MinifiedThing</minifiedDef>
+  </ThingDef>
+  <!--=============== QF 25mm Cannon ===============-->
+  <ThingDef ParentName="TurretMannedBase">
+    <defName>Turret_QF25mm</defName>
+    <label>QF 25mm Autocannon</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets/25mm_Base_Static</texPath>
+    </graphicData>
+    <statBases>
+	  <MaxHitPoints>1000</MaxHitPoints>
+      <WorkToMake>153500</WorkToMake>
+      <Mass>785</Mass>
+      <Bulk>1200</Bulk>
+    </statBases>
+	<comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>1600</basePowerConsumption>
+      </li>
+	  <li Class="CompProperties_Flickable"/>
+	  <li Class="CompProperties_Breakdownable"/>
+    </comps>
+    <description>A Quickfiring 25mm Auto Cannon that has a good ammo Capacity and Targeting radar to Improve Accuracy.</description>
+    <costList>
+      <Steel>650</Steel>
+      <ComponentIndustrial>26</ComponentIndustrial>
+	  <ComponentSpacer>5</ComponentSpacer>
+	  <Plasteel>100</Plasteel>
+    </costList>
+    <building>
+      <turretGunDef>DAT_QF25mm</turretGunDef>
+	  <ai_combatDangerous>true</ai_combatDangerous>
+	  <turretTopDrawSize>3</turretTopDrawSize>
+    </building>
+	<placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+    </placeWorkers>
+	<size>(2,2)</size>
+	<recipeMaker>
+      <researchPrerequisite>QF_AutoCannons</researchPrerequisite>
+	  <skillRequirements>
+		<Crafting>12</Crafting>
+		<Intellectual>6</Intellectual>
+	  </skillRequirements>
+    </recipeMaker>
+    <minifiedDef>MinifiedThing</minifiedDef>
+  </ThingDef>
+  <!--=============== Charge Blaster Turret ===============-->
+  <ThingDef ParentName="TurretMannedCraftableBase">
+    <defName>Turret_HCBT</defName>
+    <label>Heavy Charge Blaster Turret</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets/MachineGunBase</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>450</MaxHitPoints>
+      <WorkToMake>120000</WorkToMake>
+      <Mass>80.0</Mass>
+      <Bulk>50</Bulk>
+    </statBases>
+	<comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>1250</basePowerConsumption>
+      </li>
+	  <li Class="CompProperties_Flickable"/>
+	  <li Class="CompProperties_Breakdownable"/>
+    </comps>
+    <description>A Heavy Charge Blaster Turret with a longer barrel to Improve range.</description>
+    <costList>
+      <ComponentIndustrial>10</ComponentIndustrial>
+	  <ComponentSpacer>4</ComponentSpacer>
+	  <Plasteel>250</Plasteel>
+    </costList>
+    <building>
+      <turretGunDef>DAT_SCB</turretGunDef>
+	  <ai_combatDangerous>true</ai_combatDangerous>
+	  <turretTopDrawSize>2</turretTopDrawSize>
+    </building>
+	<placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+	<specialDisplayRadius>86</specialDisplayRadius>
+    <minifiedDef>MinifiedThing</minifiedDef>
+	<recipeMaker>
+      <researchPrerequisite>CE_ChargeTurret</researchPrerequisite>
+	  <skillRequirements>
+		<Crafting>10</Crafting>
+		<Intellectual>8</Intellectual>
+	  </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <!--=============== Old fashoned cannon ===============-->
+  <!--
+  <ThingDef ParentName="TurretMannedBase">
+    <defName>Turret_BLC</defName>
+    <label>Breech loading Cannon</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets/25mm_Base_Seige</texPath>
+    </graphicData>
+    <statBases>
+	  <MaxHitPoints>500</MaxHitPoints>
+      <WorkToMake>25000</WorkToMake>
+      <Mass>45</Mass>
+      <Bulk>260</Bulk>
+    </statBases>
+    <description>A Breech loading Cannon that's able to take out large groups of people or centipides.</description>
+    <costList>
+      <Steel>175</Steel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+	  <WoodLog>50</WoodLog>
+    </costList>
+    <building>
+      <turretGunDef>DAT_BLC</turretGunDef>
+      <turretTopGraphicPath>Things/Building/Turrets/Flame_Shotgun</turretTopGraphicPath>
+	  <turretTopDrawSize>4</turretTopDrawSize>
+    </building>
+	<size>(2,2)</size>
+    <recipeMaker>
+	  <recipeUsers>
+		<li>FueledSmithy</li>
+		<li>ElectricSmithy</li>
+      </recipeUsers>
+	  <skillRequirements>
+		<Crafting>7</Crafting>
+	  </skillRequirements>
+    </recipeMaker>
+    <minifiedDef>MinifiedThing</minifiedDef>
+  </ThingDef>
+  -->
+  <!--=============== QF Single [Pom - Pom] ===============-->
+  <ThingDef ParentName="TurretMannedCraftableBase">
+    <defName>Turret_1QF_2_Pounder</defName>
+    <label>QF 2-pounder</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets/MachineGunBase</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>450</MaxHitPoints>
+      <WorkToMake>80000</WorkToMake>
+      <Mass>1000.0</Mass>
+      <Bulk>500</Bulk>
+    </statBases>
+    <description>A single QF 2-pounder.</description>
+    <costList>
+      <ComponentIndustrial>10</ComponentIndustrial>
+	  <Steel>500</Steel>
+    </costList>
+    <building>
+      <turretGunDef>DAT_QF1_40mm</turretGunDef>
+	  <ai_combatDangerous>true</ai_combatDangerous>
+	  <turretTopDrawSize>2.5</turretTopDrawSize>
+    </building>
+	<placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+    </placeWorkers>
+	<specialDisplayRadius>12</specialDisplayRadius>
+    <minifiedDef>MinifiedThing</minifiedDef>
+	<recipeMaker>
+      <researchPrerequisite>QF_HeavyAutoCannons</researchPrerequisite>
+	  <skillRequirements>
+		<Crafting>8</Crafting>
+	  </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <!--=============== + Seige (Because History) ===============-->
+  <ThingDef ParentName="TurretMannedCraftableBase">
+    <defName>Turret_1QF_2_PounderB</defName>
+    <label>Seige QF 2-pounder</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets/25mm_Base_Seige</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>450</MaxHitPoints>
+      <WorkToMake>80000</WorkToMake>
+      <Mass>120.0</Mass>
+      <Bulk>110</Bulk>
+    </statBases>
+    <description>A single Seige QF 2-pounder.</description>
+    <costList>
+      <ComponentIndustrial>10</ComponentIndustrial>
+	  <Steel>500</Steel>
+	  <WoodLog>50</WoodLog>
+    </costList>
+    <building>
+      <turretGunDef>DAT_QF1_40mmB</turretGunDef>
+	  <ai_combatDangerous>true</ai_combatDangerous>
+	  <turretTopDrawSize>2.5</turretTopDrawSize>
+    </building>
+	<placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+    </placeWorkers>
+	<specialDisplayRadius>12</specialDisplayRadius>
+    <minifiedDef>MinifiedThing</minifiedDef>
+	<recipeMaker>
+      <researchPrerequisite>QF_HeavyAutoCannons</researchPrerequisite>
+	  <skillRequirements>
+		<Crafting>8</Crafting>
+	  </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <!--=============== QF Dual [Pom - Pom] ===============-->
+  <ThingDef ParentName="TurretMannedCraftableBase">
+    <defName>Turret_2QF_2_Pounder</defName>
+    <label>Dual QF 2-pounder</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets/25mm_Base_Static</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>1000</MaxHitPoints>
+      <WorkToMake>180000</WorkToMake>
+      <Mass>2000.0</Mass>
+      <Bulk>1000</Bulk>
+    </statBases>
+    <description>A Dual QF 2-pounder.</description>
+    <costList>
+      <ComponentIndustrial>22</ComponentIndustrial>
+	  <Steel>850</Steel>
+    </costList>
+    <building>
+      <turretGunDef>DAT_QF2_40mm</turretGunDef>
+	  <ai_combatDangerous>true</ai_combatDangerous>
+	  <turretTopDrawSize>2.5</turretTopDrawSize>
+    </building>
+	<placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+    </placeWorkers>
+	<size>(2,2)</size>
+	<specialDisplayRadius>12</specialDisplayRadius>
+    <minifiedDef>MinifiedThing</minifiedDef>
+	<recipeMaker>
+      <researchPrerequisite>QF_HeavyAutoCannons</researchPrerequisite>
+	  <skillRequirements>
+		<Crafting>8</Crafting>
+	  </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <!--=============== QF Quad [Pom - Pom] ===============-->
+  <ThingDef ParentName="TurretMannedCraftableBase">
+    <defName>Turret_4QF_2_Pounder</defName>
+    <label>Quad QF 2-pounder</label>
+	<fillPercent>0.95</fillPercent>
+    <graphicData>
+      <texPath>Things/Building/Turrets/25mm_Base_Static</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>2500</MaxHitPoints>
+      <WorkToMake>400000</WorkToMake>
+      <Mass>10000.0</Mass>
+      <Bulk>2000</Bulk>
+    </statBases>
+	<comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>1500</basePowerConsumption>
+      </li>
+	  <li Class="CompProperties_Flickable"/>
+	  <li Class="CompProperties_Breakdownable"/>
+    </comps>
+    <description>A Quad QF 2-pounder.</description>
+    <costList>
+      <ComponentIndustrial>45</ComponentIndustrial>
+	  <Steel>1750</Steel>
+    </costList>
+    <building>
+      <turretGunDef>DAT_QF4_40mm</turretGunDef>
+	  <ai_combatDangerous>true</ai_combatDangerous>
+	  <turretTopDrawSize>2.5</turretTopDrawSize>
+    </building>
+	<placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+    </placeWorkers>
+	<size>(2,2)</size>
+	<specialDisplayRadius>12</specialDisplayRadius>
+    <minifiedDef>MinifiedThing</minifiedDef>
+	<recipeMaker>
+      <researchPrerequisite>QF_OversizedAutoCannons</researchPrerequisite>
+	  <skillRequirements>
+		<Crafting>8</Crafting>
+	  </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+  <!--=============== Oct. will require a stack size of 1120 ===============-->
+  <ThingDef ParentName="TurretMannedCraftableBase">
+    <defName>Turret_8QF_2_Pounder</defName>
+    <label>Oct. QF 2-pounder</label>
+	<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+	<fillPercent>0.99</fillPercent>
+    <graphicData>
+      <texPath>Things/Building/Turrets/L_Static</texPath>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>4500</MaxHitPoints>
+      <WorkToMake>800000</WorkToMake>
+      <Mass>15700.0</Mass>
+      <Bulk>4000</Bulk>
+    </statBases>
+	<comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>3000</basePowerConsumption>
+      </li>
+	  <li Class="CompProperties_Flickable"/>
+	  <li Class="CompProperties_Breakdownable"/>
+    </comps>
+    <description>An Octuple QF 2-pounder.</description>
+    <costList>
+      <ComponentIndustrial>85</ComponentIndustrial>
+	  <Steel>3250</Steel>
+    </costList>
+    <building>
+      <turretGunDef>DAT_QF8_40mm</turretGunDef>
+	  <ai_combatDangerous>true</ai_combatDangerous>
+	  <turretTopDrawSize>2.5</turretTopDrawSize>
+    </building>
+	<placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+    </placeWorkers>
+	<size>(3,2)</size>
+	<specialDisplayRadius>12</specialDisplayRadius>
+    <minifiedDef>MinifiedThing</minifiedDef>
+	<recipeMaker>
+      <researchPrerequisite>QF_OversizedAutoCannons</researchPrerequisite>
+	  <skillRequirements>
+		<Crafting>8</Crafting>
+	  </skillRequirements>
+    </recipeMaker>
+  </ThingDef>
+</Defs>

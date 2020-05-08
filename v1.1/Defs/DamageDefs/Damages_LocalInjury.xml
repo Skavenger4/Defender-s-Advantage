@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <DamageDef ParentName="Bullet">
+    <defName>InfBul</defName>
+    <label>Infectious Bullet</label>
+    <deathMessage>{0} has been shot to death.</deathMessage>
+	<additionalHediffs>
+	  <li>
+		<hediff>Infectious</hediff>
+		<severityPerDamageDealt>0.05</severityPerDamageDealt>
+	  </li>
+	</additionalHediffs>
+  </DamageDef>
+
+  <DamageDef ParentName="Bullet">
+    <defName>RadBul</defName>
+    <label>Radioactive Bullet</label>
+    <deathMessage>{0} has been shot to death.</deathMessage>
+	<additionalHediffs>
+	  <li>
+		<hediff>RadPoi</hediff>
+		<severityPerDamageDealt>0.02</severityPerDamageDealt>
+	  </li>
+	</additionalHediffs>
+  </DamageDef>
+  
+  <DamageDef ParentName="Bullet">
+    <defName>RadSabot</defName>
+    <label>High Velocity Radioactive Bullet</label>
+    <deathMessage>{0} has been shot to death.</deathMessage>
+	<additionalHediffs>
+	  <li>
+		<hediff>RadPoi</hediff>
+		<severityPerDamageDealt>0.001</severityPerDamageDealt>
+	  </li>
+	</additionalHediffs>
+  </DamageDef>
+
+  <DamageDef Name="APMine">
+    <defName>APMine</defName>
+    <label>Mine Explosion</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <externalViolence>true</externalViolence>
+    <isExplosive>true</isExplosive>
+    <deathMessage>{0} has died in an explosion.</deathMessage>
+    <hediff>Shredded</hediff>
+    <hediffSolid>Crack</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Blunt</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <minDamageToFragment>5</minDamageToFragment>
+    <defaultDamage>45</defaultDamage>
+    <defaultStoppingPower>0.5</defaultStoppingPower>
+    <defaultArmorPenetration>0.50</defaultArmorPenetration>
+    <buildingDamageFactor>2</buildingDamageFactor>
+    <plantDamageFactor>2</plantDamageFactor>
+    <explosionAffectOutsidePartsOnly>false</explosionAffectOutsidePartsOnly>
+    <explosionHeatEnergyPerCell>5</explosionHeatEnergyPerCell>
+    <explosionCellMote>Mote_BlastDry</explosionCellMote>
+    <explosionColorCenter>(1, 0.5, 0.3)</explosionColorCenter>
+    <explosionColorEdge>(0.6, 0.5, 0.4)</explosionColorEdge>
+    <soundExplosion>Explosion_Bomb</soundExplosion>
+    <combatLogRules>Damage_Bomb</combatLogRules>
+  </DamageDef>
+
+  <DamageDef ParentName="APMine">
+    <defName>ATMine</defName>
+	<label>Anti-Tank Mine Explosion</label>
+    <deathMessage>{0} has died in a horrible explosion.</deathMessage>
+	<minDamageToFragment>105</minDamageToFragment>
+    <defaultDamage>250</defaultDamage>
+    <defaultStoppingPower>2.0</defaultStoppingPower>
+    <defaultArmorPenetration>3.50</defaultArmorPenetration>
+	<buildingDamageFactor>10</buildingDamageFactor>
+    <plantDamageFactor>10</plantDamageFactor>
+	<explosionHeatEnergyPerCell>25</explosionHeatEnergyPerCell>
+  </DamageDef>
+  
+</Defs>

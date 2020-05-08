@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef Name="TrapMineBaseB" ParentName="BuildingBase" Abstract="True">
+    <thingClass>Building_TrapExplosive</thingClass>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <damageData>
+        <rect>(0.1,0,0.8,0.3)</rect>
+      </damageData>
+    </graphicData>
+    <uiIconOffset>(0,-0.14)</uiIconOffset>
+    <altitudeLayer>Building</altitudeLayer>
+    <drawerType>RealtimeOnly</drawerType>
+    <rotatable>false</rotatable>
+    <tickerType>Normal</tickerType>
+    <stealable>false</stealable>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsSecurity</li>
+    </thingCategories>
+    <statBases>
+      <Mass>1</Mass>
+      <MaxHitPoints>40</MaxHitPoints>
+      <WorkToBuild>2400</WorkToBuild>
+      <Flammability>1</Flammability>
+      <Beauty>-4</Beauty>
+      <TrapSpringChance>1.0</TrapSpringChance>
+    </statBases>
+	<designationCategory>Security</designationCategory>
+    <building>
+      <isTrap>true</isTrap>
+      <trapPeacefulWildAnimalsSpringChanceFactor>0.75</trapPeacefulWildAnimalsSpringChanceFactor>
+      <expandHomeArea>false</expandHomeArea>
+	  <ai_chillDestination>false</ai_chillDestination>
+    </building>
+	<constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <researchPrerequisites>
+      <li>Landmines</li>
+    </researchPrerequisites>
+    <placeWorkers>
+      <li>PlaceWorker_NeverAdjacentTrap</li>
+    </placeWorkers>
+  </ThingDef>
+  <ThingDef ParentName="ResourceBase">
+    <defName>TrapFrag_MineB</defName>
+    <label>Landmine Components</label>
+    <description>These landmine components could be easily assembled into landmines</description>
+    <graphicData>
+      <texPath>Things/Item/Unfinished/UnfinishedGun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>0.5</MarketValue>
+      <Mass>0.2</Mass>
+	  <MaxHitPoints>25</MaxHitPoints>
+	  <Flammability>1.0</Flammability>
+    </statBases>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <stackLimit>50</stackLimit>
+    <stuffProps>
+      <commonality>0.1</commonality>
+    </stuffProps>
+  </ThingDef>
+<!-- ==== It would be very nice if I could find some way to add fragments to the mines as for now I have no clue how to unless I make some sort of dll. . . that may take an awfuly long time ===-->
+  <ThingDef ParentName="TrapMineBaseB">
+    <defName>TrapFrag_Mine</defName>
+    <label>Landmine</label>
+    <description>A landmine, good at culling loads of tribals and un-armored foes. Reprehensible on Earth but almost nessecary on rimworlds for defending your claims.</description>
+    <graphicData>
+      <texPath>Things/Building/Security/IEDHighExplosive</texPath>
+    </graphicData>
+	<costList>
+      <TrapFrag_MineB>1</TrapFrag_MineB>
+    </costList>
+    <comps>
+	  <li Class="CompProperties_Explosive">
+        <explosiveRadius>2.2</explosiveRadius>
+        <explosiveDamageType>APMine</explosiveDamageType>
+        <startWickHitPointsPercent>0.2</startWickHitPointsPercent>
+        <wickTicks>12~18</wickTicks>
+      </li>
+	  <li Class="CombatExtended.CompProperties_Fragments">
+		<fragments>
+		  <Fragment_Earth>2</Fragment_Earth>
+		  <Fragment_Large>10</Fragment_Large>
+		  <Fragment_Small>20</Fragment_Small>
+		  <Fragment_Tiny>50</Fragment_Tiny>
+	    </fragments>
+	  </li>
+	</comps>
+    <specialDisplayRadius>2.2</specialDisplayRadius>
+  </ThingDef>
+
+  <ThingDef ParentName="TrapMineBaseB">
+    <defName>TrapAT_Mine</defName>
+    <label>Anti Tank Mine</label>
+    <description>An Anti Tank Mine,Great for damaging Centipedies and other heaviliy armored foes. Reprehensible on Earth but almost nessecary on rimworlds for defending your claims.</description>
+    <graphicData>
+      <texPath>Things/Building/Security/IEDHighExplosive</texPath>
+    </graphicData>
+	<costList>
+      <TrapFrag_MineB>3</TrapFrag_MineB>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>1.0</explosiveRadius>
+        <explosiveDamageType>ATMine</explosiveDamageType>
+        <startWickHitPointsPercent>0.2</startWickHitPointsPercent>
+        <wickTicks>12~18</wickTicks>
+      </li>
+	  <li Class="CombatExtended.CompProperties_Fragments">
+		<fragments>
+		  <Fragment_Earth>1</Fragment_Earth>
+		  <Fragment_Large>5</Fragment_Large>
+		  <Fragment_Small>10</Fragment_Small>
+		  <Fragment_Tiny>20</Fragment_Tiny>
+	    </fragments>
+	  </li>
+    </comps>
+    <specialDisplayRadius>1.0</specialDisplayRadius>
+  </ThingDef>
+
+  <ThingDef ParentName="TrapMineBaseB">
+    <defName>Oversized_Mine</defName>
+    <label>Oversized Landmine</label>
+    <description>An oversized Landmine, Could be aboulutely devestating if anything is alive within the blast radius.</description>
+    <graphicData>
+      <texPath>Things/Building/Security/IEDHighExplosive</texPath>
+    </graphicData>
+	<costList>
+      <TrapFrag_MineB>25</TrapFrag_MineB>
+	  <FSX>100</FSX>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>15</explosiveRadius>
+        <explosiveDamageType>APMine</explosiveDamageType>
+        <startWickHitPointsPercent>0.2</startWickHitPointsPercent>
+        <wickTicks>35~50</wickTicks>
+      </li>
+	  <li Class="CombatExtended.CompProperties_Fragments">
+		<fragments>
+		  <Fragment_Earth>250</Fragment_Earth>
+		  <Fragment_Earth_B>350</Fragment_Earth_B>
+		  <Fragment_Earth_C>750</Fragment_Earth_C>
+	    </fragments>
+	  </li>
+    </comps>
+	<statBases>
+      <Mass>1000</Mass>
+      <MaxHitPoints>400</MaxHitPoints>
+      <WorkToBuild>2400</WorkToBuild>
+      <Flammability>0</Flammability>
+    </statBases>
+    <specialDisplayRadius>15</specialDisplayRadius>
+  </ThingDef>
+</Defs>

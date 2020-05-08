@@ -2,9 +2,14 @@
 <ModMetaData>
 	<name>Defender's Advantage</name>
 	<author>Scave4</author>
+	<packageId>Scave4.DefendersAdvantage.Full</packageId>
 	<supportedVersions>
 		<li>1.0</li>
+		<li>1.1</li>
 	</supportedVersions>
 	<url></url>
-	<description>Version: 1.7.1\nRevives Vanilla Raid Stratagies, Adds many defensive machine guns and some medium autocannons, and a use for mechanoid bullets that are otherwise just sold.</description>
+	<description>Version: 2.0.0\nRevives Vanilla Raid Stratagies, Adds many defensive machine guns Medium and heavy autocannons, and a use for mechanoid bullets that are otherwise just sold.\nLoad after Combat Extended</description>
+	<loadAfter>
+		<li>CETeam.CombatExtended</li>
+	</loadAfter>
 </ModMetaData>

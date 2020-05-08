@@ -1,0 +1,1098 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <ThingDef Name="BaseTurretGun" ParentName="BaseGun" Abstract="True">
+    <statBases>
+      <Mass>1</Mass>
+    </statBases>
+    <soundInteract>Interact_Rifle</soundInteract>
+    <weaponTags>
+      <li>Gun</li>
+      <li>TurretGun</li>
+    </weaponTags>
+    <tradeability>None</tradeability>
+    <destroyOnDrop>True</destroyOnDrop>
+    <menuHidden>True</menuHidden>
+    <generateAllowChance>0</generateAllowChance>
+    <smeltable>false</smeltable>
+  </ThingDef>
+
+  <ThingDef Name="BaseAutoTurretGun" ParentName="BaseTurretGun" Abstract="True">
+    <comps>
+      <li Class="CombatExtended.CompProperties_FireModes">
+        <aiUseBurstMode>FALSE</aiUseBurstMode>
+        <aiAimMode>AimedShot</aiAimMode>
+        <noSnapshot>true</noSnapshot>
+        <noSingleShot>true</noSingleShot>
+      </li>
+    </comps>
+  </ThingDef>
+  <!--===================High Capacity Puckle======-->
+  <ThingDef ParentName="BaseTurretGun">
+    <defName>DAT_Puckle</defName>
+    <label>High Capacity Puckle</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets_1.1+/Puckle_gun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <description>A modified Puckle Gun with an oversized revolving Magazine, it fires musket balls and could be devestating if grouped together.</description>
+    <statBases>
+      <MarketValue>500</MarketValue>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.09</ShotSpread>
+      <SwayFactor>0.96</SwayFactor>
+      <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>1.25</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_MusketBall_Steel</defaultProjectile>
+        <warmupTime>0.9</warmupTime>
+        <range>37</range>
+		<targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+        <burstShotCount>10</burstShotCount>
+        <soundCast>MediumMG</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>10</muzzleFlashScale>
+        <recoilPattern>Mounted</recoilPattern>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>25</magazineSize>
+        <reloadTime>12</reloadTime>
+        <ammoSet>AmmoSet_MusketBall</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+        <aimedBurstShotCount>5</aimedBurstShotCount>
+        <aiAimMode>SuppressFire</aiAimMode>
+      </li>
+    </comps>
+  </ThingDef>
+  <!-- ================== Auto Rec.SMG ================== -->
+  <ThingDef ParentName="BaseAutoTurretGun">
+    <defName>DAT_TGUN_22LR</defName>
+    <label>VHC-AM-500</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets_1.1+/Light_Turret</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <description>Very High Capacity American 180 able to carry a very large amount of ammo, still short range.</description>
+    <soundInteract>Interact_ChargeRifle</soundInteract>
+    <statBases>
+      <MarketValue>750</MarketValue>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.08</ShotSpread>
+      <SwayFactor>1.72</SwayFactor>
+      <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>0.5</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_22LR_FMJ</defaultProjectile>
+        <warmupTime>0.3</warmupTime>
+        <range>20</range>
+        <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+        <burstShotCount>50</burstShotCount>
+        <soundCast>Shot_Autopistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>6</muzzleFlashScale>
+        <recoilPattern>Mounted</recoilPattern>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>500</magazineSize>
+        <reloadTime>10.6</reloadTime>
+        <ammoSet>AmmoSet_22LR</ammoSet>
+      </li>
+    </comps>
+  </ThingDef>
+  <!-- ================== Auto MG08 ================== -->
+  <ThingDef ParentName="BaseAutoTurretGun">
+    <defName>DAT_TMG_08Z</defName>
+    <label>Automated Maschinengewehr 08</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets_1.1+/Maxim_Gun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <description>Very High Capacity American 180 able to carry a very large amount of ammo, still short range.</description>
+    <soundInteract>Interact_ChargeRifle</soundInteract>
+    <statBases>
+      <MarketValue>750</MarketValue>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.04</ShotSpread>
+      <SwayFactor>1.32</SwayFactor>
+      <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>1.1</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_792x51mmMauser_FMJ</defaultProjectile>
+        <warmupTime>0.6</warmupTime>
+        <range>65</range>
+        <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+        <burstShotCount>10</burstShotCount>
+        <soundCast>MediumMG</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>10</muzzleFlashScale>
+        <recoilPattern>Mounted</recoilPattern>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>250</magazineSize>
+        <reloadTime>6.8</reloadTime>
+        <ammoSet>AmmoSet_792x51mmMauser</ammoSet>
+      </li>
+    </comps>
+  </ThingDef>
+  <!-- ================== MG_08 ================== -->
+  <ThingDef ParentName="BaseTurretGun">
+    <defName>DAT_MG_08Z</defName>
+    <label>Maschinengewehr 08</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets_1.1+/Maxim_Gun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <description>German Great War machine gun used mostly against personell Re-Chambered To the much more common 7.92x57mmMauser to be useable untill now.</description>
+    <statBases>
+      <MarketValue>500</MarketValue>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.04</ShotSpread>
+      <SwayFactor>0.96</SwayFactor>
+      <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>1.25</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_792x51mmMauser_FMJ</defaultProjectile>
+        <warmupTime>1.1</warmupTime>
+        <range>75</range>
+		<targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+        <burstShotCount>25</burstShotCount>
+        <soundCast>MediumMG</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>10</muzzleFlashScale>
+        <recoilPattern>Mounted</recoilPattern>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>250</magazineSize>
+        <reloadTime>6.8</reloadTime>
+        <ammoSet>AmmoSet_792x51mmMauser</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+        <aimedBurstShotCount>10</aimedBurstShotCount>
+        <aiAimMode>SuppressFire</aiAimMode>
+      </li>
+    </comps>
+  </ThingDef>
+  <!-- ================== PM M1910 ================== -->
+  <ThingDef ParentName="BaseTurretGun">
+    <defName>DAT_PM_M1910Z</defName>
+    <label>PM M1910</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets_1.1+/Maxim_Gun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <description>PM M1910 Russian Great war machine gun used against personell.</description>
+    <statBases>
+      <MarketValue>500</MarketValue>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.04</ShotSpread>
+      <SwayFactor>0.96</SwayFactor>
+      <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>0.79</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_762x54mmR_FMJ</defaultProjectile>
+        <warmupTime>1.1</warmupTime>
+        <range>75</range>
+		<targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+        <burstShotCount>25</burstShotCount>
+        <soundCast>MediumMG</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>10</muzzleFlashScale>
+        <recoilPattern>Mounted</recoilPattern>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>250</magazineSize>
+        <reloadTime>6.8</reloadTime>
+        <ammoSet>AmmoSet_762x54mmR</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+        <aimedBurstShotCount>10</aimedBurstShotCount>
+        <aiAimMode>SuppressFire</aiAimMode>
+      </li>
+    </comps>
+  </ThingDef>
+  <!-- ================== Auto PM M1910 ================== -->
+  <ThingDef ParentName="BaseAutoTurretGun">
+    <defName>DAT_TPM_M1910Z</defName>
+    <label>Automated PM M1910</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets_1.1+/Maxim_Gun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <description>PM M1910 Russian Great war machine gun used against personell.</description>
+    <statBases>
+      <MarketValue>750</MarketValue>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.04</ShotSpread>
+      <SwayFactor>1.26</SwayFactor>
+      <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>0.79</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_762x54mmR_FMJ</defaultProjectile>
+        <warmupTime>0.6</warmupTime>
+        <range>65</range>
+        <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+        <burstShotCount>10</burstShotCount>
+        <soundCast>MediumMG</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>10</muzzleFlashScale>
+        <recoilPattern>Mounted</recoilPattern>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>250</magazineSize>
+        <reloadTime>6.8</reloadTime>
+        <ammoSet>AmmoSet_762x54mmR</ammoSet>
+      </li>
+    </comps>
+  </ThingDef>
+  <!-- ================== Vickers Machine Gun ================== -->
+  <ThingDef ParentName="BaseTurretGun">
+    <defName>DAT_VMG</defName>
+    <label>Vickers Machine Gun</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets_1.1+/Maxim_Gun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <description>Vickers Machine Gun from the Great War in Britian Using British Standard .303 rounds.</description>
+    <statBases>
+      <MarketValue>500</MarketValue>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.04</ShotSpread>
+      <SwayFactor>0.96</SwayFactor>
+      <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>0.74</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_303British_FMJ</defaultProjectile>
+        <warmupTime>1.1</warmupTime>
+        <range>75</range>
+		<targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+        <burstShotCount>25</burstShotCount>
+        <soundCast>MediumMG</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>10</muzzleFlashScale>
+        <recoilPattern>Mounted</recoilPattern>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>250</magazineSize>
+        <reloadTime>6.8</reloadTime>
+        <ammoSet>AmmoSet_303British</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+        <aimedBurstShotCount>10</aimedBurstShotCount>
+        <aiAimMode>SuppressFire</aiAimMode>
+      </li>
+    </comps>
+  </ThingDef>
+  <!-- ================== Auto Vickers Machine Gun ================== -->
+  <ThingDef ParentName="BaseAutoTurretGun">
+    <defName>DAT_TVMG</defName>
+    <label>Automated Vickers Machine Gun</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets_1.1+/Maxim_Gun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <description>Vickers Machine Gun from the Great War in Britian Using British Standard .303 rounds.</description>
+    <statBases>
+      <MarketValue>750</MarketValue>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.04</ShotSpread>
+      <SwayFactor>1.06</SwayFactor>
+      <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>0.84</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_303British_FMJ</defaultProjectile>
+        <warmupTime>0.6</warmupTime>
+        <range>65</range>
+        <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+        <burstShotCount>10</burstShotCount>
+        <soundCast>MediumMG</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>10</muzzleFlashScale>
+        <recoilPattern>Mounted</recoilPattern>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>250</magazineSize>
+        <reloadTime>6.8</reloadTime>
+        <ammoSet>AmmoSet_303British</ammoSet>
+      </li>
+    </comps>
+  </ThingDef>
+  <!-- ================== 25mm Single Autocannon ================== -->
+  <ThingDef ParentName="BaseTurretGun">
+    <defName>DAT_25mm</defName>
+    <label>25mm Autocannon</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets_1.1+/25mm_top</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <description>A Single 25mm Autocannon</description>
+    <statBases>
+      <MarketValue>1000</MarketValue>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>2.56</SwayFactor>
+      <RangedWeapon_Cooldown>0.6</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>1.45</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_25x163mm_FMJ</defaultProjectile>
+        <warmupTime>1.2</warmupTime>
+        <range>250</range>
+		<minRange>10</minRange>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <ticksBetweenBurstShots>18</ticksBetweenBurstShots>
+        <burstShotCount>5</burstShotCount>
+        <soundCast>HeavyMG</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>5</muzzleFlashScale>
+        <recoilPattern>Mounted</recoilPattern>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>15</magazineSize>
+        <reloadTime>5.1</reloadTime>
+        <ammoSet>AmmoSet_25x163mm</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+        <aimedBurstShotCount>3</aimedBurstShotCount>
+        <aiAimMode>SuppressFire</aiAimMode>
+      </li>
+    </comps>
+  </ThingDef>
+  <!-- ================== 25mm Dual Autocannon ================== -->
+  <ThingDef ParentName="BaseTurretGun">
+    <defName>DAT_2_25mm</defName>
+    <label>25mm Dual Autocannon</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets_1.1+/25mm_2_top</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <description>A Dual 25mm Autocannon</description>
+    <statBases>
+      <MarketValue>1500</MarketValue>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>2.76</SwayFactor>
+      <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>1.45</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_25x163mm_FMJ</defaultProjectile>
+        <warmupTime>1.2</warmupTime>
+        <range>250</range>
+		<minRange>10</minRange>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <ticksBetweenBurstShots>9</ticksBetweenBurstShots>
+        <burstShotCount>5</burstShotCount>
+        <soundCast>HeavyMG</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>5</muzzleFlashScale>
+        <recoilPattern>Mounted</recoilPattern>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>30</magazineSize>
+        <reloadTime>10.2</reloadTime>
+        <ammoSet>AmmoSet_25x163mm</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+        <aimedBurstShotCount>3</aimedBurstShotCount>
+        <aiAimMode>SuppressFire</aiAimMode>
+      </li>
+    </comps>
+  </ThingDef>
+  <!-- ================== 25mm Dual Autocannon B ================== -->
+  <ThingDef ParentName="BaseTurretGun">
+    <defName>DAT_2_25mmS</defName>
+    <label>25mm Dual Seige Autocannon</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets_1.1+/25mm_2_top</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <description>A Dual 25mm Autocannon</description>
+    <statBases>
+      <MarketValue>1500</MarketValue>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.04</ShotSpread>
+      <SwayFactor>3.76</SwayFactor>
+      <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>1.65</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_25x163mm_FMJ</defaultProjectile>
+        <warmupTime>0.8</warmupTime>
+        <range>250</range>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <ticksBetweenBurstShots>9</ticksBetweenBurstShots>
+        <burstShotCount>5</burstShotCount>
+        <soundCast>HeavyMG</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>5</muzzleFlashScale>
+        <recoilPattern>Mounted</recoilPattern>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>30</magazineSize>
+        <reloadTime>10.2</reloadTime>
+        <ammoSet>AmmoSet_25x163mm</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+        <aimedBurstShotCount>3</aimedBurstShotCount>
+        <aiAimMode>SuppressFire</aiAimMode>
+      </li>
+    </comps>
+  </ThingDef>
+  <!-- ================== 25mm Triple Autocannon ================== -->
+  <ThingDef ParentName="BaseTurretGun">
+    <defName>DAT_3_25mm</defName>
+    <label>25mm Triple Autocannon</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets_1.1+/25mm_3_top</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <description>A Triple 25mm Autocannon</description>
+    <statBases>
+      <MarketValue>2000</MarketValue>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.01</ShotSpread>
+      <SwayFactor>2.96</SwayFactor>
+      <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>1.45</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_25x163mm_FMJ</defaultProjectile>
+        <warmupTime>1.2</warmupTime>
+        <range>250</range>
+		<minRange>10</minRange>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+        <burstShotCount>5</burstShotCount>
+        <soundCast>HeavyMG</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>5</muzzleFlashScale>
+        <recoilPattern>Mounted</recoilPattern>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>45</magazineSize>
+        <reloadTime>15.3</reloadTime>
+        <ammoSet>AmmoSet_25x163mm</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+        <aimedBurstShotCount>3</aimedBurstShotCount>
+        <aiAimMode>SuppressFire</aiAimMode>
+      </li>
+    </comps>
+  </ThingDef>
+  <!-- ================== 25mm Triple Autocannon B ================== -->
+  <ThingDef ParentName="BaseTurretGun">
+    <defName>DAT_3_25mmS</defName>
+    <label>25mm Triple Seige Autocannon</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets_1.1+/25mm_3_top</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <description>A Triple 25mm Autocannon</description>
+    <statBases>
+      <MarketValue>2000</MarketValue>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.04</ShotSpread>
+      <SwayFactor>3.96</SwayFactor>
+      <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>2.05</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_25x163mm_FMJ</defaultProjectile>
+        <warmupTime>0.8</warmupTime>
+        <range>250</range>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+        <burstShotCount>5</burstShotCount>
+        <soundCast>HeavyMG</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>5</muzzleFlashScale>
+        <recoilPattern>Mounted</recoilPattern>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>45</magazineSize>
+        <reloadTime>15.3</reloadTime>
+        <ammoSet>AmmoSet_25x163mm</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+        <aimedBurstShotCount>3</aimedBurstShotCount>
+        <aiAimMode>SuppressFire</aiAimMode>
+      </li>
+    </comps>
+  </ThingDef>
+  <!-- ================== Flame Turret ================== -->
+  <ThingDef ParentName="BaseTurretGun">
+    <defName>DAT_FTT</defName>
+    <label>Large Flame Turret</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets_1.1+/FTT</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>2</drawSize>
+    </graphicData>
+    <description>A Large Flame Thrower Capable of outranging any handheld Flame Thrower</description>
+    <statBases>
+      <MarketValue>1000</MarketValue>
+      <SightsEfficiency>0.8</SightsEfficiency>
+      <ShotSpread>1.69</ShotSpread>
+      <SwayFactor>2.96</SwayFactor>
+      <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>0.45</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_Flamethrower_Napalm</defaultProjectile>
+        <warmupTime>1.2</warmupTime>
+        <range>35</range>
+		<minRange>6</minRange>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+        <burstShotCount>100</burstShotCount>
+        <soundCast>HissFlamethrower</soundCast>
+        <muzzleFlashScale>5</muzzleFlashScale>
+        <recoilPattern>Mounted</recoilPattern>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>500</magazineSize>
+        <reloadTime>24.5</reloadTime>
+        <ammoSet>AmmoSet_Flamethrower</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+        <aimedBurstShotCount>50</aimedBurstShotCount>
+        <aiAimMode>SuppressFire</aiAimMode>
+      </li>
+    </comps>
+  </ThingDef>
+  <!-- ================== Bus Blunderer ================== -->
+  <ThingDef ParentName="BaseTurretGun">
+    <defName>DAT_120mmShotgun</defName>
+    <label>Bus Blunderer</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets_1.1+/Flame_Shotgun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>2</drawSize>
+    </graphicData>
+    <description>120mm Shotgun on a static mount.</description>
+    <soundInteract>Artillery_ShellLoaded</soundInteract>
+    <statBases>
+      <MarketValue>2000</MarketValue>
+      <SightsEfficiency>1.0</SightsEfficiency>
+      <ShotSpread>0.41</ShotSpread>
+      <SwayFactor>2.99</SwayFactor>
+      <RangedWeapon_Cooldown>2.57</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_120mmS_Buck</defaultProjectile>
+        <warmupTime>3</warmupTime>
+        <range>30</range>
+        <burstShotCount />
+        <soundCast>120mm</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>20</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <recoilPattern>Mounted</recoilPattern>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>1</magazineSize>
+        <reloadTime>3.2</reloadTime>
+        <ammoSet>AmmoSet_120mmS</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+        <aiAimMode>AimedShot</aiAimMode>
+      </li>
+    </comps>
+  </ThingDef>
+  <!-- ================== QF 25 mm Autocannon ================== -->
+  <ThingDef ParentName="BaseTurretGun">
+    <defName>DAT_QF25mm</defName>
+    <label>Quick Firing 25mm Autocannon</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets_1.1+/QF_25mm</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <description>Quick Firing 25mm Autocannon (Please be Careful).</description>
+    <statBases>
+      <MarketValue>3500</MarketValue>
+      <SightsEfficiency>3.5</SightsEfficiency>
+      <ShotSpread>0.02</ShotSpread>
+      <SwayFactor>5.39</SwayFactor>
+      <RangedWeapon_Cooldown>2.57</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>1.01</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_25x163mm_FMJ</defaultProjectile>
+        <warmupTime>1.2</warmupTime>
+        <range>200</range>
+		<minRange>10</minRange>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+        <burstShotCount>50</burstShotCount>
+        <soundCast>HeavyMG</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>5</muzzleFlashScale>
+        <recoilPattern>Mounted</recoilPattern>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>200</magazineSize>
+        <reloadTime>12.2</reloadTime>
+        <ammoSet>AmmoSet_25x163mm</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+        <aimedBurstShotCount>10</aimedBurstShotCount>
+        <aiAimMode>SuppressFire</aiAimMode>
+      </li>
+    </comps>
+  </ThingDef>
+  <!--=============== Charge Blaster Turret ===============-->
+  <ThingDef ParentName="BaseTurretGun">
+    <defName>DAT_SCB</defName>
+    <label>Static Charge Blaster</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets_1.1+/Advanced_Turrets</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <description>A Faster Firing and more versitile heavy Charge blaster that could use use several ammo types, Including mechanoid bullets.</description>
+    <statBases>
+      <MarketValue>3500</MarketValue>
+      <SightsEfficiency>3.5</SightsEfficiency>
+      <ShotSpread>0.02</ShotSpread>
+      <SwayFactor>2.39</SwayFactor>
+      <RangedWeapon_Cooldown>2.57</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>0.71</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_12x64mmCharged</defaultProjectile>
+        <warmupTime>0.7</warmupTime>
+        <range>86</range>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+        <burstShotCount>25</burstShotCount>
+        <soundCast>Shot_ChargeBlaster</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>5</muzzleFlashScale>
+        <recoilPattern>Mounted</recoilPattern>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>200</magazineSize>
+        <reloadTime>12.2</reloadTime>
+        <ammoSet>AmmoSet_HCBT</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+        <aimedBurstShotCount>10</aimedBurstShotCount>
+        <aiAimMode>SuppressFire</aiAimMode>
+      </li>
+    </comps>
+  </ThingDef>
+  <!--=============== Breech loading Cannon ===============-->
+  <!--
+  <ThingDef ParentName="BaseTurretGun">
+    <defName>DAT_BLC</defName>
+    <label>Breech loading Cannon</label>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/ChargeRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <description>A Breech loading Cannon.</description>
+    <statBases>
+      <MarketValue>3500</MarketValue>
+      <SightsEfficiency>0.7</SightsEfficiency>
+      <ShotSpread>0.12</ShotSpread>
+      <SwayFactor>0.39</SwayFactor>
+      <RangedWeapon_Cooldown>2.57</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_CannonBall_Steel</defaultProjectile>
+        <warmupTime>1.2</warmupTime>
+        <range>65</range>
+		<minRange>5</minRange>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+        <soundCast>HeavyMG</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>5</muzzleFlashScale>
+        <recoilPattern>Mounted</recoilPattern>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>1</magazineSize>
+        <reloadTime>6.1</reloadTime>
+        <spawnUnloaded>false</spawnUnloaded>
+        <ammoSet>AmmoSet_CannonBall</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+        <aiAimMode>AimedShot</aiAimMode>
+      </li>
+    </comps>
+  </ThingDef>
+  -->
+  <!--=============== QF Single [Secret Project 007] ===============-->
+  <ThingDef ParentName="BaseTurretGun">
+    <defName>DAT_QF1_40mm</defName>
+    <label>Single QF 2-pounder</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets_1.1+/40mm_Single</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <description>A Single QF 2-Pounder</description>
+    <statBases>
+      <MarketValue>1000</MarketValue>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.02</ShotSpread>
+      <SwayFactor>3.26</SwayFactor>
+      <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>1.45</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_40x158mm_FMJ</defaultProjectile>
+        <warmupTime>0.8</warmupTime>
+        <range>200</range>
+		<minRange>12</minRange>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <ticksBetweenBurstShots>30</ticksBetweenBurstShots>
+        <burstShotCount>7</burstShotCount>
+        <soundCast>HeavyMG</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>5</muzzleFlashScale>
+        <recoilPattern>Mounted</recoilPattern>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>56</magazineSize>
+        <reloadTime>5.1</reloadTime>
+        <ammoSet>AmmoSet_40x158mm</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+        <aimedBurstShotCount>3</aimedBurstShotCount>
+        <aiAimMode>SuppressFire</aiAimMode>
+      </li>
+    </comps>
+  </ThingDef>
+  <!--=============== QF Single Seige [Secret Project 007] ===============-->
+  <!--=============== 56 Round Belt ===============-->
+  <ThingDef ParentName="BaseTurretGun">
+    <defName>DAT_QF1_40mmB</defName>
+    <label>Single Seige QF 2-pounder</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets_1.1+/40mm_Single</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>2</drawSize>
+    </graphicData>
+    <description>A Single QF 2-Pounder</description>
+    <statBases>
+      <MarketValue>2000</MarketValue>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>0.04</ShotSpread>
+      <SwayFactor>3.26</SwayFactor>
+      <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>2.45</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_40x158mm_FMJ</defaultProjectile>
+        <warmupTime>0.8</warmupTime>
+        <range>150</range>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <ticksBetweenBurstShots>30</ticksBetweenBurstShots>
+        <burstShotCount>7</burstShotCount>
+        <soundCast>HeavyMG</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>5</muzzleFlashScale>
+        <recoilPattern>Mounted</recoilPattern>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>56</magazineSize>
+        <reloadTime>5.1</reloadTime>
+        <ammoSet>AmmoSet_40x158mm</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+        <aimedBurstShotCount>3</aimedBurstShotCount>
+        <aiAimMode>SuppressFire</aiAimMode>
+      </li>
+    </comps>
+  </ThingDef>
+  <!--=============== QF Dual [Secret Project 007] ===============-->
+  <!--=============== 168 Round Belt ===============-->
+  <ThingDef ParentName="BaseTurretGun">
+    <defName>DAT_QF2_40mm</defName>
+    <label>Dual QF 2-pounder</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets_1.1+/40mm_Single</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <description>A Dual QF 2-Pounder</description>
+    <statBases>
+      <MarketValue>2000</MarketValue>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>1.00</ShotSpread>
+      <SwayFactor>3.26</SwayFactor>
+      <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>1.45</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_40x158mm_2FMJ</defaultProjectile>
+        <warmupTime>0.8</warmupTime>
+        <range>200</range>
+		<minRange>12</minRange>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <ticksBetweenBurstShots>30</ticksBetweenBurstShots>
+        <burstShotCount>7</burstShotCount>
+        <soundCast>HeavyMG</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>5</muzzleFlashScale>
+        <recoilPattern>Mounted</recoilPattern>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>84</magazineSize>
+        <reloadTime>10</reloadTime>
+        <ammoSet>AmmoSet_40x158mm2L</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+        <aimedBurstShotCount>3</aimedBurstShotCount>
+        <aiAimMode>SuppressFire</aiAimMode>
+      </li>
+    </comps>
+  </ThingDef>
+  <!--=============== QF Quad [Secret Project 007] ===============-->
+  <!--=============== 448 Round Belt ===============-->
+  <ThingDef ParentName="BaseTurretGun">
+    <defName>DAT_QF4_40mm</defName>
+    <label>Quad QF 2-pounder</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets_1.1+/40mm_Quad</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <description>A Quad QF 2-Pounder</description>
+    <statBases>
+      <MarketValue>3500</MarketValue>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>2.50</ShotSpread>
+      <SwayFactor>4.26</SwayFactor>
+      <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>1.45</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_40x158mm_4FMJ</defaultProjectile>
+        <warmupTime>0.8</warmupTime>
+        <range>200</range>
+		<minRange>12</minRange>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <ticksBetweenBurstShots>30</ticksBetweenBurstShots>
+        <burstShotCount>14</burstShotCount>
+        <soundCast>HeavyMG</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>5</muzzleFlashScale>
+        <recoilPattern>Mounted</recoilPattern>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>112</magazineSize>
+        <reloadTime>15.1</reloadTime>
+        <ammoSet>AmmoSet_40x158mm4L</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+        <aimedBurstShotCount>7</aimedBurstShotCount>
+        <aiAimMode>SuppressFire</aiAimMode>
+      </li>
+    </comps>
+  </ThingDef>
+  <!--=============== Oct. will require a stack size of 1120 ===============-->
+  <ThingDef ParentName="BaseTurretGun">
+    <defName>DAT_QF8_40mm</defName>
+    <label>Oct. QF 2-pounder</label>
+    <graphicData>
+      <texPath>Things/Building/Turrets_1.1+/40mm_Octuple</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <description>A Oct. QF 2-Pounder</description>
+    <statBases>
+      <MarketValue>7000</MarketValue>
+      <SightsEfficiency>1</SightsEfficiency>
+      <ShotSpread>4.00</ShotSpread>
+      <SwayFactor>5.26</SwayFactor>
+      <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li Class="CombatExtended.VerbPropertiesCE">
+        <recoilAmount>1.45</recoilAmount>
+        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_40x158mm_8FMJ</defaultProjectile>
+        <warmupTime>0.8</warmupTime>
+        <range>200</range>
+		<minRange>12</minRange>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <ticksBetweenBurstShots>30</ticksBetweenBurstShots>
+        <burstShotCount>14</burstShotCount>
+        <soundCast>HeavyMG</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>5</muzzleFlashScale>
+        <recoilPattern>Mounted</recoilPattern>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="CombatExtended.CompProperties_AmmoUser">
+        <magazineSize>140</magazineSize>
+        <reloadTime>20.1</reloadTime>
+        <ammoSet>AmmoSet_40x158mm8L</ammoSet>
+      </li>
+      <li Class="CombatExtended.CompProperties_FireModes">
+        <aimedBurstShotCount>7</aimedBurstShotCount>
+        <aiAimMode>SuppressFire</aiAimMode>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

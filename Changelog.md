@@ -355,3 +355,42 @@ Version 1.7.1 (Bug Xploding + Actually tested Editon)
 		Dissasembled Landmine Components -> Landmine Components
 		Research Project - Type 2.5 Fiber -> Insulated Variants
 		
+Version 2.0.0 (I Never thought Rimworld Would Update + Not again CE! Edition)
+	Fixed *Some* Bad Engrish in the defs
+	*Still using windows XP for code + work
+	Fixed Countless Explosive Damage Def issues
+	Fixed The 40mm ammo file size from 51kb -> 39kb
+	Fixed Turret Textures. . . 
+	Fixed Countless Turret Issues
+	**[Crowned "Ctrl+F" Best Girl]
+	All explosive ammo unable to explode like moratar shells (will be fixed next update) 
+	Reduced Fragments to fix performance issues
+	***Changed no Def Names. . . It may work with older saves (If you still have them)
+	Left Version 1.7.1 in, it may work in v1.0 
+	Fixed Tailor/Smithing speed -> General Labor Speed as it had been removed
+	Mostly Untested, This may take some time. . .
+	Most of the turret top image scales to be fixed next update
+	[Still don't know how to properly use Github]
+	An Unfixable issue with Draw Radius has been found I'd suggest turning auto-open off
+	
+Version 2.0.1 (Happy Explosion Day + Barely Tested Edition)
+	Fixed Explosive ammunition not exploding when set ablaze or blasted
+	Minor Nerf for 25mm Explosive rounds
+	Reduced 'Supplies' in the Senario ~Recently Liberated and Very Lost~
+	Fixed Scales in Top Turret images
+	Inadvertantly increased the 40mm ammo file size from 39kb -> 43kb
+	[Adding the 6 pounder & hopefully sounds in the next Major update]
+	Fixed Misleading Name of 25x163mm Incendiary -> AP-I
+	Removed Extranious lines of code
+	Fixed Flamethrower turret graphic
+	Draw Radius Error only appears once it seems. . .
+	Added An oversized Landmine Meant to Increase devestation + mayhem upon the field 
+	Added Fragments to All Mines Including the new oversized one 
+	Name Change 
+		Landmine -> Fragmine
+	[There may be a Bug with Pawn generation]
+	Added Spreadsheet
+	Improved ROF for Bus Blunderer
+	Fixed Improper ROF for Dual 25mm Autocannon
+	Damage Balance for Mauser Bullets
+	
